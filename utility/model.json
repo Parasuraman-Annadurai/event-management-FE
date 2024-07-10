@@ -4,70 +4,70 @@
             "id": "venues",
             "title": "Venues",
             "description": "Banquet Halls, Lawns",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/venues.jpg",
+            "imageUrl": "/./assets/eventsImages/venues.jpg",
             "backgroundColor": "#e6e6ff"
         },
         {
             "id": "photographers",
             "title": "Photographers",
             "description": "Photographers",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/photographers.jpg",
+            "imageUrl": "/./assets/eventsImages/photographers.jpg",
             "backgroundColor": "#ffe6cc"
         },
         {
             "id": "makeup",
             "title": "Makeup",
             "description": "Bridal Makeup, Family Makeup",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/makeup.jpg",
+            "imageUrl": "/./assets/eventsImages/makeup.jpg",
             "backgroundColor": "#ffe6e6"
         },
         {
             "id": "pre-wedding-shoot",
             "title": "Pre Wedding Shoot",
             "description": "Pre Wedding Shoot",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/pre_wedding_shoot.jpg",
+            "imageUrl": "/./assets/eventsImages/pre_wedding_shoot.jpg",
             "backgroundColor": "#e6e6ff"
         },
         {
             "id": "planning-decor",
             "title": "Planning & Decor",
             "description": "Wedding Planners, Decorators",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/planning.jpg",
+            "imageUrl": "/./assets/eventsImages/planning.jpg",
             "backgroundColor": "#ffd9b3"
         },
         {
             "id": "bridal-wear",
             "title": "Bridal Wear",
             "description": "Bridal Lehengas",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/bridal_wear.jpg",
+            "imageUrl": "/./assets/eventsImages/bridal_wear.jpg",
             "backgroundColor": "#e6f2e6"
         },
         {
             "id": "mehndi",
             "title": "Mehndi",
             "description": "Mehendi Artist",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/mehndi.jpg",
+            "imageUrl": "/./assets/eventsImages/mehndi.jpg",
             "backgroundColor": "#f5f5cc"
         },
         {
             "id": "food",
             "title": "Food",
             "description": "Catering Services, Cake, Chaat & Food",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/food.jpg",
+            "imageUrl": "/./assets/eventsImages/food.jpg",
             "backgroundColor": "#ebe1e1"
         },
         {
             "id": "music-dance",
             "title": "Music & Dance",
             "description": "DJs, Sangeet Choreographer",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/dance.jpg",
+            "imageUrl": "/./assets/eventsImages/dance.jpg",
             "backgroundColor": "#ffe0b3"
         },
         {
             "id": "jewellery-accessories",
             "title": "Jewellery & Accessories",
             "description": "Jewellery, Flower Jewellery",
-            "imageUrl": "/project-root/event-management-FE/assets/eventsImages/jwel.jpg",
+            "imageUrl": "/./assets/eventsImages/jwel.jpg",
             "backgroundColor": "#f5f5cc"
         }
     ]

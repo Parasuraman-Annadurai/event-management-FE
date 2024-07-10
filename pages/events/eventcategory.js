@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     let categoriesContainer = document.getElementById("categories");
-    let eventsData = "/project-root/event-management-FE/utility/model.json";
+    let eventsData = "../../utility/model.json";
 
     fetch(eventsData)
         .then(response => response.json())
@@ -47,5 +47,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Define the showVendors function
 function showVendors(categoryId) {
-    window.location.href = `/project-root/event-management-FE/pages/eventlisting/eventListing.html?category=${categoryId}`;
+    window.location.href = `../eventlisting/eventListing.html?category=${categoryId}`;
 }

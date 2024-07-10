@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to filter and display events based on category
     function filterCategory(category) {
-        fetch('/project-root/event-management-FE/utility/eventlist.json')
+        fetch('../../utility/eventlist.json')
             .then(response => response.json())
             .then(data => {
                 const filteredEvents = data.filter(event => event.Category === category);
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to apply price filter
     function applyPriceFilter() {
-        fetch('/project-root/event-management-FE/utility/eventlist.json')
+        fetch('../../utility/eventlist.json')
             .then(response => response.json())
             .then(data => {
                 let filteredEvents = data;
