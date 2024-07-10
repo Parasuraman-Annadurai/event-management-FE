@@ -1,0 +1,84 @@
+{
+    "organizers": [
+      {
+        "name": "Organizer 1",
+        "image": "https://picsum.photos/250/200?random=1",
+        "description": "Description of Organizer 1"
+      },
+      {
+        "name": "Organizer 2",
+        "image": "https://picsum.photos/250/200?random=2",
+        "description": "Description of Organizer 2"
+      },
+      {
+        "name": "Organizer 3",
+        "image": "https://picsum.photos/250/200?random=3",
+        "description": "Description of Organizer 3"
+      },
+      {
+        "name": "Organizer 4",
+        "image": "https://picsum.photos/250/200?random=4",
+        "description": "Description of Organizer 4"
+      },
+      {
+        "name": "Organizer 5",
+        "image": "https://picsum.photos/250/200?random=5",
+        "description": "Description of Organizer 5"
+      }
+    ],
+    "packages": [
+      {
+        "name": "Package 1",
+        "image": "https://picsum.photos/250/200?random=6",
+        "description": "Description of Package 1"
+      },
+      {
+        "name": "Package 2",
+        "image": "https://picsum.photos/250/200?random=7",
+        "description": "Description of Package 2"
+      },
+      {
+        "name": "Package 3",
+        "image": "https://picsum.photos/250/200?random=8",
+        "description": "Description of Package 3"
+      },
+      {
+        "name": "Package 4",
+        "image": "https://picsum.photos/250/200?random=9",
+        "description": "Description of Package 4"
+      },
+      {
+        "name": "Package 5",
+        "image": "https://picsum.photos/250/200?random=10",
+        "description": "Description of Package 5"
+      }
+    ],
+    "events": [
+      {
+        "name": "Event 1",
+        "image": "https://picsum.photos/250/200?random=11",
+        "description": "Description of Event 1"
+      },
+      {
+        "name": "Event 2",
+        "image": "https://picsum.photos/250/200?random=12",
+        "description": "Description of Event 2"
+      },
+      {
+        "name": "Event 3",
+        "image": "https://picsum.photos/250/200?random=13",
+        "description": "Description of Event 3"
+      },
+      {
+        "name": "Event 4",
+        "image": "https://picsum.photos/250/200?random=14",
+        "description": "Description of Event 4"
+      },
+      {
+        "name": "Event 5",
+        "image": "https://picsum.photos/250/200?random=15",
+        "description": "Description of Event 5"
+      }
+    ]
+  }
+  

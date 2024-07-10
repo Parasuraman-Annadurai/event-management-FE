@@ -1,0 +1,64 @@
+{
+"slideshow": [
+    [
+      {
+        "image": "https://picsum.photos/250/200?random=1",
+        "text": "Celebrate the special day with a themed birthday party complete with decorations, games, and a delicious birthday cake. Perfect for all ages, these parties are designed to create unforgettable memories."
+      },
+      {
+        "image": "https://picsum.photos/250/200?random=2",
+        "text": "A casual, family-friendly event where community members gather in a park to enjoy food, games, and socializing. These events foster a sense of community and togetherness."
+      },
+      {
+        "image": "https://picsum.photos/250/200?random=3",
+        "text": "A volunteer-driven event focused on cleaning up natural areas, such as parks, beaches, and rivers. These events aim to promote environmental conservation and community involvement."
+      }
+    ],
+    [
+      {
+        "image": "https://picsum.photos/250/200?random=4",
+        "text": "A vibrant celebration showcasing the customs, traditions, and arts of a specific culture or community. These events often feature music, dance, food, and crafts, offering a rich cultural experience"
+      },
+      {
+        "image": "https://picsum.photos/250/200?random=5",
+        "text": " A competitive event where athletes or teams compete in a series of matches or games to determine the champion. This can range from local youth leagues to international competitions"
+      },
+      {
+        "image": "https://picsum.photos/250/200?random=6",
+        "text": "A beautiful and elegant event where two people are united in marriage. This includes a ceremony followed by a reception with food, music, and dancing to celebrate the newlyweds."
+      }
+    ],
+    [
+      {
+        "image": "https://picsum.photos/250/200?random=7",
+        "text": "A beautiful and elegant event where two people are united in marriage. This includes a ceremony followed by a reception with food, music, and dancing to celebrate the newlyweds."
+      },
+      {
+        "image": "https://picsum.photos/250/200?random=8",
+        "text": "A beautiful and elegant event where two people are united in marriage. This includes a ceremony followed by a reception with food, music, and dancing to celebrate the newlyweds."
+      },
+      {
+        "image": "https://picsum.photos/250/200?random=9",
+        "text": "A beautiful and elegant event where two people are united in marriage. This includes a ceremony followed by a reception with food, music, and dancing to celebrate the newlyweds."
+      }
+    ]
+  ],
+  "testimonials": [
+    {
+      "image": "https://picsum.photos/100/100?random=10",
+      "name": "John Doe",
+      "review": "Amazing event planning! Everything was perfect."
+    },
+    {
+      "image": "https://picsum.photos/100/100?random=11",
+      "name": "Jane Smith",
+      "review": "Had a fantastic experience with their services."
+    },
+    {
+      "image": "https://picsum.photos/100/100?random=12",
+      "name": "Emily Johnson",
+      "review": "Highly recommend for any event!"
+    }
+  ]
+}
+

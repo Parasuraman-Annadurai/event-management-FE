@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #f88379;
+    --secondary-color: #fadadd;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
