@@ -1,0 +1,112 @@
+[
+    {
+        "OrganizationName": "GRP Makeup Studio",
+        "eventName": "Bridal Makeup",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org1_makeup.jpg",
+        "eventDescription": "Exquisite bridal makeup for your special day.",
+        "price": 15000,
+        "address": "123 Beauty Ave, Glam Town",
+        "whatsapp": 1234567800,
+        "Mobile": 9876543220,
+        "Category": "makeup"
+    },
+    {
+        "OrganizationName": "Fashionista Cosmetics",
+        "eventName": "Fashion Show Makeup",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org2_makeup.jpeg",
+        "eventDescription": "Creative makeup designs for runway models.",
+        "price": 12000,
+        "address": "456 Catwalk St, Fashion City",
+        "whatsapp": 1234567801,
+        "Mobile": 9876543221,
+        "Category": "makeup"
+    },
+    {
+        "OrganizationName": "Celebrity Makeup Artists",
+        "eventName": "Celebrity Makeup Session",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org3_makeup.jpg",
+        "eventDescription": "Get the star treatment with celebrity-inspired makeup.",
+        "price": 18000,
+        "address": "789 Star Blvd, Celebrity Town",
+        "whatsapp": 1234567802,
+        "Mobile": 9876543222,
+        "Category": "makeup"
+    },
+    {
+        "OrganizationName": "Grand Venues",
+        "eventName": "Wedding Venue",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org1_venues.jpeg",
+        "eventDescription": "Beautiful venues for your dream wedding.",
+        "price": 100000,
+        "address": "101 Dream Rd",
+        "whatsapp": 1234567803,
+        "Mobile": 9876543223,
+        "Category": "venues"
+    },
+    {
+        "OrganizationName": "Party Halls",
+        "eventName": "Party Venue",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org2_venues.jpeg.jpeg",
+        "eventDescription": "Perfect for any celebration.",
+        "price": 65000,
+        "address": "202 Celebration Town",
+        "whatsapp": 1234567804,
+        "Mobile": 9876543224,
+        "Category": "venues"
+    },
+    {
+        "OrganizationName": "Taj Connemara",
+        "eventName": "Wedding Venue",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org3_venues.jpg",
+        "eventDescription": "Perfect for any celebration.",
+        "price": 2000000,
+        "address": "403 New Town",
+        "whatsapp": 9783784773,
+        "Mobile": 9876543224,
+        "Category": "venues"
+    },
+    {
+        "OrganizationName": "Capture Moments Studio",
+        "eventName": "Wedding Photoshoot",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org1_photo.jpg",
+        "eventDescription": "Wedding photoshoot to capture your special moments.",
+        "price": 80000,
+        "address": "123 Capture Lane, Photo City",
+        "whatsapp": 1234567805,
+        "Mobile": 9876543225,
+        "Category": "photographers"
+    },
+    {
+        "OrganizationName": "Dream Click Photography",
+        "eventName": "Pregnancy Photoshoot",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org2_photo.jpg",
+        "eventDescription": "Capture the precious moments of your pregnancy with our maternity photoshoot.",
+        "price": 20000,
+        "address": "456 Dream Blvd, Wedding Town",
+        "whatsapp": 1234567806,
+        "Mobile": 9876543226,
+        "Category": "photographers"
+    },
+    {
+        "OrganizationName": "Happy Celebrations",
+        "eventName": "Birthday Celebration",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsOrgImg/org3_photo.jpg",
+        "eventDescription": "Fun-filled birthday parties for kids with games and entertainment.",
+        "price": 12000,
+        "address": "789 Baby St, Motherhood City",
+        "whatsapp": 1234567807,
+        "Mobile": 9876543227,
+        "Category": "photographers"
+    }
+    ,{
+        "OrganizationName": "Party Halls",
+        "eventName": "Party Venue",
+        "eventPhotos": "/project-root/event-management-FE/assets/eventsImages/jwel.jpg",
+        "eventDescription": "Perfect for any celebration.",
+        "price": 5000,
+        "address": "202 Celebration Town",
+        "whatsapp": 1234567804,
+        "Mobile": 9876543224,
+        "Category": "jewellery-accessories"
+    }
+]

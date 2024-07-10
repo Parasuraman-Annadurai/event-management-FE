@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listing</title>
+    <link rel="stylesheet" href="./eventListing.css">
+</head>
+<body>
+    <h1>Event Listing</h1>
+    <div class="categories">
+        <label for="priceFilter" class="priceRange">Price Range </label>
+        <select id="priceFilter">
+            <option value="all">All</option>
+            <option value="0-1000">₹0 - ₹1000</option>
+            <option value="1001-5000">₹1001 - ₹5000</option>
+            <option value="5001-10000">₹5001 - ₹10000</option>
+            <option value="10001-50000">₹10001 - ₹50000</option>
+            <option value="50001-100000">₹50001 - ₹100000</option>
+            <option value="100001">₹100001 and above</option>
+        </select>
+    </div>
+    <div class="container" id="eventListings"></div>
+    <script src="./eventListing.js"></script>
+</body>
+</html>
+
