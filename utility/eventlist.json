@@ -8,7 +8,8 @@
         "address": "123 Beauty Ave, Glam Town",
         "whatsapp": 1234567800,
         "Mobile": 9876543220,
-        "Category": "makeup"
+        "Category": "makeup",
+        "tagline": "Transforming you into the bride of your dreams"
     },
     {
         "OrganizationName": "Fashionista Cosmetics",
@@ -19,7 +20,8 @@
         "address": "456 Catwalk St, Fashion City",
         "whatsapp": 1234567801,
         "Mobile": 9876543221,
-        "Category": "makeup"
+        "Category": "makeup",
+        "tagline": "Makeup that steals the show"
     },
     {
         "OrganizationName": "Celebrity Makeup Artists",
@@ -30,7 +32,32 @@
         "address": "789 Star Blvd, Celebrity Town",
         "whatsapp": 1234567802,
         "Mobile": 9876543222,
-        "Category": "makeup"
+        "Category": "makeup",
+        "tagline": "Experience the celebrity makeup"
+    },
+    {
+        "OrganizationName": "GRP Makeup Studio",
+        "eventName": "Bridal Makeup",
+        "eventPhotos": "/./assets/eventsOrgImg/org1_makeup.jpg",
+        "eventDescription": "Exquisite bridal makeup for your special day.",
+        "price": 15000,
+        "address": "123 Beauty Ave, Glam Town",
+        "whatsapp": 1234567800,
+        "Mobile": 9876543220,
+        "Category": "makeup",
+        "tagline": "Transforming you into the bride of your dreams"
+    },
+    {
+        "OrganizationName": "GRP Makeup Studio",
+        "eventName": "Bridal Makeup",
+        "eventPhotos": "/./assets/eventsOrgImg/org1_makeup.jpg",
+        "eventDescription": "Exquisite bridal makeup for your special day.",
+        "price": 15000,
+        "address": "123 Beauty Ave, Glam Town",
+        "whatsapp": 1234567800,
+        "Mobile": 9876543220,
+        "Category": "makeup",
+        "tagline": "Transforming you into the bride of your dreams"
     },
     {
         "OrganizationName": "Grand Venues",
@@ -41,7 +68,8 @@
         "address": "101 Dream Rd",
         "whatsapp": 1234567803,
         "Mobile": 9876543223,
-        "Category": "venues"
+        "Category": "venues",
+        "tagline": "Creating the perfect backdrop for your big day"
     },
     {
         "OrganizationName": "Party Halls",
@@ -52,7 +80,8 @@
         "address": "202 Celebration Town",
         "whatsapp": 1234567804,
         "Mobile": 9876543224,
-        "Category": "venues"
+        "Category": "venues",
+        "tagline": "Celebrate life's moments in style"
     },
     {
         "OrganizationName": "Taj Connemara",
@@ -63,7 +92,8 @@
         "address": "403 New Town",
         "whatsapp": 9783784773,
         "Mobile": 9876543224,
-        "Category": "venues"
+        "Category": "venues",
+        "tagline": "Luxurious settings for unforgettable weddings"
     },
     {
         "OrganizationName": "Capture Moments Studio",
@@ -74,7 +104,8 @@
         "address": "123 Capture Lane, Photo City",
         "whatsapp": 1234567805,
         "Mobile": 9876543225,
-        "Category": "photographers"
+        "Category": "photographers",
+        "tagline": "Capturing your memories in every shot"
     },
     {
         "OrganizationName": "Dream Click Photography",
@@ -85,7 +116,8 @@
         "address": "456 Dream Blvd, Wedding Town",
         "whatsapp": 1234567806,
         "Mobile": 9876543226,
-        "Category": "photographers"
+        "Category": "photographers",
+        "tagline": "Cherishing the beauty of motherhood"
     },
     {
         "OrganizationName": "Happy Celebrations",
@@ -96,7 +128,7 @@
         "address": "789 Baby St, Motherhood City",
         "whatsapp": 1234567807,
         "Mobile": 9876543227,
-        "Category": "photographers"
+        "Category": "photographers",
+        "tagline": "Creating joyful memories for every birthday"
     }
-    
 ]

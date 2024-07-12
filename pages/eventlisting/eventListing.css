@@ -6,16 +6,13 @@
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-body {
-    padding: 20px;
+/* .eventCategories {
+
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+} */
+
 .categories {
     display: flex;
     flex-direction: column;
@@ -36,8 +33,13 @@ h1 {
     margin: 0 10px;
     cursor: pointer;
 }
-
+.eventContainer{
+    margin: auto;
+    max-width: 1000px;
+    width: 100%;
+}
 .container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
