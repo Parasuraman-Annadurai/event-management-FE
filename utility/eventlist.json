@@ -2,133 +2,134 @@
     {
         "OrganizationName": "GRP Makeup Studio",
         "eventName": "Bridal Makeup",
-        "eventPhotos": "/./assets/eventsOrgImg/org1_makeup.jpg",
+        "eventPhotos": "/assets/eventsOrgImg/org1_makeup.jpg",
         "eventDescription": "Exquisite bridal makeup for your special day.",
         "price": 15000,
         "address": "123 Beauty Ave, Glam Town",
         "whatsapp": 1234567800,
         "Mobile": 9876543220,
         "Category": "makeup",
-        "tagline": "Transforming you into the bride of your dreams"
+        "tagline": "Transforming you into the bride of your dreams",
+        "about": "GRP Makeup Studio specializes in bridal makeup, offering a wide range of beauty services to ensure you look your best on your special day. Our team of expert makeup artists uses the latest techniques and high-quality products to create a flawless look that enhances your natural beauty.",
+        "about_img": "/assets/eventsOrgImg/makeup_about.jpg",
+        "projectImages": [
+            "/assets/eventsOrgImg/org1_makeup.jpg",
+            "/assets/eventsOrgImg/org2_makeup.jpeg",
+            "/assets/eventsOrgImg/org3_makeup.jpg",
+            "/assets/eventsOrgImg/org2_photo.jpg"
+        ],
+        "email":"grpmakeup@gmail.com"
     },
     {
         "OrganizationName": "Fashionista Cosmetics",
         "eventName": "Fashion Show Makeup",
-        "eventPhotos": "/./assets/eventsOrgImg/org2_makeup.jpeg",
+        "eventPhotos": "/assets/eventsOrgImg/org2_makeup.jpeg",
         "eventDescription": "Creative makeup designs for runway models.",
         "price": 12000,
         "address": "456 Catwalk St, Fashion City",
         "whatsapp": 1234567801,
         "Mobile": 9876543221,
         "Category": "makeup",
-        "tagline": "Makeup that steals the show"
+        "tagline": "Makeup that steals the show",
+        "about": "Fashionista Cosmetics offers professional makeup services for fashion shows. Our team of creative makeup artists is experienced in designing unique looks that make models stand out on the runway. We use top-of-the-line products to ensure long-lasting and impactful results.",
+        "about_img": "/assets/eventsOrgImg/org2_about.jpg"
     },
     {
         "OrganizationName": "Celebrity Makeup Artists",
         "eventName": "Celebrity Makeup Session",
-        "eventPhotos": "/./assets/eventsOrgImg/org3_makeup.jpg",
+        "eventPhotos": "/assets/eventsOrgImg/org3_makeup.jpg",
         "eventDescription": "Get the star treatment with celebrity-inspired makeup.",
         "price": 18000,
         "address": "789 Star Blvd, Celebrity Town",
         "whatsapp": 1234567802,
         "Mobile": 9876543222,
         "Category": "makeup",
-        "tagline": "Experience the celebrity makeup"
-    },
-    {
-        "OrganizationName": "GRP Makeup Studio",
-        "eventName": "Bridal Makeup",
-        "eventPhotos": "/./assets/eventsOrgImg/org1_makeup.jpg",
-        "eventDescription": "Exquisite bridal makeup for your special day.",
-        "price": 15000,
-        "address": "123 Beauty Ave, Glam Town",
-        "whatsapp": 1234567800,
-        "Mobile": 9876543220,
-        "Category": "makeup",
-        "tagline": "Transforming you into the bride of your dreams"
-    },
-    {
-        "OrganizationName": "GRP Makeup Studio",
-        "eventName": "Bridal Makeup",
-        "eventPhotos": "/./assets/eventsOrgImg/org1_makeup.jpg",
-        "eventDescription": "Exquisite bridal makeup for your special day.",
-        "price": 15000,
-        "address": "123 Beauty Ave, Glam Town",
-        "whatsapp": 1234567800,
-        "Mobile": 9876543220,
-        "Category": "makeup",
-        "tagline": "Transforming you into the bride of your dreams"
+        "tagline": "Experience the celebrity makeup",
+        "about": "Celebrity Makeup Artists brings the glamour of Hollywood to you with our celebrity-inspired makeup sessions. Our team of makeup artists has worked with some of the biggest names in the industry, and we use this experience to create stunning looks for our clients.",
+        "about_img": "/assets/eventsOrgImg/org3_about.jpg"
     },
     {
         "OrganizationName": "Grand Venues",
         "eventName": "Wedding Venue",
-        "eventPhotos": "/./assets/eventsOrgImg/org1_venues.jpeg",
+        "eventPhotos": "/assets/eventsOrgImg/org1_venues.jpeg",
         "eventDescription": "Beautiful venues for your dream wedding.",
         "price": 100000,
         "address": "101 Dream Rd",
         "whatsapp": 1234567803,
         "Mobile": 9876543223,
         "Category": "venues",
-        "tagline": "Creating the perfect backdrop for your big day"
+        "tagline": "Creating the perfect backdrop for your big day",
+        "about": "Grand Venues offers a selection of beautiful wedding venues to create the perfect backdrop for your special day. Our venues are designed to accommodate weddings of all sizes, and we provide a range of services to ensure your event is seamless and unforgettable.",
+        "about_img": "/assets/eventsOrgImg/org1_venues_about.jpg"
     },
     {
         "OrganizationName": "Party Halls",
         "eventName": "Party Venue",
-        "eventPhotos": "/./assets/eventsOrgImg/org2_venues.jpeg.jpeg",
+        "eventPhotos": "/assets/eventsOrgImg/org2_venues.jpeg",
         "eventDescription": "Perfect for any celebration.",
         "price": 65000,
         "address": "202 Celebration Town",
         "whatsapp": 1234567804,
         "Mobile": 9876543224,
         "Category": "venues",
-        "tagline": "Celebrate life's moments in style"
+        "tagline": "Celebrate life's moments in style",
+        "about": "Party Halls offers versatile venues perfect for any celebration. Whether you're hosting a birthday party, anniversary, or corporate event, our halls provide a stylish and comfortable setting to make your event memorable.",
+        "about_img": "/assets/eventsOrgImg/org2_venues_about.jpg"
     },
     {
         "OrganizationName": "Taj Connemara",
         "eventName": "Wedding Venue",
-        "eventPhotos": "/./assets/eventsOrgImg/org3_venues.jpg",
-        "eventDescription": "Perfect for any celebration.",
+        "eventPhotos": "/assets/eventsOrgImg/org3_venues.jpg",
+        "eventDescription": "Luxurious settings for unforgettable weddings.",
         "price": 2000000,
         "address": "403 New Town",
         "whatsapp": 9783784773,
         "Mobile": 9876543224,
         "Category": "venues",
-        "tagline": "Luxurious settings for unforgettable weddings"
+        "tagline": "Luxurious settings for unforgettable weddings",
+        "about": "Taj Connemara offers luxurious wedding venues that provide the perfect setting for an unforgettable celebration. Our venues are designed to provide a grand and elegant atmosphere, complemented by our exceptional service and attention to detail.",
+        "about_img": "/assets/eventsOrgImg/org3_venues_about.jpg"
     },
     {
         "OrganizationName": "Capture Moments Studio",
         "eventName": "Wedding Photoshoot",
-        "eventPhotos": "/./assets/eventsOrgImg/org1_photo.jpg",
+        "eventPhotos": "/assets/eventsOrgImg/org1_photo.jpg",
         "eventDescription": "Wedding photoshoot to capture your special moments.",
         "price": 80000,
         "address": "123 Capture Lane, Photo City",
         "whatsapp": 1234567805,
         "Mobile": 9876543225,
         "Category": "photographers",
-        "tagline": "Capturing your memories in every shot"
+        "tagline": "Capturing your memories in every shot",
+        "about": "Capture Moments Studio specializes in wedding photography, capturing the special moments of your big day. Our team of professional photographers uses the latest equipment and techniques to deliver stunning photos that you will cherish forever.",
+        "about_img": "/assets/eventsOrgImg/org1_photo_about.jpg"
     },
     {
         "OrganizationName": "Dream Click Photography",
         "eventName": "Pregnancy Photoshoot",
-        "eventPhotos": "/./assets/eventsOrgImg/org2_photo.jpg",
+        "eventPhotos": "/assets/eventsOrgImg/org2_photo.jpg",
         "eventDescription": "Capture the precious moments of your pregnancy with our maternity photoshoot.",
         "price": 20000,
         "address": "456 Dream Blvd, Wedding Town",
         "whatsapp": 1234567806,
         "Mobile": 9876543226,
         "Category": "photographers",
-        "tagline": "Cherishing the beauty of motherhood"
+        "tagline": "Cherishing the beauty of motherhood",
+        "about": "Dream Click Photography offers maternity photoshoots to capture the precious moments of your pregnancy. Our team of skilled photographers ensures a comfortable and enjoyable experience, delivering beautiful photos that celebrate the beauty of motherhood.",
+        "about_img": "/assets/eventsOrgImg/org2_photo_about.jpg"
     },
     {
         "OrganizationName": "Happy Celebrations",
         "eventName": "Birthday Celebration",
-        "eventPhotos": "/./assets/eventsOrgImg/org3_photo.jpg",
+        "eventPhotos": "/assets/eventsOrgImg/org3_photo.jpg",
         "eventDescription": "Fun-filled birthday parties for kids with games and entertainment.",
         "price": 12000,
         "address": "789 Baby St, Motherhood City",
         "whatsapp": 1234567807,
         "Mobile": 9876543227,
         "Category": "photographers",
-        "tagline": "Creating joyful memories for every birthday"
+        "tagline": "Creating joyful memories for every birthday",
+        "about": "Happy Celebrations specializes in organizing fun-filled birthday parties for kids. Our events include a variety of games and entertainment options to ensure a memorable and enjoyable experience for all attendees.",
+        "about_img": "/assets/eventsOrgImg/org3_photo_about.jpg"
     }
 ]
