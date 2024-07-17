@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch footer.html and insert into #footerEMS
+    fetch('../../components/header/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => console.error('Error fetching footer:', error));
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     let urlParams = new URLSearchParams(window.location.search);
     let organizationName = urlParams.get('organization').replace(/-/g, ' ');
@@ -50,3 +61,14 @@ function displayEventDetails(event) {
         alert(`Booking for ${event.OrganizationName}`);
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch footer.html and insert into #footerEMS
+    fetch('../../components/footer/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerEMS').innerHTML = html;
+        })
+        .catch(error => console.error('Error fetching footer:', error));
+});

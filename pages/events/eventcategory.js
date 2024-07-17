@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch footer.html and insert into #footerEMS
+    fetch('../../components/header/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => console.error('Error fetching footer:', error));
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     let categoriesContainer = document.getElementById("categories");
     let eventsData = "../../utility/model.json";
@@ -49,3 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function showVendors(categoryId) {
     window.location.href = `../eventlisting/eventListing.html?category=${categoryId}`;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch footer.html and insert into #footerEMS
+    fetch('../../components/footer/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerEMS').innerHTML = html;
+        })
+        .catch(error => console.error('Error fetching footer:', error));
+});
