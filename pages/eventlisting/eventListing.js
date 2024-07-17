@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch('../../utility/eventlist.json')
             .then(response => response.json())
             .then(data => {
-                const filteredEvents = data.filter(event => event.Category === category);
+                let filteredEvents = data.filter(event => event.Category === category);
                 displayEvents(filteredEvents);
             })
             .catch(error => console.error('Error fetching data:', error));
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = ''; // Clear the existing content
 
         events.forEach(event => {
-            const card = document.createElement('div');
+            let card = document.createElement('div');
             card.className = 'card';
 
             card.innerHTML = `
@@ -44,6 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
             container.appendChild(card);
+
+
+            card.addEventListener("click", () => {
+                showVendorsDetails(event.OrganizationName);
+            });
+            
         });
     }
 
@@ -67,7 +73,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 displayEvents(filteredEvents);
+
+                 
             })
             .catch(error => console.error('Error fetching data:', error));
     }
 });
+
+function showVendorsDetails(OrganizationName) {
+    // Replace spaces with hyphens
+    var formattedName = OrganizationName.replace(/ /g, '-');
+    // Redirect to the new URL
+    window.location.href = `../eventDescription/eventDescription.html?organization=${formattedName}`;
+}
+

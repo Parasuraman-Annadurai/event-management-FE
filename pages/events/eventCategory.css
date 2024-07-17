@@ -1,13 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+   
 }
 
 .container {
     width: 80%;
-    margin: 20px auto;
+    margin: 60px auto;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -26,7 +26,6 @@ h1 {
     align-items: center;
     padding: 20px;
     border-radius: 8px;
-    background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     flex: 0 0 48%;

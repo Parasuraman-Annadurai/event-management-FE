@@ -4,14 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Description</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../components/header/header.css">
     <link rel="stylesheet" href="./eventDescription.css">
 </head>
 <body>
-    <h1>Event Listing</h1>
-    <div class="eventListing">
-        
+    <!-- Navbarcode -->
+    <div id="header"></div>
+    <!-- Navbar end -->
+
+    <div class="desHeader">
+        <div class="eventDescription">
+            <div class="eventContent">
+                <div class="leftSide">
+                    <img id="eventImage" src="" alt="Event Image">
+                </div>
+                <div class="rightSide">
+                    <h2 id="eventName"></h2>
+                    <h3 id="eventTagline"></h3>
+                    <button id="eventPrice"></button>
+                    <div class="navigationSection">
+                        <p id="aboutSection">About</p>
+                        <p id="projectSection">Projects</p>
+                        <p id="contactSection">Contact</p>
+                        <p id="bookingSection">Book Now</p>
+                    </div>
+                    <!-- <button id="bookingButton">Book Now</button> -->
+                </div>
+            </div>
+        </div>
     </div>
- 
+
+    <!-- About Section -->
+    <div class="aboutContainer" id="aboutContainer">
+        <div class="aboutContent">
+            <div class="leftSection">
+                <h1>ABOUT</h1>
+                <div class="underline"></div>
+                <p id="aboutDescription"></p>
+            </div>
+            <div class="rightSection">
+                <img id="aboutImage" src="" alt="About Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- projectSection -->
+    <div class="projectSection" id="projectContainer">
+        <h1>Projects</h1>
+        <div class="underline"></div>
+        <div class="projectsGrid">
+            <img class="projectImage" id="projectImg1" src="" alt="Project Image 1">
+            <img class="projectImage" id="projectImg2" src="" alt="Project Image 2">
+            <img class="projectImage" id="projectImg3" src="" alt="Project Image 3">
+            <img class="projectImage" id="projectImg4" src="" alt="Project Image 4">
+        </div>
+    </div>
+
+    <!-- contact Section-->
+    <div class="contactDetails" id="contactContainer">
+        <h1>Contact</h1>
+        <div class="underline"></div>
+        <div class="contactGrid">
+            <div class="contactItem">
+                <h3>Address</h3>
+                <p id="contactAddress"></p>
+            </div>
+            <div class="contactItem">
+                <h3>Call Us</h3>
+                <p id="contactMobile"></p>
+                <p id="contactWhatsapp"></p>
+            </div>
+            <div class="contactItem">
+                <h3>Mail Us</h3>
+                <p id="contactEmail"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../components/header/header.js"></script>
     <script src="./eventDescription.js"></script>
 </body>
 </html>
