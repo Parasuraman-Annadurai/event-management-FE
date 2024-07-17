@@ -259,15 +259,6 @@ window.previousTestimonial = previousTestimonial;
 });
 
 
-// Sidebar functions
-function closeSidebar() {
-    document.getElementById("mySidebar").style.width = "0";
-}
-
-function openSidebar() {
-    document.getElementById("mySidebar").style.width = "250px";
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     // Fetch footer.html and insert into #footerEMS
     fetch('./components/footer/footer.html')
