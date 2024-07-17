@@ -1,15 +1,63 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>header</title>
+    <title>Header</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="header.css">
 </head>
 <body>
-    <div id="navBar"></div> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <i class="fas fa-bars sidebar-icon" id="bar"></i>
+                <div class="nav-logo">Event Spot</div>
+            </div>
+            <div class="navbar-right">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <i class="fas fa-search search-icon" id="search-icon"></i>
+
+                <div class="famous-Packages">
+                    <button class="famous_Packages">Famous Packages</button>
+                    <div class="packages-dropdown-content">
+                        <a href="#">BirthDay</a>
+                        <a href="#">Wedding</a>
+                    </div>
+                </div>
+
+                <div class="famous-Events">
+                    <button class="Famous_events">Famous Events</button>
+                    <div class="events-dropdown-content">
+                        <a href="#">Makeup</a>
+                        <a href="#">Decoration</a>
+                    </div>
+                </div>
+
+                <div class="services-dropdown">
+                    <button class="Services_content">Services</button>
+                    <div class="services-dropdown-content">
+                        <a href="#">Packages</a>
+                        <a href="#">Events</a>
+                    </div>
+                </div>
+
+                <i class="fas fa-user-circle profile-icon"></i>
+            </div>
+        </nav>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">Packages</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </header>
+
     <script src="header.js"></script>
 </body>
-</html> -->
+</html>

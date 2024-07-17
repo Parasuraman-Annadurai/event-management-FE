@@ -3,22 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>all is well</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>All is Well</title>
     <link rel="stylesheet" href="./components/header/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./pages/home/style.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
 </head>
 <body>
-    <div id="header"></div>
-    <div id="app"></div>
-    <div id="app1"></div>
-    <div id="footer"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="./pages/home/script.js"></script>
+    <div id="navbarHeader"></div>
+    <div id="homePageMain">
+        <div class="homePageMain__content">
+            
+            <div id="homePageMain_BannerSlider"></div>
+
+            <span class="homePageTopOrganiserTitle">Top Organisers - "Architects of memorable celebrations"</span>
+            <div class="homePageTopOrganisersMain">
+                <div class="homePageLeftDiv">
+                    <img class="homePageLeftDivImages" src="./assets/Home_Images/Organisers/organisers8.jpeg">
+                </div>
+                <div class="homePageRightDiv">
+                    <p class="homePageRightdescription">The Wedding Design Company is a luxury wedding planning company founded by Vandana Mohan in 1989. The company caters to the exceptional needs of the people who seek out their dream wedding. ensure perfect planning every step of the way."</p>
+                </div>
+                </div>
+    
+                <span class="homePageTopPackagesTitle">Top Packages - "Perfect moments, perfectly planned."</span>            
+                <div class="homePageTopPackagesMain">
+                <div class="homePagePackagesLeftDiv">
+                    <img class="homePagePackagesLeftDivImages" src="">
+                </div>
+                <div class="homePagePackagesRightDiv">
+                    <p class="homePagePackagesRightdescription"></p>
+                </div>
+                </div>
+                <span class="homePageTopEventsTitle">Top Events - "Making every event extraordinary."</span>
+                <div class="homePageTopEventsMain">
+                <div class="homePageEventsLeftDiv">
+                    <img class="homePageEventsLeftDivImages" src="">
+                </div>
+                <div class="homePageEventsRightDiv">
+                    <p class="homePageEventsRightdescription"></p>
+                </div>
+                </div>
+                
+        </div>
+
+        <span class="homePageTopPackagesTitle">Top Reviews</span>            
+        <!-- Testimonial Div -->
+        <div class="testimonial-div1">
+            <div class="testimonial-arrow1" onclick="previousTestimonial()">&#9664;</div>
+            <div class="testimonial-container1" id="testimonial-container-1"></div>
+            <div class="testimonial-container1" id="testimonial-container-2"></div>
+            <div class="testimonial-container1" id="testimonial-container-3"></div>
+            <div class="testimonial-arrow1" onclick="nextTestimonial()">&#9654;</div>
+
+        </div>
+       
+</div>
+
+    <div id="footerEMS"></div>
     <script src="./components/header/header.js"></script>
-    <script src="./components/footer/footer.js"></script>
+
+    <script src="./pages/home/script.js"></script>
 
 </body>
 </html>
-
