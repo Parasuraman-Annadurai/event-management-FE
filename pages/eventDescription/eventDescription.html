@@ -6,6 +6,7 @@
     <title>Event Description</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./eventDescription.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <!-- Navbarcode -->
@@ -28,7 +29,6 @@
                         <p id="contactSection">Contact</p>
                         <p id="bookingSection">Book Now</p>
                     </div>
-                    <!-- <button id="bookingButton">Book Now</button> -->
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    <!-- projectSection -->
+    <!-- Project Section -->
     <div class="projectSection" id="projectContainer">
         <h1 class="desSideHeading">Projects</h1>
         <div class="underline"></div>
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <!-- contact Section-->
+    <!-- Contact Section -->
     <div class="contactDetails" id="contactContainer">
         <h1 class="desSideHeading">Contact</h1>
         <div class="underline"></div>
@@ -81,6 +81,60 @@
         </div>
     </div>
     <div id="footerEMS"></div>
+
+    <!-- User Details Modal -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="user-details-container">
+                <div class="user-details-form">
+                    <h2>User Details</h2>
+
+                    <form id="userForm" action="#">
+                        <div class="input-group">
+                            <label for="username">User Name</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="contact">Contact</label>
+                            <input type="tel" id="contact" name="contact" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="address">Address</label>
+                            <textarea name="address" id="address" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                    
+                    <!-- <form action="#">
+                        <div class="input-group">
+                            <label for="username">User Name</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="contact">Contact</label>
+                            <input type="tel" id="contact" name="contact" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="address">Address</label>
+                            <textarea name="address" id="address" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="blurOverlay" class="blur-overlay"></div>
 
     <script src="./eventDescription.js"></script>
 </body>
