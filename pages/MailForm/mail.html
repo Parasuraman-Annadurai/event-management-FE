@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form</title>
+    <link rel="stylesheet" href="mail.css">
+</head>
+<body>
+    <div class="user-details-container-main">
+    <div class="user-details-container">
+        <div class="user-details-form">
+            <h2>User Details</h2>
+            <form action="#">
+                <div class="input-group">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="contact">Contact</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <textarea type="textarea" name="address" id="address" required></textarea>
+                </div>
+                <div class="input-group checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+

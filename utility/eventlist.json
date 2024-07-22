@@ -46,7 +46,16 @@
         "Category": "makeup",
         "tagline": "Experience the celebrity makeup",
         "about": "Celebrity Makeup Artists brings the glamour of Hollywood to you with our celebrity-inspired makeup sessions. Our team of makeup artists has worked with some of the biggest names in the industry, and we use this experience to create stunning looks for our clients.",
-        "about_img": "/assets/eventsOrgImg/org3_about.jpg"
+        "about_img": "/assets/eventsOrgImg/org3_about.jpg",
+        "projectImages": [
+            "/assets/eventsOrgImg/org1_makeup.jpg",
+            "/assets/eventsOrgImg/org2_makeup.jpeg",
+            "/assets/eventsOrgImg/org3_makeup.jpg",
+            "/assets/eventsOrgImg/org2_photo.jpg",
+               "/assets/eventsOrgImg/org2_photo.jpg",
+                  "/assets/eventsOrgImg/org2_photo.jpg"
+        ],
+        "email":"grpmakeup@gmail.com"
     },
     {
         "OrganizationName": "Grand Venues",
