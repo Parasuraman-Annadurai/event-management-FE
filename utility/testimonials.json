@@ -1,309 +1,154 @@
 [
+    {
+      "img": "../assets/Home_Images/testimonials/Mukesh.jpeg",
+      "name": "Mukesh",
+      "review": "Highly recommend their services. The food was outstanding."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/sunil.jpeg",
+      "name": "Sunil",
+      "review": "Fantastic music and sound system! The DJ kept the party entertaining."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/srija.jpeg",
+      "name": "Srija",
+      "review": "Beautiful floral arrangements. The flowers added neat ambiance."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/hari.jpeg",
+      "name": "Hari",
+      "review": "Seamless event management. Everything making our event stress-free."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/theetshi.jpeg",
+      "name": "Theetshitha",
+      "review": "Delicious food and great service. Every dish was a hit with our guests."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/viji.jpeg",
+      "name": "Vijayalakshmi",
+      "review": "Captured every moment perfectly. The photos tell the story of our event."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/guna.jpeg",
+      "name": "Gunasri",
+      "review": "Highly organized and professional. The event was executed flawlessly."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/vignesh.jpeg",
+      "name": "Vignesh",
+      "review": "Stunning decorations. The setup matched our theme perfectly."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/sneha.jpeg",
+      "name": "Sneha",
+      "review": "Smooth coordination throughout. The event ran seamlessly, excellent coordination."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/sathish.jpeg",
+      "name": "Sathish",
+      "review": "Beautiful voice and performance. The live music added a magical touch evening."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/akil.jpeg",
+      "name": "Akilashwaren",
+      "review": "Perfect lighting setup. The ambiance was enhanced with excellent lighting."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/varsitha.jpeg",
+      "name": "Varshitha",
+      "review": "Crystal clear sound quality. The sound system was perfect for our event."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/Ahalya.jpeg",
+      "name": "Ahalya",
+      "review": "Flawless makeup for the event. The makeup artist enhancing our looks."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/Asha.jpeg",
+      "name": "Asha",
+      "review": "Exquisite culinary experience. The dishes were delicious & well-presented."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/bharath.jpeg",
+      "name": "Bharath",
+      "review": "Every detail was perfect. The event was beautifully organized & managed."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/vanthana.jpeg",
+      "name": "Vanthana",
+      "review": "Top-notch security services. We felt safe, secure throughout the event."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/poomika.jpeg",
+      "name": "Poomika",
+      "review": "Amazing cocktails and service. The bar was a highlight of our event."
+    },
+    {
+      "img": "https://randomuser.me/api/portraits/men/20.jpg",
+      "name": "Madhan",
+      "review": "Punctual and professional. The driver was reliable and courteous."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/veena.jpeg",
+      "name": "Veena",
+      "review": "Smooth and efficient organization. The excellent event coordination."
+    },
+    {
+      "img": "https://randomuser.me/api/portraits/men/22.jpg",
+      "name": "Jeyapandi",
+      "review": "Outstanding food and service. The catering exceeded our expectations."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/Prakash.jpeg",
+      "name": "Prakash",
+      "review": "Captured stunning moments. The photography beautifully done."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/pattabi.jpeg",
+      "name": "Pattabi",
+      "review": "Perfect sound balance. The sound was clear and well-managed."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/parasu.jpeg",
+      "name": "Parasuraman",
+      "review": "Exceptional planning and execution. The event was flawless."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/avinash.jpeg",
+      "name": "Avinash",
+      "review": "Amazing video coverage. The videography captured beautifully."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/prasanth.jpeg",
+      "name": "Prasanth",
+      "review": "Breathtaking decorations. The venue was perfect for the occasion."
+    },
+    {
+      "img": "../assets/Home_Images/testimonials/amrish.jpeg",
+      "name": "Amrish",
+      "review": "Perfect lighting for event.The lighting fantastic atmosphere."
+    },
    
     {
-        "img": "https://randomuser.me/api/portraits/men/3.jpg",
-        "name": "Sam Wilson",
-        "profession": "Caterer",
-        "review": "Highly recommend their services."
+      "img": "../assets/Home_Images/testimonials/yuvaraj.jpeg",
+      "name": "Yuvaraj",
+      "review": "Gorgeous floral arrangements. The flowers were fresh."
     },
     {
-        "img": "https://randomuser.me/api/portraits/women/4.jpg",
-        "name": "Lisa Johnson",
-        "profession": "DJ",
-        "review": "Fantastic music and sound system!"
+      "img": "../assets/Home_Images/testimonials/mani.jpeg",
+      "name": "ManiKandan",
+      "review": "Gorgeous floral arrangements. The flowers were fresh."
     },
     {
-        "img": "https://randomuser.me/api/portraits/men/5.jpg",
-        "name": "Tom Brown",
-        "profession": "Florist",
-        "review": "Beautiful floral arrangements."
+      "img": "../assets/Home_Images/testimonials/ganesh.jpeg",
+      "name": "Ganesh",
+      "review": "Gorgeous floral arrangements. The flowers were fresh."
     },
     {
-        "img": "https://randomuser.me/api/portraits/women/6.jpg",
-        "name": "Emily Davis",
-        "profession": "Event Manager",
-        "review": "Seamless event management."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/7.jpg",
-        "name": "Mike Wilson",
-        "profession": "Caterer",
-        "review": "Delicious food and great service."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/8.jpg",
-        "name": "Sarah Lee",
-        "profession": "Photographer",
-        "review": "Captured every moment perfectly."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/9.jpg",
-        "name": "David Clark",
-        "profession": "Event Planner",
-        "review": "Highly organized and professional."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/10.jpg",
-        "name": "Anna White",
-        "profession": "Decorator",
-        "review": "Stunning decorations."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/11.jpg",
-        "name": "James Martin",
-        "profession": "Event Coordinator",
-        "review": "Smooth coordination throughout."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/12.jpg",
-        "name": "Olivia King",
-        "profession": "Singer",
-        "review": "Beautiful voice and performance."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/13.jpg",
-        "name": "Noah Brown",
-        "profession": "Lighting Technician",
-        "review": "Perfect lighting setup."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/1.jpg",
-        "name": "John Doe",
-        "profession": "Event Planner",
-        "review": "This service is amazing!"
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/2.jpg",
-        "name": "Jane Smith",
-        "profession": "Photographer",
-        "review": "Best event planning experience ever!"
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/3.jpg",
-        "name": "Sam Wilson",
-        "profession": "Caterer",
-        "review": "Highly recommend their services."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/4.jpg",
-        "name": "Lisa Johnson",
-        "profession": "DJ",
-        "review": "Fantastic music and sound system!"
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/5.jpg",
-        "name": "Tom Brown",
-        "profession": "Florist",
-        "review": "Beautiful floral arrangements."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/6.jpg",
-        "name": "Emily Davis",
-        "profession": "Event Manager",
-        "review": "Seamless event management."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/7.jpg",
-        "name": "Mike Wilson",
-        "profession": "Caterer",
-        "review": "Delicious food and great service."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/8.jpg",
-        "name": "Sarah Lee",
-        "profession": "Photographer",
-        "review": "Captured every moment perfectly."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/9.jpg",
-        "name": "David Clark",
-        "profession": "Event Planner",
-        "review": "Highly organized and professional."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/10.jpg",
-        "name": "Anna White",
-        "profession": "Decorator",
-        "review": "Stunning decorations."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/11.jpg",
-        "name": "James Martin",
-        "profession": "Event Coordinator",
-        "review": "Smooth coordination throughout."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/12.jpg",
-        "name": "Olivia King",
-        "profession": "Singer",
-        "review": "Beautiful voice and performance."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/13.jpg",
-        "name": "Noah Brown",
-        "profession": "Lighting Technician",
-        "review": "Perfect lighting setup."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/14.jpg",
-        "name": "Henry Taylor",
-        "profession": "Sound Engineer",
-        "review": "Crystal clear sound quality."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/15.jpg",
-        "name": "Grace Harris",
-        "profession": "Makeup Artist",
-        "review": "Flawless makeup for the event."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/16.jpg",
-        "name": "Ethan Moore",
-        "profession": "Chef",
-        "review": "Exquisite culinary experience."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/17.jpg",
-        "name": "Sophie Thomas",
-        "profession": "Event Coordinator",
-        "review": "Every detail was perfect."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/18.jpg",
-        "name": "Liam Jackson",
-        "profession": "Security Manager",
-        "review": "Top-notch security services."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/19.jpg",
-        "name": "Chloe White",
-        "profession": "Bartender",
-        "review": "Amazing cocktails and service."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/20.jpg",
-        "name": "Lucas Martin",
-        "profession": "Driver",
-        "review": "Punctual and professional."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/21.jpg",
-        "name": "Mia Lee",
-        "profession": "Coordinator",
-        "review": "Smooth and efficient organization."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/22.jpg",
-        "name": "Daniel Allen",
-        "profession": "Caterer",
-        "review": "Outstanding food and service."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/23.jpg",
-        "name": "Ella Scott",
-        "profession": "Photographer",
-        "review": "Captured stunning moments."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/24.jpg",
-        "name": "Mason Green",
-        "profession": "Sound Technician",
-        "review": "Perfect sound balance."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/25.jpg",
-        "name": "Sophia Adams",
-        "profession": "Event Planner",
-        "review": "Exceptional planning and execution."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/26.jpg",
-        "name": "James Turner",
-        "profession": "Videographer",
-        "review": "Amazing video coverage."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/27.jpg",
-        "name": "Amelia Lewis",
-        "profession": "Decorator",
-        "review": "Breathtaking decorations."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/28.jpg",
-        "name": "Alexander Walker",
-        "profession": "Lighting Technician",
-        "review": "Perfect lighting for the event."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/29.jpg",
-        "name": "Harper Robinson",
-        "profession": "Singer",
-        "review": "Mesmerizing performance."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/30.jpg",
-        "name": "Benjamin Hill",
-        "profession": "Florist",
-        "review": "Gorgeous floral arrangements."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/31.jpg",
-        "name": "Ava Young",
-        "profession": "Photographer",
-        "review": "Captured every precious moment."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/32.jpg",
-        "name": "Elijah King",
-        "profession": "Event Planner",
-        "review": "Everything was flawlessly organized."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/33.jpg",
-        "name": "Charlotte Wright",
-        "profession": "DJ",
-        "review": "Incredible music selection."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/34.jpg",
-        "name": "William Harris",
-        "profession": "Caterer",
-        "review": "The food was absolutely delicious."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/35.jpg",
-        "name": "Isabella Lewis",
-        "profession": "Event Manager",
-        "review": "Effortless event management."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/36.jpg",
-        "name": "Sebastian Clark",
-        "profession": "Sound Engineer",
-        "review": "Top-quality sound engineering."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/37.jpg",
-        "name": "Mila Hall",
-        "profession": "Decorator",
-        "review": "Beautifully decorated venue."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/38.jpg",
-        "name": "Jackson Allen",
-        "profession": "Photographer",
-        "review": "Fantastic photography."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/women/39.jpg",
-        "name": "Emily Wright",
-        "profession": "Caterer",
-        "review": "Exceptional catering services."
-    },
-    {
-        "img": "https://randomuser.me/api/portraits/men/40.jpg",
-        "name": "David Martinez",
-        "profession": "Event Planner",
-        "review": "Very professional and organized."
+      "img": "../assets/Home_Images/testimonials/vinith.jpeg",
+      "name": "Vinith",
+      "review": "Gorgeous floral arrangements. The flowers were fresh."
     }
-]
+  ]
+  

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
     --primary-color: #ff6f61;
     --main-color:#ff8b80;
     --secondary-color: #e56357;
+    --scroll:#ffd3cf;
     --white: #ffffff;
     --black: #000000;
 }
@@ -10,7 +13,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
 }
 
 body {
@@ -55,65 +59,74 @@ body {
     to {opacity: 1}
 }
 
-.homePageTopOrganisersMain, .homePageTopPackagesMain, .homePageTopEventsMain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 93%;
-    height: 250px;
-    position: relative;
-    margin: auto;
-    margin-top: 4rem;  
-    background-color:var(--white);
-    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-}
-.homePageTopOrganisersMain, .homePageTopEventsMain{
-    background-color: var(--primary-color);
-} 
-
-.homePageTopPackagesMain{
-    background-color:var(--main-color);
-}
-
-.homePageTopOrganisersMain:hover, .homePageTopPackagesMain:hover, .homePageTopEventsMain:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
 .homePageTopOrganiserTitle, .homePageTopPackagesTitle, .homePageTopEventsTitle {
     display: block;
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 2rem;   
+    margin-top: 2rem;  
     color: var(--primary-color);
 }
 
-.homePageLeftDiv, .homePageRightDiv, .homePagePackagesLeftDiv, .homePagePackagesRightDiv, .homePageEventsLeftDiv, .homePageEventsRightDiv {
+.homePageTopOrganisersMain, .homePageTopPackagesMain, .homePageTopEventsMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 93%;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    margin-top: 2rem;
+    background-color:var(--white);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+}
+.homePageTopOrganisersMain, .homePageTopEventsMain{
+    background-color: var(--main-color);
+} 
+
+.homePageTopPackagesMain{
+    background-color:var(--primary-color);
+}
+
+/* .homePageTopOrganisersMain:hover, .homePageTopPackagesMain:hover, .homePageTopEventsMain:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+} */
+
+
+
+.homePageRightDiv, .homePagePackagesRightDiv,.homePageEventsRightDiv {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .homePageLeftDivImages, .homePagePackagesLeftDivImages, .homePageEventsLeftDivImages {
-    width: 100%;
-    max-width: 500px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
     border-radius: 20px;
-    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+.homePageLeftDivImages, .homePagePackagesLeftDivImages, .homePageEventsLeftDivImages {
+    border-radius: 30px 0px 0px 30px;
+
+}
+
+.homePagePackagesLeftDivImages{
+    border-radius: 0px 30px 30px 0px;
 }
 
 .homePageRightdescription, .homePagePackagesRightdescription, .homePageEventsRightdescription {
-    max-width: 90%;
-    color: #333;
+    width: 550px;
+    color: var(--white);
+    font-weight:400;
     font-size: 1.1em;
     line-height: 1.6;
     margin: 20px;
@@ -130,7 +143,7 @@ body {
     position: relative;
     margin: auto;
     margin-top: 2rem;
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -173,12 +186,14 @@ body {
 
 .testimonial-content h3 {
     margin: 10px 0;
-    color: var(--black);
+    color: var(--primary-color);
 }
 
 .testimonial-content p {
-    color: var(--black);
+    color: var(--main-color);
+
 }
+
 
 /*------------------------------------------------ scroll bar code */
 ::-webkit-scrollbar {
@@ -187,7 +202,7 @@ body {
     background-color: var(--primary-color);
   }
   ::-webkit-scrollbar-track {
-    background-color:#ffd3cf
+    background-color:var(--scroll)
   }
   ::-webkit-scrollbar-thumb {
     background-color:var(--secondary-color);

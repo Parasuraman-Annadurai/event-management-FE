@@ -1,15 +1,44 @@
 {
-    "events": [
-      { "image": "https://picsum.photos/250/200?random=21", "description": "Event Description 1" },
-      { "image": "https://picsum.photos/250/200?random=22", "description": "Event Description 2" },
-      { "image": "https://picsum.photos/250/200?random=23", "description": "Event Description 3" },
-      { "image": "https://picsum.photos/250/200?random=24", "description": "Event Description 4" },
-      { "image": "https://picsum.photos/250/200?random=25", "description": "Event Description 5" },
-      { "image": "https://picsum.photos/250/200?random=26", "description": "Event Description 6" },
-      { "image": "https://picsum.photos/250/200?random=27", "description": "Event Description 7" },
-      { "image": "https://picsum.photos/250/200?random=28", "description": "Event Description 8" },
-      { "image": "https://picsum.photos/250/200?random=29", "description": "Event Description 9" },
-      { "image": "https://picsum.photos/250/200?random=30", "description": "Event Description 10" }
-    ]
-  }
-  
+  "events": [
+    {
+      "image": "../assets/Home_Images/Events/makeup.jpeg",
+      "description": "Professional makeup services designed to enhance your natural beauty. Our expert makeup artists create flawless looks tailored to your style and the event's theme. From subtle elegance to bold glamour, we ensure you shine with confidence."
+    },
+    {
+      "image": "../assets/Home_Images/Events/decoration.jpeg",
+      "description": "Transform your event space with our stunning decoration services. We offer creative and customizable themes to perfectly match your vision. Whether it's a grand celebration or an intimate gathering, our decorations set the perfect ambiance."
+    },
+    {
+      "image": "../assets/Home_Images/Events/mehandi.jpeg",
+      "description": "Experience beautiful and intricate Mehandi designs for your special occasion. Our skilled henna artists provide detailed and elegant patterns that last long and add a traditional touch to your celebration. Perfect for weddings and other events."
+    },
+    {
+      "image": "../assets/Home_Images/Events/venues.jpeg",
+      "description": "Choose from a range of elegant venues that cater to your event needs. Whether you're looking for a grand hall or a cozy space, our venues offer diverse options to fit any occasion. We ensure a memorable setting for your special day."
+    },
+    {
+      "image":"../assets/Home_Images/Events/photoshoot.jpeg",
+      "description": "Capture every moment of your event with our professional photoshoot services. Our experienced photographers use high-quality equipment to deliver beautiful and lasting images. Perfect for preserving memories and sharing with loved ones."
+    },
+    {
+      "image": "../assets/Home_Images/Events/dressup.jpeg",
+      "description": "Get ready for your big day with our bridal dress up services. We provide customized outfits and accessories to ensure you look stunning. Our focus is on making you feel special and confident, from fittings to final touches."
+    },
+    {
+      "image": "../assets/Home_Images/Events/cleaning.jpeg",
+      "description": "Enjoy a clean and organized venue with our thorough cleaning services. We handle all aspects of cleaning before and after your event, ensuring a spotless environment. Relax and focus on your event while we take care of the cleanup."
+    },
+    {
+      "image": "../assets/Home_Images/Events/catering.jpeg",
+      "description": "Delight your guests with our diverse catering options. From gourmet meals to simple snacks, we offer a range of dishes to suit any palate. Our catering services are designed to enhance your event with delicious and well-presented food."
+    },
+    {
+      "image": "../assets/Home_Images/Events/DJ.jpeg",
+      "description": "Elevate the atmosphere of your event with engaging music. Our professional DJs and live bands provide a variety of genres to match the mood and energy of your celebration. Keep your guests entertained and dancing all night long."
+    },
+    {
+      "image": "../assets/Home_Images/Events/dancers.jpeg",
+      "description": "Add excitement to your event with dynamic dance performances. Our professional dancers offer energetic routines and choreographed shows that captivate and entertain. Perfect for creating a lively and memorable experience for your guests."
+    }
+  ]
+}

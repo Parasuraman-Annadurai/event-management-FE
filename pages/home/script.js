@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
             testimonialDiv.innerHTML = `
                 <img src="${testimonial.img}" alt="${testimonial.name}">
                 <h3>${testimonial.name}</h3>
-                <p>${testimonial.profession}</p>
+              
                 <p>${testimonial.review}</p>
             `;
             testimonialContainer.appendChild(testimonialDiv);
@@ -220,7 +220,7 @@ testimonials.forEach((testimonial, index) => {
     testimonialDiv.innerHTML = `
         <img src="${testimonial.img}" alt="${testimonial.name}">
         <h3>${testimonial.name}</h3>
-        <p>${testimonial.profession}</p>
+      
         <p>${testimonial.review}</p>
     `;
     if (index % 3 === 0) {

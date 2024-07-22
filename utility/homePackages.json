@@ -1,15 +1,40 @@
 {
-    "packages": [
-      { "image": "https://picsum.photos/250/200?random=11", "description": "Package Description 1" },
-      { "image": "https://picsum.photos/250/200?random=12", "description": "Package Description 2" },
-      { "image": "https://picsum.photos/250/200?random=13", "description": "Package Description 3" },
-      { "image": "https://picsum.photos/250/200?random=14", "description": "Package Description 4" },
-      { "image": "https://picsum.photos/250/200?random=15", "description": "Package Description 5" },
-      { "image": "https://picsum.photos/250/200?random=16", "description": "Package Description 6" },
-      { "image": "https://picsum.photos/250/200?random=17", "description": "Package Description 7" },
-      { "image": "https://picsum.photos/250/200?random=18", "description": "Package Description 8" },
-      { "image": "https://picsum.photos/250/200?random=19", "description": "Package Description 9" },
-      { "image": "https://picsum.photos/250/200?random=20", "description": "Package Description 10" }
-    ]
-  }
-  
+  "packages": [
+    {
+      "image": "../assets/Home_Images/Packages/birthday.jpeg",
+      "description": "Celebrate your special day with our comprehensive birthday package. Includes decorations, catering, and entertainment. Tailored themes to match your style. Let us make your birthday unforgettable!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/wedding.jpeg",
+      "description": "Create your dream wedding with our all-inclusive package. Elegant venue setup, exquisite catering, and personalized decor. Professional coordination to ensure a seamless event. Make your big day magical!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/Reception.jpeg",
+      "description": "Host a stunning reception with our tailored package. Includes stylish venue, gourmet catering, and live entertainment. Attention to every detail for a memorable celebration. Your guests will be impressed!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/successParty.jpeg",
+      "description": "Celebrate achievements with our success party package. Vibrant decor, delicious food, and exciting activities. Perfect for corporate or personal milestones. Make your success shine with us!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/earingCermony.jpeg",
+      "description": "Mark this special occasion with our earing ceremony package. Elegant decorations, traditional rituals, and sumptuous catering. Personalized touches to honor your culture. Celebrate this milestone beautifully!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/BabyShower.jpeg",
+      "description": "Celebrate the joy of a new arrival with our baby shower package. Adorable decorations, themed games, and delicious treats. Customized to your preferences. Make this special day even more memorable!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/NamingCermony.jpeg",
+      "description": "Welcome your little one with our naming ceremony package. Traditional setup, delightful catering, and meaningful rituals. Ensuring a heartfelt celebration. Cherish this precious moment with family and friends!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/officefunction.jpeg",
+      "description": "Host a successful office function with our tailored package. Professional setup, catering, and AV support. Ideal for conferences, meetings, or parties. Impress your colleagues with a seamless event!"
+    },
+    {
+      "image": "../assets/Home_Images/Packages/reunion.jpeg",
+      "description": "Reunite with friends and family with our get-together package. Cozy venue, delightful food, and fun activities. Perfect for any occasion. Create wonderful memories with your loved ones!"
+    }
+  ]
+}
