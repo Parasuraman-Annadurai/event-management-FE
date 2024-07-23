@@ -4,7 +4,7 @@
         "eventName": "Bridal Makeup",
         "eventPhotos": "/assets/eventsOrgImg/org1_makeup.jpg",
         "eventDescription": "Exquisite bridal makeup for your special day.",
-        "price": 15000,
+        "price": "15,000",
         "address": "123 Beauty Ave, Glam Town",
         "whatsapp": 1234567800,
         "Mobile": 9876543220,
@@ -46,7 +46,7 @@
         "Category": "makeup",
         "tagline": "Experience the celebrity makeup",
         "about": "Celebrity Makeup Artists brings the glamour of Hollywood to you with our celebrity-inspired makeup sessions. Our team of makeup artists has worked with some of the biggest names in the industry, and we use this experience to create stunning looks for our clients.",
-        "about_img": "/assets/eventsOrgImg/org3_about.jpg",
+        "about_img": "/assets/eventsOrgImg/org3_makeup.jpg",
         "projectImages": [
             "/assets/eventsOrgImg/org1_makeup.jpg",
             "/assets/eventsOrgImg/org2_makeup.jpeg",
@@ -140,5 +140,70 @@
         "tagline": "Creating joyful memories for every birthday",
         "about": "Happy Celebrations specializes in organizing fun-filled birthday parties for kids. Our events include a variety of games and entertainment options to ensure a memorable and enjoyable experience for all attendees.",
         "about_img": "/assets/eventsOrgImg/org3_photo_about.jpg"
+    },
+    {
+        "OrganizationName": "Elegance Photography",
+        "eventName": "Pre-Wedding Photoshoot",
+        "eventPhotos": "/./assets/eventsOrgImg/org1_prewed.jpg",
+        "eventDescription": "Capture your love story with stunning pre-wedding photos.",
+        "price": 25000,
+        "address": "456 Love Lane, Romance City",
+        "whatsapp": 1122334455,
+        "Mobile": 9988776655,
+        "Category": "pre-wedding-shoot",
+        "tagline": "Memories that last a lifetime",
+        "about": "Elegance Photography specializes in pre-wedding photoshoots, offering a range of packages to suit every couple's needs. Our experienced photographers work with you to create beautiful, timeless images that capture the essence of your relationship.",
+        "about_img": "/./assets/eventsImage/",
+        "projectImages": [
+            "/assets/eventsOrgImg/prewedding1.jpg",
+            "/assets/eventsOrgImg/prewedding2.jpg",
+            "/assets/eventsOrgImg/prewedding3.jpg",
+            "/assets/eventsOrgImg/prewedding4.jpg"
+        ],
+        "email": "elegancephoto@gmail.com"
+    },
+    {
+        "OrganizationName": "Dream Events",
+        "eventName": "Pre-Wedding Planning",
+        "eventPhotos": "/./assets/eventsOrgImg/org2_prewed.jpg",
+        "eventDescription": "Plan your perfect pre-wedding events with us.",
+        "price": 50000,
+        "address": "789 Wedding Blvd, Celebration City",
+        "whatsapp": 2233445566,
+        "Mobile": 7766554433,
+        "Category": "pre-wedding-shoot",
+        "tagline": "Creating magical moments",
+        "about": "Dream Events offers comprehensive pre-wedding planning services to ensure every detail of your celebration is perfect. From engagement parties to bridal showers, our team of experts will work with you to create unforgettable experiences.",
+        "about_img": "/assets/eventsOrgImg/planning_about.jpg",
+        "projectImages": [
+            "/assets/eventsOrgImg/prewedding_event1.jpg",
+            "/assets/eventsOrgImg/prewedding_event2.jpg",
+            "/assets/eventsOrgImg/prewedding_event3.jpg",
+            "/assets/eventsOrgImg/prewedding_event4.jpg"
+        ],
+        "email": "dreamevents@gmail.com"
+    },
+    {
+        "OrganizationName": "Love in Bloom",
+        "eventName": "Pre-Wedding Floral Design",
+        "eventPhotos": "/./assets//eventsOrgImg/org3_prewed.jpg",
+        "eventDescription": "Beautiful floral arrangements for your pre-wedding events.",
+        "price": "30,000",
+        "address": "321 Floral St, Blossom Town",
+        "whatsapp": 3344556677,
+        "Mobile": 6655443322,
+        "Category": "pre-wedding-shoot",
+        "tagline": "Flowers that speak the language of love",
+        "about": "Love in Bloom specializes in creating stunning floral designs for pre-wedding events. Our talented florists use the freshest flowers and the latest design trends to craft arrangements that perfectly complement your celebration.",
+        "about_img": "/assets/eventsOrgImg/floral_about.jpg",
+        "projectImages": [
+            "/assets/eventsOrgImg/prewedding_floral1.jpg",
+            "/assets/eventsOrgImg/prewedding_floral2.jpg",
+            "/assets/eventsOrgImg/prewedding_floral3.jpg",
+            "/assets/eventsOrgImg/prewedding_floral4.jpg"
+        ],
+        "email": "loveinbloom@gmail.com"
     }
+    
+    
 ]

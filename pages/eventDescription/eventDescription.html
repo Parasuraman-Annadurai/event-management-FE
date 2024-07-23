@@ -6,6 +6,7 @@
     <title>Event Description</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./eventDescription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -22,7 +23,10 @@
                 <div class="rightSide">
                     <h2 id="eventName"></h2>
                     <h3 id="eventTagline"></h3>
-                    <button id="eventPrice"></button>
+                    <div id="eventPriceContainer">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <span id="eventPrice"></span>
+                    </div>
                     <div class="navigationSection">
                         <p id="aboutSection">About</p>
                         <p id="projectSection">Projects</p>

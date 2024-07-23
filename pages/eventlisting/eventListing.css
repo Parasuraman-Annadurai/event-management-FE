@@ -1,17 +1,26 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #ff6f61;
+    --main-color: #ff8b80;
+    --secondary-color: #e56357;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #666;
+    --border-color:#ccc;
+    --heading:#333;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', sans-serif;
 }
-
-/* .eventCategories {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
 .categories {
     display: flex;
@@ -29,7 +38,7 @@
 .categories select {
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: var(--border-color);
     margin: 0 10px;
     cursor: pointer;
 }
@@ -47,12 +56,12 @@
 }
 
 .card {
-    background: white;
+    background: var(--white);
     border-radius: 15px;
     cursor: pointer;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px; /* Ensure all cards have the same width */
+    width: 300px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -72,27 +81,27 @@
 .card-body {
     padding: 20px;
     text-align: left;
-    flex: 1; /* Allow body to grow and fill space */
+    flex: 1;
 }
 
 .card-body h3 {
     margin-bottom: 10px;
     font-size: 1.5em;
-    color: #333;
+    color: var(--heading);
 }
 
 .card-body p {
-    color: #666;
+    color: var(--gray);
     font-size: 1em;
     line-height: 1.6;
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
-    max-height: 4.8em; /* Limit to 3 lines with line-height */
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-height: 4.8em; 
 }
 
 .card-footer {
-    background: #ff6f61;
-    color: white;
+    background: var(--primary-color);
+    color: var(--white);
     padding: 15px;
     font-size: 1em;
     display: flex;
@@ -103,9 +112,3 @@
 .card-footer span {
     font-weight: bold;
 }
-
-
-/* #footerEMS{
-    position: sticky;
-    bottom: 0px;
-} */
