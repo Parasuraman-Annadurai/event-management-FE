@@ -1,152 +1,152 @@
 [
     {
-      "img": "../assets/Home_Images/testimonials/Mukesh.jpeg",
+      "img": "Mukesh.jpeg",
       "name": "Mukesh",
       "review": "Highly recommend their services. The food was outstanding."
     },
     {
-      "img": "../assets/Home_Images/testimonials/sunil.jpeg",
+      "img": "sunil.jpeg",
       "name": "Sunil",
       "review": "Fantastic music and sound system! The DJ kept the party entertaining."
     },
     {
-      "img": "../assets/Home_Images/testimonials/srija.jpeg",
+      "img": "srija.jpeg",
       "name": "Srija",
       "review": "Beautiful floral arrangements. The flowers added neat ambiance."
     },
     {
-      "img": "../assets/Home_Images/testimonials/hari.jpeg",
+      "img": "hari.jpeg",
       "name": "Hari",
       "review": "Seamless event management. Everything making our event stress-free."
     },
     {
-      "img": "../assets/Home_Images/testimonials/theetshi.jpeg",
+      "img": "theetshi.jpeg",
       "name": "Theetshitha",
       "review": "Delicious food and great service. Every dish was a hit with our guests."
     },
     {
-      "img": "../assets/Home_Images/testimonials/viji.jpeg",
+      "img": "viji.jpeg",
       "name": "Vijayalakshmi",
       "review": "Captured every moment perfectly. The photos tell the story of our event."
     },
     {
-      "img": "../assets/Home_Images/testimonials/guna.jpeg",
+      "img": "guna.jpeg",
       "name": "Gunasri",
       "review": "Highly organized and professional. The event was executed flawlessly."
     },
     {
-      "img": "../assets/Home_Images/testimonials/vignesh.jpeg",
+      "img": "vignesh.jpeg",
       "name": "Vignesh",
       "review": "Stunning decorations. The setup matched our theme perfectly."
     },
     {
-      "img": "../assets/Home_Images/testimonials/sneha.jpeg",
+      "img": "sneha.jpeg",
       "name": "Sneha",
       "review": "Smooth coordination throughout. The event ran seamlessly, excellent coordination."
     },
     {
-      "img": "../assets/Home_Images/testimonials/sathish.jpeg",
+      "img": "sathish.jpeg",
       "name": "Sathish",
       "review": "Beautiful voice and performance. The live music added a magical touch evening."
     },
     {
-      "img": "../assets/Home_Images/testimonials/akil.jpeg",
+      "img": "akil.jpeg",
       "name": "Akilashwaren",
       "review": "Perfect lighting setup. The ambiance was enhanced with excellent lighting."
     },
     {
-      "img": "../assets/Home_Images/testimonials/varsitha.jpeg",
+      "img": "varsitha.jpeg",
       "name": "Varshitha",
       "review": "Crystal clear sound quality. The sound system was perfect for our event."
     },
     {
-      "img": "../assets/Home_Images/testimonials/Ahalya.jpeg",
+      "img": "Ahalya.jpeg",
       "name": "Ahalya",
       "review": "Flawless makeup for the event. The makeup artist enhancing our looks."
     },
     {
-      "img": "../assets/Home_Images/testimonials/Asha.jpeg",
+      "img": "Asha.jpeg",
       "name": "Asha",
       "review": "Exquisite culinary experience. The dishes were delicious & well-presented."
     },
     {
-      "img": "../assets/Home_Images/testimonials/bharath.jpeg",
+      "img": "bharath.jpeg",
       "name": "Bharath",
       "review": "Every detail was perfect. The event was beautifully organized & managed."
     },
     {
-      "img": "../assets/Home_Images/testimonials/vanthana.jpeg",
+      "img": "vanthana.jpeg",
       "name": "Vanthana",
       "review": "Top-notch security services. We felt safe, secure throughout the event."
     },
     {
-      "img": "../assets/Home_Images/testimonials/poomika.jpeg",
+      "img": "poomika.jpeg",
       "name": "Poomika",
       "review": "Amazing cocktails and service. The bar was a highlight of our event."
     },
     {
-      "img": "https://randomuser.me/api/portraits/men/20.jpg",
+      "img": "madhan.jpeg",
       "name": "Madhan",
       "review": "Punctual and professional. The driver was reliable and courteous."
     },
     {
-      "img": "../assets/Home_Images/testimonials/veena.jpeg",
+      "img": "veena.jpeg",
       "name": "Veena",
       "review": "Smooth and efficient organization. The excellent event coordination."
     },
     {
-      "img": "https://randomuser.me/api/portraits/men/22.jpg",
-      "name": "Jeyapandi",
+      "img": "santhosh.jpeg",
+      "name": "Santhosh",
       "review": "Outstanding food and service. The catering exceeded our expectations."
     },
     {
-      "img": "../assets/Home_Images/testimonials/Prakash.jpeg",
+      "img": "Prakash.jpeg",
       "name": "Prakash",
       "review": "Captured stunning moments. The photography beautifully done."
     },
     {
-      "img": "../assets/Home_Images/testimonials/pattabi.jpeg",
+      "img": "pattabi.jpeg",
       "name": "Pattabi",
       "review": "Perfect sound balance. The sound was clear and well-managed."
     },
     {
-      "img": "../assets/Home_Images/testimonials/parasu.jpeg",
+      "img": "parasu.jpeg",
       "name": "Parasuraman",
       "review": "Exceptional planning and execution. The event was flawless."
     },
     {
-      "img": "../assets/Home_Images/testimonials/avinash.jpeg",
+      "img": "avinash.jpeg",
       "name": "Avinash",
       "review": "Amazing video coverage. The videography captured beautifully."
     },
     {
-      "img": "../assets/Home_Images/testimonials/prasanth.jpeg",
+      "img": "prasanth.jpeg",
       "name": "Prasanth",
       "review": "Breathtaking decorations. The venue was perfect for the occasion."
     },
     {
-      "img": "../assets/Home_Images/testimonials/amrish.jpeg",
+      "img": "amrish.jpeg",
       "name": "Amrish",
       "review": "Perfect lighting for event.The lighting fantastic atmosphere."
     },
    
     {
-      "img": "../assets/Home_Images/testimonials/yuvaraj.jpeg",
+      "img": "yuvaraj.jpeg",
       "name": "Yuvaraj",
       "review": "Gorgeous floral arrangements. The flowers were fresh."
     },
     {
-      "img": "../assets/Home_Images/testimonials/mani.jpeg",
+      "img": "mani.jpeg",
       "name": "ManiKandan",
       "review": "Gorgeous floral arrangements. The flowers were fresh."
     },
     {
-      "img": "../assets/Home_Images/testimonials/ganesh.jpeg",
+      "img": "ganesh.jpeg",
       "name": "Ganesh",
       "review": "Gorgeous floral arrangements. The flowers were fresh."
     },
     {
-      "img": "../assets/Home_Images/testimonials/vinith.jpeg",
+      "img": "vinith.jpeg",
       "name": "Vinith",
       "review": "Gorgeous floral arrangements. The flowers were fresh."
     }

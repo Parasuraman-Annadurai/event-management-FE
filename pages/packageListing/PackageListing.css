@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff6f61;
+    --main-color: #ff8b80;
+    --secondary-color: #e56357;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.packageCategories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.packageContainer {
+    margin: auto;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.packageListings {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.packageCard {
+    background: var(--white);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 1000px; 
+    height: 200px;
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.packageCardMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+.packageCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.packageCard img {
+    width: 40%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.packageCardBody {
+    padding: 20px;
+    text-align: left;
+    flex: 1; 
+}
+
+.packageCardBody h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: var(--black);
+}
+
+.packageCardBody p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-height: 4.8em; 
+}
+
+.packageCardFooter {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    font-size: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 0px 0p ;
+}
+
+.packageCardFooter span {
+    font-weight: bold;
+}

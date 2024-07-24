@@ -1,0 +1,68 @@
+{
+    "packages": [
+        {
+            "id": "Packages/birthday-package",
+            "title": "Birthday",
+            "description": "Celebrate your special day",
+            "description1": "Celebrate your special day with our comprehensive birthday package. Includes decorations, catering, and entertainment. Tailored themes to match your style. Let us make your birthday unforgettable!",
+            "imageUrl":"birthday.jpeg",
+            "backgroundColor": "#ffe6cc"
+        },
+        {
+            "id": "Packages/wedding-package",
+            "title": "Wedding",
+            "description": "Create your dream wedding ",
+            "description1": "Create your dream wedding with our all-inclusive package. Elegant venue setup, exquisite catering, and personalized decor. Professional coordination to ensure a seamless event. Make your big day magical!",
+            "imageUrl": "wedding.jpeg",
+            "backgroundColor": "#e6e6ff"
+        },
+        {
+            "id": "Packages/reception-package",
+            "title": "Reception",
+            "description": "Host a stunning reception",
+            "description1": "Host a stunning reception with our tailored package. Includes stylish venue, gourmet catering, and live entertainment. Attention to every detail for a memorable celebration. Your guests will be impressed!",
+            "imageUrl": "Reception.jpeg",
+            "backgroundColor": "#ffe6e6"
+        },
+        {
+            "id": "Packages/success-party-package",
+            "title": "Success Party",
+            "description": "Celebrate your achievements.",
+            "description1": "Celebrate achievements with our success party package. Vibrant decor, delicious food, and exciting activities. Perfect for corporate or personal milestones. Make your success shine with us!",
+            "imageUrl": "successParty.jpeg",
+            "backgroundColor": "#ffd9b3"
+        },
+        {
+            "id": "Packages/ear-piercing-ceremony-package",
+            "title": "Ear Piercing Ceremony",
+            "description": "Mark this special occasion.",
+            "description1": "Mark this special occasion with our ear piercing ceremony package. Elegant decorations, traditional rituals, and sumptuous catering. Personalized touches to honor your culture. Celebrate this milestone beautifully!",
+            "imageUrl": "earingCermony.jpeg",
+            "backgroundColor": "#e6f2e6"
+        },
+        {
+            "id": "Packages/baby-shower-package",
+            "title": "Baby Shower",
+            "description": "Celebrate the joy of a new arrival.",
+            "description1": "Celebrate the joy of a new arrival with our baby shower package. Adorable decorations, themed games, and delicious treats. Customized to your preferences. Make this special day even more memorable!",
+            "imageUrl": "BabyShower.jpeg",
+            "backgroundColor": "#f5f5cc"
+        },
+        {
+            "id": "Packages/naming-ceremony-package",
+            "title": "Naming Ceremony",
+            "description": "Welcome your little one.",
+            "description1": "Welcome your little one with our naming ceremony package. Traditional setup, delightful catering, and meaningful rituals. Ensuring a heartfelt celebration. Cherish this precious moment with family and friends!",
+            "imageUrl": "NamingCermony.jpeg",
+            "backgroundColor": "#ebe1e1"
+        },
+        {
+            "id": "Packages/office-function-package",
+            "title": "Office Function",
+            "description": "Host a successful office function",
+            "description1": "Host a successful office function with our tailored package. Professional setup, catering, and AV support. Ideal for conferences, meetings, or parties. Impress your colleagues with a seamless event!",
+            "imageUrl": "officefunction.jpeg",
+            "backgroundColor": "#ffe0b3"
+        }
+    ]
+}

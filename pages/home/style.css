@@ -195,6 +195,7 @@ body {
 }
 
 
+
 /*------------------------------------------------ scroll bar code */
 ::-webkit-scrollbar {
     width: 8px;
@@ -222,7 +223,3 @@ body {
 }
 
 
-.plaproductcard:hover{    
-    animation: fadeIn 0.5s ease-in-out;
-    cursor:auto;
-}
