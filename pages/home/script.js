@@ -57,7 +57,7 @@ function initializeSlideshow(containerSelector, leftImageSelector, rightDescript
 
     function updateSlide() {
         if (data.length > 0) {
-            leftImage.src = "./assets/Home_Images/"+data[index].image;
+            leftImage.src = "assets/Home_Images/"+data[index].image;
             rightDescription.textContent = data[index].description;
             index = (index + 1) % data.length;
         }
@@ -81,7 +81,7 @@ function initializeTestimonials() {
     let currentTestimonial = [0, 0, 0];
     let testimonials = [];
 
-    fetch('../../utility/testimonials.json')
+    fetch('utility/testimonials.json')
         .then(response => response.json())
         .then(data => {
             testimonials = data;
@@ -95,7 +95,7 @@ function initializeTestimonials() {
             testimonialDiv.classList.add('testimonial-content');
             testimonialDiv.id = `testimonial-${index}`;
             testimonialDiv.innerHTML = `
-                <img src="../assets/Home_Images/testimonials/${testimonial.img}" alt="${testimonial.name}">
+                <img src="assets/Home_Images/testimonials/${testimonial.img}" alt="${testimonial.name}">
                 <h3>${testimonial.name}</h3>
                 <p>${testimonial.review}</p>
             `;
