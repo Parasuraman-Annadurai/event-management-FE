@@ -1,4 +1,4 @@
-import { loadHeader, loadFooter } from '/utility/utility.js';
+import { loadHeader, loadFooter } from 'utility/utility.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
@@ -19,7 +19,7 @@ function initializePackageListings() {
 }
 
 function filterCategory(category) {
-    fetch('/utility/packageListingData.json')
+    fetch('utility/packageListingData.json')
         .then(response => response.json())
         .then(data => {
             const filteredPackages = data.packages.filter(pkg => pkg.category === category);
@@ -40,7 +40,7 @@ function displayPackages(packages) {
         card.className = 'packageCard';
 
         card.innerHTML = `
-            <img src="/assets/Home_Images/${pkg.packageImage}" alt="${pkg.packageName}">
+            <img src="assets/Home_Images/${pkg.packageImage}" alt="${pkg.packageName}">
             <div class="packageCardMain">
             <div class="packageCardBody">
                 <h3>${pkg.organizationName}</h3>
@@ -64,5 +64,5 @@ function displayPackages(packages) {
 
 function showPackageDetails(packageName) {
     const formattedTitle = packageName.replace(/ /g, '-');
-    window.location.href = `/packageDescription/PackageDescription.html?title=${formattedTitle}`;
+    window.location.href = `pages/packageDescription/PackageDescription.html?title=${formattedTitle}`;
 }

@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
     slidesHome();
-    initializeSlideshow('.homePageTopOrganisersMain', '.homePageLeftDivImages', '.homePageRightdescription', '/utility/homeOrganisers.json');
-    initializeSlideshow('.homePageTopPackagesMain', '.homePagePackagesLeftDivImages', '.homePagePackagesRightdescription', '/utility/homePackages.json');
-    initializeSlideshow('.homePageTopEventsMain', '.homePageEventsLeftDivImages', '.homePageEventsRightdescription', '/utility/homeEvents.json');
+    initializeSlideshow('.homePageTopOrganisersMain', '.homePageLeftDivImages', '.homePageRightdescription', 'utility/homeOrganisers.json');
+    initializeSlideshow('.homePageTopPackagesMain', '.homePagePackagesLeftDivImages', '.homePagePackagesRightdescription', 'utility/homePackages.json');
+    initializeSlideshow('.homePageTopEventsMain', '.homePageEventsLeftDivImages', '.homePageEventsRightdescription', 'utility/homeEvents.json');
     initializeTestimonials();
 });
 
@@ -18,7 +18,7 @@ function createSlideshow() {
         slide.className = 'mySlides fade';
 
         const img = document.createElement('img');
-        img.src = `/assets/Home_Images/slideshow/Designer${i}.jpeg`;
+        img.src = `assets/Home_Images/slideshow/Designer${i}.jpeg`;
         img.alt = `Slide ${i}`;
 
         slide.appendChild(img);
@@ -93,7 +93,7 @@ function initializeTestimonials() {
             testimonialDiv.classList.add('testimonial-content');
             testimonialDiv.id = `testimonial-${index}`;
             testimonialDiv.innerHTML = `
-                <img src="/assets/Home_Images/testimonials/${testimonial.img}" alt="${testimonial.name}">
+                <img src="assets/Home_Images/testimonials/${testimonial.img}" alt="${testimonial.name}">
                 <h3>${testimonial.name}</h3>
                 <p>${testimonial.review}</p>
             `;
