@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
     slidesHome();
-    initializeSlideshow('.homePageTopOrganisersMain', '.homePageLeftDivImages', '.homePageRightdescription', 'utility/homeOrganisers.json');
-    initializeSlideshow('.homePageTopPackagesMain', '.homePagePackagesLeftDivImages', '.homePagePackagesRightdescription', 'utility/homePackages.json');
-    initializeSlideshow('.homePageTopEventsMain', '.homePageEventsLeftDivImages', '.homePageEventsRightdescription', 'utility/homeEvents.json');
+    initializeSlideshow('.homePageTopOrganisersMain', '.homePageLeftDivImages', '.homePageRightdescription', '/utility/homeOrganisers.json');
+    initializeSlideshow('.homePageTopPackagesMain', '.homePagePackagesLeftDivImages', '.homePagePackagesRightdescription', '/utility/homePackages.json');
+    initializeSlideshow('.homePageTopEventsMain', '.homePageEventsLeftDivImages', '.homePageEventsRightdescription', '/utility/homeEvents.json');
     initializeTestimonials();
 });
 
@@ -79,7 +79,7 @@ function initializeTestimonials() {
     let currentTestimonial = [0, 0, 0];
     let testimonials = [];
 
-    fetch('/utility/testimonials.json')
+    fetch('utility/testimonials.json')
         .then(response => response.json())
         .then(data => {
             testimonials = data;
