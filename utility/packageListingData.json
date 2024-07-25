@@ -47,6 +47,98 @@
         "experience": "2"
       },
       {
+        "organizationName": "TP Wedding Organiser",
+        "packageName": "Wedding",
+        "packageImage":"Packages/wedding.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Professional bridal makeup services",
+            "eventPhotos": "Events/wedding_makeup.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Elegant wedding decoration services",
+            "eventPhotos": "Events/wedding_decoration.jpeg",
+            "price": 8000
+          },
+          {
+            "eventName": "Mehandi",
+            "description": "Beautiful bridal Mehandi designs",
+            "eventPhotos": "Events/wedding_mehandi.jpeg",
+            "price": 4000
+          },
+          {
+            "eventName": "Venues",
+            "description": "Luxurious wedding venues",
+            "eventPhotos": "Events/wedding_venues.jpeg",
+            "price":10000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Professional wedding photoshoot",
+            "eventPhotos": "Events/wedding_photoshoot.jpeg",
+            "price":7000
+          }
+        ],
+        "packageDescription": "Create your dream wedding with our all-inclusive package. Elegant venue setup, exquisite catering, and personalized decor. Professional coordination to ensure a seamless event. Make your big day magical!",
+        "totalPackagePrice": 34000,
+        "address": "789 Casual Ave, Chilltown",
+        "whatsapp": "9629886074",
+        "mobile": "9629886074",
+        "category": "Packages/wedding-package",
+        "email": "theetshitha@gmail.com",
+        "rating": 4.5,
+        "experience": "2"
+      },
+      {
+        "organizationName": "TP Wedding Organiser",
+        "packageName": "Wedding",
+        "packageImage":"Packages/wedding.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Professional bridal makeup services",
+            "eventPhotos": "Events/wedding_makeup.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Elegant wedding decoration services",
+            "eventPhotos": "Events/wedding_decoration.jpeg",
+            "price": 8000
+          },
+          {
+            "eventName": "Mehandi",
+            "description": "Beautiful bridal Mehandi designs",
+            "eventPhotos": "Events/wedding_mehandi.jpeg",
+            "price": 4000
+          },
+          {
+            "eventName": "Venues",
+            "description": "Luxurious wedding venues",
+            "eventPhotos": "Events/wedding_venues.jpeg",
+            "price":10000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Professional wedding photoshoot",
+            "eventPhotos": "Events/wedding_photoshoot.jpeg",
+            "price":7000
+          }
+        ],
+        "packageDescription": "Create your dream wedding with our all-inclusive package. Elegant venue setup, exquisite catering, and personalized decor. Professional coordination to ensure a seamless event. Make your big day magical!",
+        "totalPackagePrice": 34000,
+        "address": "789 Casual Ave, Chilltown",
+        "whatsapp": "9629886074",
+        "mobile": "9629886074",
+        "category": "Packages/wedding-package",
+        "email": "theetshitha@gmail.com",
+        "rating": 4.5,
+        "experience": "2"
+      },
+      {
         "organizationName": "TP Birthday Organiser",
         "packageName": "Birthday",
         "packageImage":"Packages/birthday.jpeg",
@@ -267,7 +359,7 @@
           }
         ],
         "packageDescription": "Celebrate your child's ear piercing ceremony with our special package. Enjoy beautiful decorations, delicious food, and traditional music. Capture the moment with our photoshoot service.",
-        "totalPackagePrice": "₹24,000",
+        "totalPackagePrice": 24000,
         "address": "654 Tradition Way, Culture Town",
         "whatsapp": "9629886079",
         "mobile": "9629886079",
