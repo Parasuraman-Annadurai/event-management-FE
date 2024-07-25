@@ -1,5 +1,5 @@
 export function loadHeader() {
-    fetch('../../components/header/header.html')
+    fetch('/components/header/header.html')
         .then(response => response.text())
         .then(data => {
             const navbarHeader = document.getElementById('navbarHeader');
@@ -23,7 +23,7 @@ export function loadHeader() {
 }
 
 export function loadFooter() {
-    fetch('../../components/footer/footer.html')
+    fetch('/components/footer/footer.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('footerEMS').innerHTML = html;
@@ -31,3 +31,13 @@ export function loadFooter() {
         .catch(error => console.error('Error fetching footer:', error));
 }
 
+export async function fetchData(jsonFile) {
+    try {
+        let response = await fetch(jsonFile);
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return null;
+    }
+}
