@@ -185,6 +185,98 @@
         "experience": "3"
       },
       {
+        "organizationName": "TP Birthday Organiser",
+        "packageName": "Birthday",
+        "packageImage":"Packages/birthday.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Fun and colorful birthday makeup",
+            "eventPhotos": "Events/birthday_makeup.jpeg",
+            "price": 3000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Creative birthday decoration services",
+            "eventPhotos": "Events/birthday_decoration.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Entertainment",
+            "description": "Games and activities for all ages",
+            "eventPhotos": "Events/birthday_entertainment.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Delicious birthday catering options",
+            "eventPhotos": "Events/birthday_catering.jpeg",
+            "price":7000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture the fun moments",
+            "eventPhotos": "Events/birthday_photoshoot.jpeg",
+            "price":5000
+          }
+        ],
+        "packageDescription": "Celebrate your birthday with our exciting package. Enjoy vibrant decorations, fun games, and delicious catering. Make unforgettable memories with our professional photoshoot.",
+        "totalPackagePrice": 26000,
+        "address": "123 Party Lane, Funville",
+        "whatsapp": "9629886075",
+        "mobile": "9629886075",
+        "category": "Packages/birthday-package",
+        "email": "snehandckap@gmail.com",
+        "rating": 4.3,
+        "experience": "3"
+      },
+      {
+        "organizationName": "TP Birthday Organiser",
+        "packageName": "Birthday",
+        "packageImage":"Packages/birthday.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Fun and colorful birthday makeup",
+            "eventPhotos": "Events/birthday_makeup.jpeg",
+            "price": 3000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Creative birthday decoration services",
+            "eventPhotos": "Events/birthday_decoration.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Entertainment",
+            "description": "Games and activities for all ages",
+            "eventPhotos": "Events/birthday_entertainment.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Delicious birthday catering options",
+            "eventPhotos": "Events/birthday_catering.jpeg",
+            "price":7000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture the fun moments",
+            "eventPhotos": "Events/birthday_photoshoot.jpeg",
+            "price":5000
+          }
+        ],
+        "packageDescription": "Celebrate your birthday with our exciting package. Enjoy vibrant decorations, fun games, and delicious catering. Make unforgettable memories with our professional photoshoot.",
+        "totalPackagePrice": 26000,
+        "address": "123 Party Lane, Funville",
+        "whatsapp": "9629886075",
+        "mobile": "9629886075",
+        "category": "Packages/birthday-package",
+        "email": "snehandckap@gmail.com",
+        "rating": 4.3,
+        "experience": "3"
+      },
+      {
         "organizationName": "TP Reception Organiser",
         "packageName": "Reception",
         "packageImage":"Packages/Reception.jpeg",
@@ -231,6 +323,99 @@
         "experience": "4"
       },
       {
+        "organizationName": "TP Reception Organiser",
+        "packageName": "Reception",
+        "packageImage":"Packages/Reception.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Elegant reception makeup",
+            "eventPhotos": "Events/reception_makeup.jpeg",
+            "price":4500
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Sophisticated reception decoration services",
+            "eventPhotos": "Events/reception_decoration.jpeg",
+            "price":7000
+          },
+          {
+            "eventName": "Music-DJ",
+            "description": "Professional DJ for your reception",
+            "eventPhotos": "Events/reception_music.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Gourmet reception catering",
+            "eventPhotos": "Events/reception_catering.jpeg",
+            "price":9000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Memorable reception photoshoot",
+            "eventPhotos": "Events/reception_photoshoot.jpeg",
+            "price":6000
+          }
+        ],
+        "packageDescription": "Host a stunning reception with our comprehensive package. Enjoy beautiful decorations, professional DJ, and gourmet catering. Capture the evening with our expert photoshoot.",
+        "totalPackagePrice": 32500,
+        "address": "456 Celebration Rd, Happytown",
+        "whatsapp": "9629886076",
+        "mobile": "9629886076",
+        "category": "Packages/reception-package",
+        "email": "theetshithaldckap@gmail.com",
+        "rating": 4.7,
+        "experience": "4"
+      },
+      {
+        "organizationName": "TP Reception Organiser",
+        "packageName": "Reception",
+        "packageImage":"Packages/Reception.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Elegant reception makeup",
+            "eventPhotos": "Events/reception_makeup.jpeg",
+            "price":4500
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Sophisticated reception decoration services",
+            "eventPhotos": "Events/reception_decoration.jpeg",
+            "price":7000
+          },
+          {
+            "eventName": "Music-DJ",
+            "description": "Professional DJ for your reception",
+            "eventPhotos": "Events/reception_music.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Gourmet reception catering",
+            "eventPhotos": "Events/reception_catering.jpeg",
+            "price":9000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Memorable reception photoshoot",
+            "eventPhotos": "Events/reception_photoshoot.jpeg",
+            "price":6000
+          }
+        ],
+        "packageDescription": "Host a stunning reception with our comprehensive package. Enjoy beautiful decorations, professional DJ, and gourmet catering. Capture the evening with our expert photoshoot.",
+        "totalPackagePrice": 32500,
+        "address": "456 Celebration Rd, Happytown",
+        "whatsapp": "9629886076",
+        "mobile": "9629886076",
+        "category": "Packages/reception-package",
+        "email": "theetshithaldckap@gmail.com",
+        "rating": 4.7,
+        "experience": "4"
+      },
+
+      {
         "organizationName": "TP Naming Ceremony Organiser",
         "packageName": "Naming Ceremony",
         "packageImage":"Packages/NamingCermony.jpeg",
@@ -276,6 +461,101 @@
         "rating": 4.4,
         "experience": "2"
       },
+
+      {
+        "organizationName": "TP Naming Ceremony Organiser",
+        "packageName": "Naming Ceremony",
+        "packageImage":"Packages/NamingCermony.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Traditional naming ceremony makeup",
+            "eventPhotos": "Events/naming_makeup.jpeg",
+            "price": 3500
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Beautiful naming ceremony decorations",
+            "eventPhotos": "Events/naming_decoration.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Specialized catering for naming ceremonies",
+            "eventPhotos": "Events/naming_catering.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Music",
+            "description": "Live music for the event",
+            "eventPhotos": "Events/naming_music.jpeg",
+            "price":4000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Cherish the moments with our photoshoot",
+            "eventPhotos": "Events/naming_photoshoot.jpeg",
+            "price":5000
+          }
+        ],
+        "packageDescription": "Make your baby's naming ceremony special with our tailored package. Enjoy traditional decorations, delicious catering, and live music. Capture the day with our photoshoot service.",
+        "totalPackagePrice": 23500,
+        "address": "789 Happy St, Joyville",
+        "whatsapp": "9629886077",
+        "mobile": "9629886077",
+        "category": "Packages/naming-ceremony-package",
+        "email": "gunasrigdckap@gmail.com",
+        "rating": 4.4,
+        "experience": "2"
+      },
+
+      {
+        "organizationName": "TP Naming Ceremony Organiser",
+        "packageName": "Naming Ceremony",
+        "packageImage":"Packages/NamingCermony.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Traditional naming ceremony makeup",
+            "eventPhotos": "Events/naming_makeup.jpeg",
+            "price": 3500
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Beautiful naming ceremony decorations",
+            "eventPhotos": "Events/naming_decoration.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Specialized catering for naming ceremonies",
+            "eventPhotos": "Events/naming_catering.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Music",
+            "description": "Live music for the event",
+            "eventPhotos": "Events/naming_music.jpeg",
+            "price":4000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Cherish the moments with our photoshoot",
+            "eventPhotos": "Events/naming_photoshoot.jpeg",
+            "price":5000
+          }
+        ],
+        "packageDescription": "Make your baby's naming ceremony special with our tailored package. Enjoy traditional decorations, delicious catering, and live music. Capture the day with our photoshoot service.",
+        "totalPackagePrice": 23500,
+        "address": "789 Happy St, Joyville",
+        "whatsapp": "9629886077",
+        "mobile": "9629886077",
+        "category": "Packages/naming-ceremony-package",
+        "email": "gunasrigdckap@gmail.com",
+        "rating": 4.4,
+        "experience": "2"
+      },
+
       {
         "organizationName": "TP Success Party Organiser",
         "packageName": "Success Party",
@@ -320,6 +600,146 @@
         "category": "Packages/success-party-package",
         "email": "sathishksdckap@gmail.com",
         "rating": 4.6,
+        "experience": "3"
+      },
+
+      {
+        "organizationName": "TP Success Party Organiser",
+        "packageName": "Success Party",
+        "packageImage":"Packages/successParty.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Glamorous makeup for success parties",
+            "eventPhotos": "Events/success_makeup.jpeg",
+            "price": 4000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Stylish decorations for success celebrations",
+            "eventPhotos": "Events/success_decoration.jpeg",
+            "price": 7500
+          },
+          {
+            "eventName": "Music-DJ",
+            "description": "Top DJ for your success party",
+            "eventPhotos": "Events/success_music.jpeg",
+            "price": 6500
+          },
+          {
+            "eventName": "Catering",
+            "description": "Delicious food for the celebration",
+            "eventPhotos": "Events/success_catering.jpeg",
+            "price":8000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture your success with our photoshoot",
+            "eventPhotos": "Events/success_photoshoot.jpeg",
+            "price":6000
+          }
+        ],
+        "packageDescription": "Celebrate your success with our exclusive package. Enjoy stylish decorations, a top DJ, and delicious catering. Capture the excitement with our professional photoshoot.",
+        "totalPackagePrice": 32000,
+        "address": "321 Achievement Ln, Victory City",
+        "whatsapp": "9629886078",
+        "mobile": "9629886078",
+        "category": "Packages/success-party-package",
+        "email": "sathishksdckap@gmail.com",
+        "rating": 4.6,
+        "experience": "3"
+      },
+      {
+        "organizationName": "TP Success Party Organiser",
+        "packageName": "Success Party",
+        "packageImage":"Packages/successParty.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Glamorous makeup for success parties",
+            "eventPhotos": "Events/success_makeup.jpeg",
+            "price": 4000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Stylish decorations for success celebrations",
+            "eventPhotos": "Events/success_decoration.jpeg",
+            "price": 7500
+          },
+          {
+            "eventName": "Music-DJ",
+            "description": "Top DJ for your success party",
+            "eventPhotos": "Events/success_music.jpeg",
+            "price": 6500
+          },
+          {
+            "eventName": "Catering",
+            "description": "Delicious food for the celebration",
+            "eventPhotos": "Events/success_catering.jpeg",
+            "price":8000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture your success with our photoshoot",
+            "eventPhotos": "Events/success_photoshoot.jpeg",
+            "price":6000
+          }
+        ],
+        "packageDescription": "Celebrate your success with our exclusive package. Enjoy stylish decorations, a top DJ, and delicious catering. Capture the excitement with our professional photoshoot.",
+        "totalPackagePrice": 32000,
+        "address": "321 Achievement Ln, Victory City",
+        "whatsapp": "9629886078",
+        "mobile": "9629886078",
+        "category": "Packages/success-party-package",
+        "email": "sathishksdckap@gmail.com",
+        "rating": 4.6,
+        "experience": "3"
+      },
+
+      {
+        "organizationName": "TP Ear Piercing Ceremony Organiser",
+        "packageName": "Ear Piercing Ceremony",
+        "packageImage":"Packages/earingCermony.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Gentle makeup for ear piercing ceremonies",
+            "eventPhotos": "Events/ear_piercing_makeup.jpeg",
+            "price": 3000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Decorations for a memorable ceremony",
+            "eventPhotos": "Events/ear_piercing_decoration.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Tasty food for all guests",
+            "eventPhotos": "Events/ear_piercing_catering.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Music",
+            "description": "Traditional music for the ceremony",
+            "eventPhotos": "Events/ear_piercing_music.jpeg",
+            "price":4500
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture the precious moments",
+            "eventPhotos": "Events/ear_piercing_photoshoot.jpeg",
+            "price":5500
+          }
+        ],
+        "packageDescription": "Celebrate your child's ear piercing ceremony with our special package. Enjoy beautiful decorations, delicious food, and traditional music. Capture the moment with our photoshoot service.",
+        "totalPackagePrice": 24000,
+        "address": "654 Tradition Way, Culture Town",
+        "whatsapp": "9629886079",
+        "mobile": "9629886079",
+        "category": "Packages/ear-piercing-ceremony-package",
+        "email": "parasuramana@dckap.com",
+        "rating": 4.5,
         "experience": "3"
       },
       {
@@ -369,6 +789,53 @@
         "experience": "3"
       },
       {
+        "organizationName": "TP Ear Piercing Ceremony Organiser",
+        "packageName": "Ear Piercing Ceremony",
+        "packageImage":"Packages/earingCermony.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Gentle makeup for ear piercing ceremonies",
+            "eventPhotos": "Events/ear_piercing_makeup.jpeg",
+            "price": 3000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Decorations for a memorable ceremony",
+            "eventPhotos": "Events/ear_piercing_decoration.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Tasty food for all guests",
+            "eventPhotos": "Events/ear_piercing_catering.jpeg",
+            "price": 6000
+          },
+          {
+            "eventName": "Music",
+            "description": "Traditional music for the ceremony",
+            "eventPhotos": "Events/ear_piercing_music.jpeg",
+            "price":4500
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture the precious moments",
+            "eventPhotos": "Events/ear_piercing_photoshoot.jpeg",
+            "price":5500
+          }
+        ],
+        "packageDescription": "Celebrate your child's ear piercing ceremony with our special package. Enjoy beautiful decorations, delicious food, and traditional music. Capture the moment with our photoshoot service.",
+        "totalPackagePrice": 24000,
+        "address": "654 Tradition Way, Culture Town",
+        "whatsapp": "9629886079",
+        "mobile": "9629886079",
+        "category": "Packages/ear-piercing-ceremony-package",
+        "email": "parasuramana@dckap.com",
+        "rating": 4.5,
+        "experience": "3"
+      },
+
+      {
         "organizationName": "TP Baby Shower Organiser",
         "packageName": "Baby Shower",
         "packageImage":"Packages/BabyShower.jpeg",
@@ -413,6 +880,191 @@
         "email": "theetshitha@gmail.com",
         "rating": 4.7,
         "experience": "4"
+      },
+      {
+        "organizationName": "TP Baby Shower Organiser",
+        "packageName": "Baby Shower",
+        "packageImage":"Packages/BabyShower.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Gentle and glowing makeup for baby showers",
+            "eventPhotos": "Events/baby_shower_makeup.jpeg",
+            "price": 4000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Lovely decorations for your baby shower",
+            "eventPhotos": "Events/baby_shower_decoration.jpeg",
+            "price": 7500
+          },
+          {
+            "eventName": "Games",
+            "description": "Fun baby shower games for guests",
+            "eventPhotos": "Events/baby_shower_games.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Delicious catering for your guests",
+            "eventPhotos": "Events/baby_shower_catering.jpeg",
+            "price":8000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture the joy of the occasion",
+            "eventPhotos": "Events/baby_shower_photoshoot.jpeg",
+            "price":6500
+          }
+        ],
+        "packageDescription": "Celebrate the arrival of your little one with our complete baby shower package. Enjoy lovely decorations, fun games, and delicious catering. Capture the joy with our professional photoshoot.",
+        "totalPackagePrice": 31000,
+        "address": "789 Celebration Blvd, Parenthood City",
+        "whatsapp": "9629886080",
+        "mobile": "9629886080",
+        "category": "Packages/baby-shower-package",
+        "email": "theetshitha@gmail.com",
+        "rating": 4.7,
+        "experience": "4"
+      },
+      {
+        "organizationName": "TP Baby Shower Organiser",
+        "packageName": "Baby Shower",
+        "packageImage":"Packages/BabyShower.jpeg",
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Gentle and glowing makeup for baby showers",
+            "eventPhotos": "Events/baby_shower_makeup.jpeg",
+            "price": 4000
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Lovely decorations for your baby shower",
+            "eventPhotos": "Events/baby_shower_decoration.jpeg",
+            "price": 7500
+          },
+          {
+            "eventName": "Games",
+            "description": "Fun baby shower games for guests",
+            "eventPhotos": "Events/baby_shower_games.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Delicious catering for your guests",
+            "eventPhotos": "Events/baby_shower_catering.jpeg",
+            "price":8000
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Capture the joy of the occasion",
+            "eventPhotos": "Events/baby_shower_photoshoot.jpeg",
+            "price":6500
+          }
+        ],
+        "packageDescription": "Celebrate the arrival of your little one with our complete baby shower package. Enjoy lovely decorations, fun games, and delicious catering. Capture the joy with our professional photoshoot.",
+        "totalPackagePrice": 31000,
+        "address": "789 Celebration Blvd, Parenthood City",
+        "whatsapp": "9629886080",
+        "mobile": "9629886080",
+        "category": "Packages/baby-shower-package",
+        "email": "theetshitha@gmail.com",
+        "rating": 4.7,
+        "experience": "4"
+      },
+
+      {
+        "organizationName": "TP Office Function Organiser",
+        "packageName": "Office Function",
+        "packageImage":"Packages/officefunction.jpeg",
+        "totalPackagePrice": 28500,
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Professional makeup for office functions",
+            "eventPhotos": "Events/office_function_makeup.jpeg",
+            "price": 3500
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Elegant office function decorations",
+            "eventPhotos": "Events/office_function_decoration.jpeg",
+            "price":6000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Corporate catering services",
+            "eventPhotos": "Events/office_function_catering.jpeg",
+            "price": 7500
+          },
+          {
+            "eventName": "Music-DJ",
+            "description": "Professional DJ for office parties",
+            "eventPhotos": "Events/office_function_music.jpeg",
+            "price":5500
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Document your corporate event",
+            "eventPhotos": "",
+            "price":6000
+          }
+        ],
+        "packageDescription": "Host a successful office function with our tailored package. Enjoy elegant decorations, professional DJ, and corporate catering. Capture the event with our expert photoshoot.",
+        "address": "123 Corporate Ave, Biztown",
+        "whatsapp": "9629886081",
+        "mobile": "9629886081",
+        "category": "Packages/office-function-package",
+        "email": "snehandckap@gmail.com",
+        "rating": 4.5,
+        "experience": "2"
+      },
+      {
+        "organizationName": "TP Office Function Organiser",
+        "packageName": "Office Function",
+        "packageImage":"Packages/officefunction.jpeg",
+        "totalPackagePrice": 28500,
+        "packagesLists": [
+          {
+            "eventName": "Makeup",
+            "description": "Professional makeup for office functions",
+            "eventPhotos": "Events/office_function_makeup.jpeg",
+            "price": 3500
+          },
+          {
+            "eventName": "Decoration",
+            "description": "Elegant office function decorations",
+            "eventPhotos": "Events/office_function_decoration.jpeg",
+            "price":6000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Corporate catering services",
+            "eventPhotos": "Events/office_function_catering.jpeg",
+            "price": 7500
+          },
+          {
+            "eventName": "Music-DJ",
+            "description": "Professional DJ for office parties",
+            "eventPhotos": "Events/office_function_music.jpeg",
+            "price":5500
+          },
+          {
+            "eventName": "Photoshoot",
+            "description": "Document your corporate event",
+            "eventPhotos": "",
+            "price":6000
+          }
+        ],
+        "packageDescription": "Host a successful office function with our tailored package. Enjoy elegant decorations, professional DJ, and corporate catering. Capture the event with our expert photoshoot.",
+        "address": "123 Corporate Ave, Biztown",
+        "whatsapp": "9629886081",
+        "mobile": "9629886081",
+        "category": "Packages/office-function-package",
+        "email": "snehandckap@gmail.com",
+        "rating": 4.5,
+        "experience": "2"
       },
       {
         "organizationName": "TP Office Function Organiser",
@@ -460,6 +1112,9 @@
         "rating": 4.5,
         "experience": "2"
       }
+
+
+
     ]
   }
   
