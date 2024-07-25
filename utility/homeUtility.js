@@ -22,14 +22,7 @@ export function loadHeader() {
         .catch(error => console.error('Error loading header:', error));
 }
 
-export function loadFooter() {
-    fetch('../components/footer/footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footerEMS').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
-}
+
 
 export async function fetchData(jsonFile) {
     try {
@@ -40,4 +33,12 @@ export async function fetchData(jsonFile) {
         console.error('Error fetching data:', error);
         return null;
     }
+}
+export function loadFooter() {
+    fetch('../components/footer/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerEMS').innerHTML = html;
+        })
+        .catch(error => console.error('Error fetching footer:', error));
 }
