@@ -1,4 +1,4 @@
-import { loadHeader, loadFooter } from 'utility/utility.js';   
+import { loadHeader, loadFooter } from '../../utility/utility.js';   
 
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
@@ -52,5 +52,5 @@ function initializePackageCategories() {
 }
 
 function showVendors(categoryId) {
-    window.location.href = `pages/packageListing/PackageListing.html?category=${categoryId}`;
+    window.location.href = `../packageListing/PackageListing.html?category=${categoryId}`;
 }

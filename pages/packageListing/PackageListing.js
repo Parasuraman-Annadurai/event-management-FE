@@ -1,4 +1,4 @@
-import { loadHeader, loadFooter } from 'utility/utility.js';
+import { loadHeader, loadFooter } from '../../utility/utility.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
@@ -64,5 +64,5 @@ function displayPackages(packages) {
 
 function showPackageDetails(packageName) {
     const formattedTitle = packageName.replace(/ /g, '-');
-    window.location.href = `pages/packageDescription/PackageDescription.html?title=${formattedTitle}`;
+    window.location.href = `../packageDescription/PackageDescription.html?title=${formattedTitle}`;
 }
