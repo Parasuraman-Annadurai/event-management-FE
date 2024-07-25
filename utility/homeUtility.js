@@ -35,7 +35,7 @@ export async function fetchData(jsonFile) {
     }
 }
 export function loadFooter() {
-    fetch('components/footer/footer.html')
+    fetch('../components/footer/footer.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('footerEMS').innerHTML = html;
