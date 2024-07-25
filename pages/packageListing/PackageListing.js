@@ -1,4 +1,4 @@
-import { loadHeader, loadFooter } from '../utility/utility.js';
+import { loadHeader, loadFooter } from 'utility/utility.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
