@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
     slidesHome();
-    initializeSlideshow('.homePageTopOrganisersMain', '.homePageLeftDivImages', '.homePageRightdescription', '/utility/homeOrganisers.json');
-    initializeSlideshow('.homePageTopPackagesMain', '.homePagePackagesLeftDivImages', '.homePagePackagesRightdescription', '/utility/homePackages.json');
-    initializeSlideshow('.homePageTopEventsMain', '.homePageEventsLeftDivImages', '.homePageEventsRightdescription', '/utility/homeEvents.json');
+    initializeSlideshow('.homePageTopOrganisersMain', '.homePageLeftDivImages', '.homePageRightdescription', 'utility/homeOrganisers.json');
+    initializeSlideshow('.homePageTopPackagesMain', '.homePagePackagesLeftDivImages', '.homePagePackagesRightdescription', 'utility/homePackages.json');
+    initializeSlideshow('.homePageTopEventsMain', '.homePageEventsLeftDivImages', '.homePageEventsRightdescription', 'utility/homeEvents.json');
     initializeTestimonials();
 });
 
@@ -55,7 +55,7 @@ function initializeSlideshow(containerSelector, leftImageSelector, rightDescript
 
     function updateSlide() {
         if (data.length > 0) {
-            leftImage.src = "/assets/Home_Images/"+data[index].image;
+            leftImage.src = "assets/Home_Images/"+data[index].image;
             rightDescription.textContent = data[index].description;
             index = (index + 1) % data.length;
         }
