@@ -1,5 +1,5 @@
 export function loadHeader() {
-    fetch('../components/header/header.html')
+    fetch('components/header/header.html')
         .then(response => response.text())
         .then(data => {
             const navbarHeader = document.getElementById('navbarHeader');
