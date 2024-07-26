@@ -1,4 +1,4 @@
-import { loadHeader, loadFooter } from 'utility/utility.js';   
+import { loadHeader, loadFooter } from '/utility/utility.js';   
 
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initializePackageCategories() {
     const categoriesContainer = document.getElementById("package-categories");
-    const eventsData = "utility/packageData.json";
+    const eventsData = "/utility/packageData.json";
 
     fetch(eventsData)
         .then(response => response.json())
@@ -29,7 +29,7 @@ function initializePackageCategories() {
                 categoryDiv.style.backgroundColor = category.backgroundColor;
 
                 const img = document.createElement("img");
-                img.src = "assets/Home_Images/Packages/" + category.imageUrl;
+                img.src = "/assets/Home_Images/Packages/" + category.imageUrl;
 
                 const title = document.createElement("h2");
                 title.textContent = category.title;
@@ -52,5 +52,5 @@ function initializePackageCategories() {
 }
 
 function showVendors(categoryId) {
-    window.location.href = `../packageListing/PackageListing.html?category=${categoryId}`;
+    window.location.href = `/pages/packageListing/PackageListing.html?category=${categoryId}`;
 }
