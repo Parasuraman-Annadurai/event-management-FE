@@ -10,9 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <!-- Navbarcode -->
-    <div id="header"></div>
-    <!-- Navbar end -->
+      <!-- Navbar -->
+      <div id="navbarHeader"></div>
+      <!-- Navbar end -->
 
     <div class="desHeader">
         <div class="eventDescription">
@@ -105,7 +105,7 @@
                         </div>
                         <div class="input-group">
                             <label for="contact">Contact</label>
-                            <input type="tel" id="contact" name="contact" required>
+                            <input type="number" id="contact" name="contact" required>
                         </div>
                         <div class="input-group">
                             <label for="address">Address</label>
@@ -114,25 +114,7 @@
                         <button type="submit" class="submit-btn">Submit</button>
                     </form>
                     
-                    <!-- <form action="#">
-                        <div class="input-group">
-                            <label for="username">User Name</label>
-                            <input type="text" id="username" name="username" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="contact">Contact</label>
-                            <input type="tel" id="contact" name="contact" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="address">Address</label>
-                            <textarea name="address" id="address" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Submit</button>
-                    </form> -->
+                   
                 </div>
             </div>
         </div>
@@ -140,6 +122,6 @@
 
     <div id="blurOverlay" class="blur-overlay"></div>
 
-    <script src="./eventDescription.js"></script>
+    <script type="module" src="./eventDescription.js"></script>
 </body>
 </html>

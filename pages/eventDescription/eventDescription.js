@@ -1,4 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+import { loadHeader, loadFooter } from '/utility/utility.js';
+   
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadHeader();
+    loadFooter();
     fetchAndInsertHeader();
     fetchAndInsertFooter();
     setupEventDetails();

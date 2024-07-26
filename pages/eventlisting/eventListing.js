@@ -1,17 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Fetch footer.html and insert into #footerEMS
-    fetch('../../components/header/header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
-});
 
+import { loadHeader, loadFooter } from '/utility/utility.js';
 
-
-
+    
 document.addEventListener("DOMContentLoaded", () => {
+
+    loadHeader();
+    loadFooter();
     let container = document.getElementById('eventListings');
     let urlParams = new URLSearchParams(window.location.search);
     let categoryId = urlParams.get('category');
@@ -101,14 +95,3 @@ function showVendorsDetails(OrganizationName) {
     // Redirect to the new URL
     window.location.href = `../eventDescription/eventDescription.html?organization=${formattedName}`;
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Fetch footer.html and insert into #footerEMS
-    fetch('../../components/footer/footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footerEMS').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
-});
-
