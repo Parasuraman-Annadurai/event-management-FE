@@ -270,13 +270,30 @@ i.fa-solid.fa-indian-rupee-sign {
 
 .modal-content {
     background-color: var(--white);
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    width: 50%;
+    /* max-width: 500px; */
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
+.left-side-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side-image img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+}
+
+
 
 .close {
     position: absolute;
@@ -296,15 +313,18 @@ i.fa-solid.fa-indian-rupee-sign {
 }
 
 .user-details-container {
+    display: flex;
+    flex-direction: row;
     padding: 20px;
 }
 
 .user-details-form {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 20px;
 }
-
 .user-details-form h2 {
     margin-bottom: 10px;
     font-size: 2em;
@@ -350,6 +370,7 @@ i.fa-solid.fa-indian-rupee-sign {
     cursor: pointer;
     align-self: center;
     margin-top: 5px;
+    width: 300px;
 }
 
 .submit-btn:hover {

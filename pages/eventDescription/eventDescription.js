@@ -5,31 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadHeader();
     loadFooter();
-    fetchAndInsertHeader();
-    fetchAndInsertFooter();
     setupEventDetails();
     setupNavigation();
     setupModalFunctionality();
     setupFormSubmission();
 });
 
-function fetchAndInsertHeader() {
-    fetch('../../components/header/header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching header:', error));
-}
-
-function fetchAndInsertFooter() {
-    fetch('../../components/footer/footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footerEMS').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
-}
 
 function setupEventDetails() {
     let urlParams = new URLSearchParams(window.location.search);
@@ -80,12 +61,24 @@ function setupNavigation() {
     });
 }
 
+
 function setupModalFunctionality() {
     let modal = document.getElementById('userModal');
     let blurOverlay = document.getElementById('blurOverlay');
     let closeBtn = document.querySelector('.close');
 
-    document.getElementById('bookingSection').addEventListener('click', () => openModal(modal, blurOverlay));
+    let images = [
+        '/assets/eventsImages/venues.jpg',
+        '/assets/eventsImages/dance.jpg',
+        '/assets/eventsImages/makeup.jpg',
+        '/assets/eventsImages/photographers.jpg'
+    ];
+
+    document.getElementById('bookingSection').addEventListener('click', () => {
+        let randomImage = images[Math.floor(Math.random() * images.length)];
+        document.getElementById('randomImage').src = randomImage;
+        openModal(modal, blurOverlay);
+    });
 
     closeBtn.addEventListener('click', () => closeModal(modal, blurOverlay));
 
@@ -112,6 +105,7 @@ function closeModal(modal, blurOverlay) {
 function resetForm() {
     document.getElementById('userForm').reset();
 }
+
 
 function setupFormSubmission() {
     let form = document.getElementById('userForm');
