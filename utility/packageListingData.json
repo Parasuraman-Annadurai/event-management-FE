@@ -1,7 +1,7 @@
 {
     "packages": [
       {
-        "organizationName": "TP Wedding Organiser",
+        "organizationName": "TPWeddingOrganiser",
         "packageName": "Wedding",
         "packageImage":"Packages/wedding.jpeg",
         "packagesLists": [
@@ -47,7 +47,7 @@
         "experience": "2"
       },
       {
-        "organizationName": "TP Wedding Organiser",
+        "organizationName": "pt Wedding Organiser",
         "packageName": "Wedding",
         "packageImage":"Packages/wedding.jpeg",
         "packagesLists": [
@@ -417,7 +417,7 @@
 
       {
         "organizationName": "TP Naming Ceremony Organiser",
-        "packageName": "Naming Ceremony",
+        "packageName": "NamingCeremony",
         "packageImage":"Packages/NamingCermony.jpeg",
         "packagesLists": [
           {
@@ -464,7 +464,7 @@
 
       {
         "organizationName": "TP Naming Ceremony Organiser",
-        "packageName": "Naming Ceremony",
+        "packageName": "NamingCeremony",
         "packageImage":"Packages/NamingCermony.jpeg",
         "packagesLists": [
           {
@@ -511,7 +511,7 @@
 
       {
         "organizationName": "TP Naming Ceremony Organiser",
-        "packageName": "Naming Ceremony",
+        "packageName": "NamingCeremony",
         "packageImage":"Packages/NamingCermony.jpeg",
         "packagesLists": [
           {
@@ -558,7 +558,7 @@
 
       {
         "organizationName": "TP Success Party Organiser",
-        "packageName": "Success Party",
+        "packageName": "SuccessParty",
         "packageImage":"Packages/successParty.jpeg",
         "packagesLists": [
           {
@@ -605,7 +605,7 @@
 
       {
         "organizationName": "TP Success Party Organiser",
-        "packageName": "Success Party",
+        "packageName": "SuccessParty",
         "packageImage":"Packages/successParty.jpeg",
         "packagesLists": [
           {
@@ -651,7 +651,7 @@
       },
       {
         "organizationName": "TP Success Party Organiser",
-        "packageName": "Success Party",
+        "packageName": "SuccessParty",
         "packageImage":"Packages/successParty.jpeg",
         "packagesLists": [
           {
@@ -698,7 +698,7 @@
 
       {
         "organizationName": "TP Ear Piercing Ceremony Organiser",
-        "packageName": "Ear Piercing Ceremony",
+        "packageName": "EarPiercingCeremony",
         "packageImage":"Packages/earingCermony.jpeg",
         "packagesLists": [
           {
@@ -744,7 +744,7 @@
       },
       {
         "organizationName": "TP Ear Piercing Ceremony Organiser",
-        "packageName": "Ear Piercing Ceremony",
+        "packageName": "EarPiercingCeremony",
         "packageImage":"Packages/earingCermony.jpeg",
         "packagesLists": [
           {
@@ -790,7 +790,7 @@
       },
       {
         "organizationName": "TP Ear Piercing Ceremony Organiser",
-        "packageName": "Ear Piercing Ceremony",
+        "packageName": "EarPiercingCeremony",
         "packageImage":"Packages/earingCermony.jpeg",
         "packagesLists": [
           {
@@ -837,7 +837,7 @@
 
       {
         "organizationName": "TP Baby Shower Organiser",
-        "packageName": "Baby Shower",
+        "packageName": "BabyShower",
         "packageImage":"Packages/BabyShower.jpeg",
         "packagesLists": [
           {
@@ -883,7 +883,7 @@
       },
       {
         "organizationName": "TP Baby Shower Organiser",
-        "packageName": "Baby Shower",
+        "packageName": "BabyShower",
         "packageImage":"Packages/BabyShower.jpeg",
         "packagesLists": [
           {
@@ -929,7 +929,7 @@
       },
       {
         "organizationName": "TP Baby Shower Organiser",
-        "packageName": "Baby Shower",
+        "packageName": "BabyShower",
         "packageImage":"Packages/BabyShower.jpeg",
         "packagesLists": [
           {
@@ -976,7 +976,7 @@
 
       {
         "organizationName": "TP Office Function Organiser",
-        "packageName": "Office Function",
+        "packageName": "OfficeFunction",
         "packageImage":"Packages/officefunction.jpeg",
         "totalPackagePrice": 28500,
         "packagesLists": [
@@ -1022,7 +1022,7 @@
       },
       {
         "organizationName": "TP Office Function Organiser",
-        "packageName": "Office Function",
+        "packageName": "OfficeFunction",
         "packageImage":"Packages/officefunction.jpeg",
         "totalPackagePrice": 28500,
         "packagesLists": [
@@ -1068,7 +1068,7 @@
       },
       {
         "organizationName": "TP Office Function Organiser",
-        "packageName": "Office Function",
+        "packageName": "OfficeFunction",
         "packageImage":"Packages/officefunction.jpeg",
         "totalPackagePrice": 28500,
         "packagesLists": [

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff6f61;
+    --main-color: #ff8b80;
+    --secondary-color: #e56357;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.descriptionContainer {
+    margin: auto;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.descriptionCard {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.headerSection {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.headerSection img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.headerDetails h1 {
+    font-size: 2em;
+    color: var(--black);
+}
+
+.headerDetails h2 {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+.descriptionBody {
+    padding: 20px;
+}
+
+.descriptionBody p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.eventDetail {
+    background: var(--main-color);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventDetail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.eventDetail h3 {
+    font-size: 1.2em;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.eventDetail p {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contactInfo {
+    margin-top: 20px;
+}
+
+.contactInfo p {
+    font-size: 1em;
+    color: var(--black);
+    margin: 0.5rem 0;
+}
+
+.contactInfo span {
+    color: var(--primary-color);
+}

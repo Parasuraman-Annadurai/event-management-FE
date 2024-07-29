@@ -4,7 +4,8 @@
     --primary-color: #ff6f61;
     --main-color:#ff8b80;
     --secondary-color: #e56357;
-    --scroll:#ffd3cf;
+    --scrolltab:var(--primary-color);
+    --scroll:#fcc4bf;
     --white: #ffffff;
     --black: #000000;
 }
@@ -80,24 +81,12 @@ body {
     margin: auto;
     margin-top: 2rem;
     background-color:var(--white);
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color:var(--white);
+    color: var(--black);
 }
-.homePageTopOrganisersMain, .homePageTopEventsMain{
-    background-color: var(--main-color);
-} 
-
-.homePageTopPackagesMain{
-    background-color:var(--primary-color);
-}
-
-/* .homePageTopOrganisersMain:hover, .homePageTopPackagesMain:hover, .homePageTopEventsMain:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-} */
-
-
 
 .homePageRightDiv, .homePagePackagesRightDiv,.homePageEventsRightDiv {
     flex: 1;
@@ -125,12 +114,21 @@ body {
 
 .homePageRightdescription, .homePagePackagesRightdescription, .homePageEventsRightdescription {
     width: 550px;
-    color: var(--white);
     font-weight:400;
     font-size: 1.1em;
     line-height: 1.6;
     margin: 20px;
 }
+/* .homePageTopOrganisersMain, .homePageTopEventsMain{
+    background-color: var(--white);
+    color: var(--scroll);
+} 
+
+.homePageTopPackagesMain{
+    background-color:var(--primary-color);
+    color: var(--white);
+} */
+
 
 /* testimonial */
 .testimonial-div1 {
@@ -143,7 +141,7 @@ body {
     position: relative;
     margin: auto;
     margin-top: 2rem;
-    background-color: var(--primary-color);
+    background-color:var(--scroll);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -166,7 +164,7 @@ body {
     font-size: 2rem;
     cursor: pointer;
     user-select: none;
-    color: var(--white);
+    color: var(--primary-color);
     margin: 0 10px;
 }
 
@@ -190,7 +188,7 @@ body {
 }
 
 .testimonial-content p {
-    color: var(--main-color);
+    color: gray;
 
 }
 
@@ -206,7 +204,7 @@ body {
     background-color:var(--scroll)
   }
   ::-webkit-scrollbar-thumb {
-    background-color:var(--secondary-color);
+    background-color:var(--scrolltab);
     border-radius: 4px;
   }
 
