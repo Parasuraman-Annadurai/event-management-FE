@@ -13,7 +13,7 @@ async function fetchPackageData() {
     try {
         const response = await fetch('/utility/packageListingData.json');
         const data = await response.json();
-        const packageData = data.packages.find(pkg => pkg.packageName === packageName);
+        const packageData = data.packages.find(pkg => pkg.organizationName === packageName);
 
         if (packageData) {
             document.getElementById('packageImage').src = "/assets/Home_Images/" + packageData.packageImage;

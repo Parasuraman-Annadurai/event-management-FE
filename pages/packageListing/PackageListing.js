@@ -57,12 +57,12 @@ function displayPackages(packages) {
         container.appendChild(card);
 
         card.addEventListener('click', () => {
-            showPackageDetails(pkg.packageName);
+            showPackageDetails(pkg.organizationName);
         });
     });
 }
 
-function showPackageDetails(packageName) {
-    const formattedTitle = packageName.replace(/ /g, '-');
+function showPackageDetails(organizationName) {
+    const formattedTitle = organizationName;
     window.location.href = `/pages/packageDescription/PackageDescription.html?title=${formattedTitle}`;
 }
