@@ -32,7 +32,13 @@
         "Category": "makeup",
         "tagline": "Makeup that steals the show",
         "about": "Fashionista Cosmetics offers professional makeup services for fashion shows. Our team of creative makeup artists is experienced in designing unique looks that make models stand out on the runway. We use top-of-the-line products to ensure long-lasting and impactful results.",
-        "about_img": "/assets/eventsOrgImg/org2_about.jpg"
+        "about_img": "/assets/eventsOrgImg/org2_about.jpg",
+        "projectImages": [
+          "/assets/eventsOrgImg/org1_prewed.jpg",
+          "/assets/eventsOrgImg/org2_prewed.jpg",
+          "/assets/eventsOrgImg/org3_prewed.jpg"
+        ],
+        "email":"fashionista@gmail.com"
     },
     {
         "OrganizationName": "Celebrity Makeup Artists",

@@ -10,9 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-      <!-- Navbar -->
-      <div id="navbarHeader"></div>
-      <!-- Navbar end -->
+    <!-- Navbar -->
+    <div id="navbarHeader"></div>
+    <!-- Navbar end -->
 
     <div class="desHeader">
         <div class="eventDescription">
@@ -86,44 +86,48 @@
     </div>
     <div id="footerEMS"></div>
 
-
     <!-- User Details Modal -->
-<div id="userModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="user-details-container">
-            <div class="left-side-image">
-                <img id="randomImage" src="" alt="Random Image">
-            </div>
-            <div class="user-details-form">
-                <!-- <h2>User Details</h2> -->
-                <form id="userForm" action="#">
-                    <div class="input-group">
-                        <label for="username">User Name</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="contact">Contact</label>
-                        <input type="number" id="contact" name="contact" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="address">Address</label>
-                        <textarea name="address" id="address" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit</button>
-                </form>
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="user-details-container">
+                <div class="left-side-image">
+                    <img id="randomImage" src="" alt="Random Image">
+                </div>
+                <div class="user-details-form">
+                    <form id="userForm" action="#">
+                        <div class="input-group">
+                            <input type="text" id="userName" name="userName" placeholder="Your Name" >
+                            <div class="error-messages"><p class="error-message" id="userNameError"></p></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" placeholder="Email" >
+                            <div class="error-messages"><p class="error-message" id="emailError"></p></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" id="contact" name="contact" placeholder="Contact" >
+                            <div class="error-messages"><p class="error-message" id="contactError"></p></div>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="address" id="address" placeholder="Address" ></textarea>
+                            <div class="error-messages"><p class="error-message" id="addressError"></p></div>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="agree">
+                            <label for="agree">I agree this event</label>
+                            
+                        </div>
+                        <div class="error-messages"><p class="error-message" id="agreeError"></p></div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="blurOverlay" class="blur-overlay"></div>
-
+    <div id="blurOverlay" class="blur-overlay"></div>
 
     <script type="module" src="./eventDescription.js"></script>
 </body>
 </html>
+
