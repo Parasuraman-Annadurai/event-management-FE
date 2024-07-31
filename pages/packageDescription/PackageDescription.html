@@ -13,26 +13,43 @@
     <!-- Navbar end -->
 
     <div class="descriptionContainer">
-        <div class="descriptionCard">
-            <div class="headerSection">
-                <img id="packageImage" src="" alt="Package Image">
-                <div class="headerDetails">
-                    <h1 id="packageName"></h1>
-                    <h2 id="organizerName"></h2>
-                </div>
+        <!-- Header Section -->
+        <div class="headerSection">
+            <img id="packageImage" src="" alt="Package Image">
+            <div class="headerDetails">
+                <h1 id="packageName"></h1>
+                <h2 id="organizerName"></h2>
             </div>
-            <div class="descriptionBody">
-                <p id="packageDescription"></p>
-                <div id="packageDetails" class="gridContainer"></div>
-                <div class="contactInfo">
-                    <p><strong>Address:</strong> <span id="address"></span></p>
-                    <p><strong>WhatsApp:</strong> <span id="whatsapp"></span></p>
-                    <p><strong>Mobile:</strong> <span id="mobile"></span></p>
-                    <p><strong>Email:</strong> <span id="email"></span></p>
-                    <p><strong>Rating:</strong> <span id="rating"></span></p>
-                    <p><strong>Experience:</strong> <span id="experience"></span> years</p>
-                </div>
-            </div>
+        </div>
+
+        <!-- Events Carousel -->
+        <div class="carouselContainer">
+            <button id="prevBtn" class="carouselBtn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel" id="carousel"></div>
+            <button id="nextBtn" class="carouselBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Package Description -->
+        <div class="descriptionBody">
+            <h2>Package Description</h2>
+            <p id="packageDescription"></p>
+        </div>
+
+        <!-- Our Services Section -->
+        <div class="servicesSection">
+            <h2>Our Services</h2>
+            <div id="packageDetails" class="gridContainer"></div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contactCard">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+            <p><strong>WhatsApp:</strong> <span id="whatsapp"></span></p>
+            <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Rating:</strong> <span id="rating"></span></p>
+            <p><strong>Experience:</strong> <span id="experience"></span> years</p>
         </div>
     </div>
 

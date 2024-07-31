@@ -21,17 +21,25 @@ async function fetchPackageData() {
             document.getElementById('organizerName').textContent = packageData.organizationName || 'Organizer Name';
             document.getElementById('packageDescription').textContent = packageData.packageDescription;
 
-            const detailsDiv = document.getElementById('packageDetails');
+            const carousel = document.getElementById('carousel');
             packageData.packagesLists.forEach(event => {
-                const eventElement = document.createElement('div');
-                eventElement.className = 'eventDetail';
-                eventElement.innerHTML = `
-                    <img src="${event.eventPhotos}" alt="${event.eventName}">
+                const img = document.createElement('img');
+                img.src = "/assets/Home_Images/" + event.eventPhotos;
+                img.alt= event.eventName
+                carousel.appendChild(img);
+            });
+
+            const packageDetails = document.getElementById('packageDetails');
+            packageData.packagesLists.forEach(event => {
+                const card = document.createElement('div');
+                card.className = 'eventDetail';
+                card.innerHTML = `
+                    <img src="/assets/Home_Images/${event.eventPhotos}" alt="${event.eventName}">
                     <h3>${event.eventName}</h3>
+                    <div class="price">₹${event.price}</div>
                     <p>${event.description}</p>
-                    <p>Price: ₹${event.price}</p>
                 `;
-                detailsDiv.appendChild(eventElement);
+                packageDetails.appendChild(card);
             });
 
             document.getElementById('address').textContent = packageData.address;
@@ -47,3 +55,19 @@ async function fetchPackageData() {
         console.error('Error fetching package data:', error);
     }
 }
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    document.getElementById('carousel').scrollBy({
+        top: 0,
+        left: -190,
+        behavior: 'smooth'
+    });
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    document.getElementById('carousel').scrollBy({
+        top: 0,
+        left: 190,
+        behavior: 'smooth'
+    });
+});

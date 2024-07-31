@@ -8,32 +8,56 @@
           {
             "eventName": "Makeup",
             "description": "Professional bridal makeup services",
-            "eventPhotos": "Events/wedding_makeup.jpeg",
+            "eventPhotos": "Events/makeup.jpeg",
             "price": 5000
           },
           {
             "eventName": "Decoration",
             "description": "Elegant wedding decoration services",
-            "eventPhotos": "Events/wedding_decoration.jpeg",
+            "eventPhotos": "Events/decoration.jpeg",
             "price": 8000
           },
           {
             "eventName": "Mehandi",
             "description": "Beautiful bridal Mehandi designs",
-            "eventPhotos": "Events/wedding_mehandi.jpeg",
+            "eventPhotos": "Events/mehandi.jpeg",
             "price": 4000
           },
           {
             "eventName": "Venues",
             "description": "Luxurious wedding venues",
-            "eventPhotos": "Events/wedding_venues.jpeg",
+            "eventPhotos": "Events/venues.jpeg",
             "price":10000
           },
           {
             "eventName": "Photoshoot",
             "description": "Professional wedding photoshoot",
-            "eventPhotos": "Events/wedding_photoshoot.jpeg",
+            "eventPhotos": "Events/photoshoot.jpeg",
             "price":7000
+          },
+          {
+            "eventName": "Cleaning",
+            "description": "Best Cleaning services, very professional",
+            "eventPhotos": "Events/cleaning.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Dressup",
+            "description": "Professional bridal dressup services",
+            "eventPhotos": "Events/dressup.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Catering",
+            "description": "Professional bridal makeup services",
+            "eventPhotos": "Events/catering.jpeg",
+            "price": 5000
+          },
+          {
+            "eventName": "Jewellery",
+            "description": "Rich Look bridal Jewells",
+            "eventPhotos": "Events/jwellery.jpeg",
+            "price": 5000
           }
         ],
         "packageDescription": "Create your dream wedding with our all-inclusive package. Elegant venue setup, exquisite catering, and personalized decor. Professional coordination to ensure a seamless event. Make your big day magical!",
