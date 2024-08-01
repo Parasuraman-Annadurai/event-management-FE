@@ -11,9 +11,9 @@ const packageName = urlParams.get('title');
 
 async function fetchPackageData() {
     try {
-        const response = await fetch('/utility/packageListingData.json');
+        const response = await fetch("http://localhost:8080/api/allpackages");
         const data = await response.json();
-        const packageData = data.packages.find(pkg => pkg.organizationName === packageName);
+        const packageData = data.data.find(pkg => pkg.organizationName === packageName);
 
         if (packageData) {
             document.getElementById('packageImage').src = "/assets/Home_Images/" + packageData.packageImage;
@@ -25,7 +25,7 @@ async function fetchPackageData() {
             packageData.packagesLists.forEach(event => {
                 const img = document.createElement('img');
                 img.src = "/assets/Home_Images/" + event.eventPhotos;
-                img.alt= event.eventName
+                img.alt= event.eventName;
                 carousel.appendChild(img);
             });
 

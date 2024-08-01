@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initializePackageListings() {
     const container = document.getElementById('packageListings');
+    if (!container) {
+        console.error('No element with ID "packageListings" found.');
+        return;
+    }
     const urlParams = new URLSearchParams(window.location.search);
     const categoryId = urlParams.get('category');
 
@@ -19,10 +23,11 @@ function initializePackageListings() {
 }
 
 function filterCategory(category) {
-    fetch('/utility/packageListingData.json')
+    fetch("http://localhost:8080/api/allpackages")
         .then(response => response.json())
         .then(data => {
-            const filteredPackages = data.packages.filter(pkg => pkg.category === category);
+            data = data.data;
+            const filteredPackages = data.filter(pkg => pkg.category === category);
             displayPackages(filteredPackages);
         })
         .catch(error => console.error('Error fetching data:', error));
@@ -30,28 +35,30 @@ function filterCategory(category) {
 
 function displayPackages(packages) {
     const container = document.getElementById('packageListings');
+    if (!container) {
+        console.error('No element with ID "packageListings" found.');
+        return;
+    }
     container.innerHTML = '';
 
     packages.forEach(pkg => {
+        let price = parseInt(pkg.totalPackagePrice);
 
-        let price =parseInt(pkg.totalPackagePrice)
-        
         const card = document.createElement('div');
         card.className = 'packageCard';
 
         card.innerHTML = `
             <img src="/assets/Home_Images/${pkg.packageImage}" alt="${pkg.packageName}">
             <div class="packageCardMain">
-            <div class="packageCardBody">
-                <h3>${pkg.organizationName}</h3>
-                <p>${pkg.packageDescription}</p>
+                <div class="packageCardBody">
+                    <h3>${pkg.organizationName}</h3>
+                    <p>${pkg.packageDescription}</p>
+                </div>
+                <div class="packageCardFooter">
+                    <span>₹ ${price.toLocaleString()}</span>
+                    <span>per day</span>
+                </div>
             </div>
-            <div class="packageCardFooter">
-                <span>₹ ${price.toLocaleString()}</span>
-                <span>per day</span>
-            </div>
-            </div>
-            
         `;
 
         container.appendChild(card);
@@ -63,6 +70,6 @@ function displayPackages(packages) {
 }
 
 function showPackageDetails(organizationName) {
-    const formattedTitle = organizationName;
+    const formattedTitle = encodeURIComponent(organizationName);
     window.location.href = `/pages/packageDescription/PackageDescription.html?title=${formattedTitle}`;
 }

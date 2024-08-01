@@ -1,56 +1,71 @@
-import { loadHeader, loadFooter } from '/utility/utility.js';   
+import { loadHeader, loadFooter } from '/utility/utility.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
-    initializePackageCategories();
+    fetchPackageData();
 });
 
-function initializePackageCategories() {
-    const categoriesContainer = document.getElementById("package-categories");
-    const eventsData = "/utility/packageData.json";
-
-    fetch(eventsData)
-        .then(response => response.json())
+function fetchPackageData() {
+    fetch("http://localhost:8080/api/allpackages")
+        .then(res => res.json())
         .then(data => {
-            const categories = data.packages;
-            let rowDiv = null;
+            data = data.data;
+            const uniquePackages = {};
 
-            categories.forEach((category, index) => {
-                if (index % 2 === 0) {
-                    rowDiv = document.createElement("div");
-                    rowDiv.className = "package-categories-row";
-                    categoriesContainer.appendChild(rowDiv);
+            data.forEach(pkg => {
+                if (!uniquePackages[pkg.packageName]) {
+                    uniquePackages[pkg.packageName] = pkg;
                 }
-
-                const categoryDiv = document.createElement("div");
-                categoryDiv.className = "package-category";
-                categoryDiv.id = category.id;
-                categoryDiv.style.backgroundColor = category.backgroundColor;
-
-                const img = document.createElement("img");
-                img.src = "/assets/Home_Images/Packages/" + category.imageUrl;
-
-                const title = document.createElement("h2");
-                title.textContent = category.title;
-
-                const description = document.createElement("p");
-                description.textContent = category.description;
-
-                categoryDiv.appendChild(img);
-                categoryDiv.appendChild(title);
-                categoryDiv.appendChild(description);
-
-                rowDiv.appendChild(categoryDiv);
-
-                categoryDiv.addEventListener("click", () => {
-                    showVendors(category.id);
-                });
             });
+
+            const packagesArray = Object.values(uniquePackages);
+            initializePackageCategories(packagesArray);
         })
-        .catch(error => console.error('Error fetching the JSON data:', error));
+        .catch(error => console.error('Error fetching the API data:', error));
+}
+
+function initializePackageCategories(packages) {
+    const categoriesContainer = document.getElementById("package-categories");
+    if (!categoriesContainer) {
+        console.error('No element with ID "package-categories" found.');
+        return;
+    }
+    let rowDiv = null;
+
+    packages.forEach((category, index) => {
+        if (index % 4 === 0) {
+            rowDiv = document.createElement("div");
+            rowDiv.className = "package-categories-row";
+            categoriesContainer.appendChild(rowDiv);
+        }
+
+        const categoryDiv = document.createElement("div");
+        categoryDiv.className = "package-category";
+        categoryDiv.id = category.category;
+
+        const img = document.createElement("img");
+        img.src = "/assets/Home_Images/" + category.packageImage;
+
+        const title = document.createElement("h2");
+        title.textContent = category.packageName;
+
+        const description = document.createElement("p");
+        const descriptionText = category.packageDescription.split(' ').slice(0, 7).join(' ') + '...';
+        description.textContent = descriptionText;
+
+        categoryDiv.appendChild(img);
+        categoryDiv.appendChild(title);
+        categoryDiv.appendChild(description);
+
+        rowDiv.appendChild(categoryDiv);
+
+        categoryDiv.addEventListener("click", () => {
+            showVendors(category.category); 
+        });
+    });
 }
 
 function showVendors(categoryId) {
-    window.location.href = `/pages/packageListing/PackageListing.html?category=${categoryId}`;
+    window.location.href = `/pages/packageListing/PackageListing.html?category=${encodeURIComponent(categoryId)}`;
 }
