@@ -120,8 +120,6 @@ function setupFormSubmission() {
 }
 
 
-
-
 function validateForm() {
     let isValid = true;
 
@@ -137,9 +135,12 @@ function validateForm() {
     let addressError = document.getElementById('addressError');
     let agreeError = document.getElementById('agreeError');
 
+    let errors = [];
+
     if (userName.value.trim() === "") {
         userNameError.textContent = "Enter user name";
         userNameError.style.display = 'block';
+        errors.push(userNameError);
         isValid = false;
     } else {
         userNameError.style.display = 'none';
@@ -149,10 +150,12 @@ function validateForm() {
     if (email.value.trim() === "") {
         emailError.textContent = "Enter email";
         emailError.style.display = 'block';
+        errors.push(emailError);
         isValid = false;
     } else if (!emailPattern.test(email.value.trim())) {
         emailError.textContent = "Enter valid email";
         emailError.style.display = 'block';
+        errors.push(emailError);
         isValid = false;
     } else {
         emailError.style.display = 'none';
@@ -162,10 +165,12 @@ function validateForm() {
     if (contact.value.trim() === "") {
         contactError.textContent = "Enter contact number";
         contactError.style.display = 'block';
+        errors.push(contactError);
         isValid = false;
     } else if (!contactPattern.test(contact.value.trim())) {
         contactError.textContent = "Enter valid contact number";
         contactError.style.display = 'block';
+        errors.push(contactError);
         isValid = false;
     } else {
         contactError.style.display = 'none';
@@ -174,6 +179,7 @@ function validateForm() {
     if (address.value.trim() === "") {
         addressError.textContent = "Enter address";
         addressError.style.display = 'block';
+        errors.push(addressError);
         isValid = false;
     } else {
         addressError.style.display = 'none';
@@ -182,9 +188,16 @@ function validateForm() {
     if (!agree.checked) {
         agreeError.textContent = "You must agree to the terms";
         agreeError.style.display = 'block';
+        errors.push(agreeError);
         isValid = false;
     } else {
         agreeError.style.display = 'none';
+    }
+
+    if (errors.length > 0) {
+        setTimeout(() => {
+            errors.forEach(error => error.style.display = 'none');
+        }, 2000);
     }
 
     return isValid;

@@ -150,7 +150,7 @@ i.fa-solid.fa-indian-rupee-sign {
 }
 
 .desSideHeading {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 10px;
     color: var(--heading);
 }
@@ -309,7 +309,7 @@ i.fa-solid.fa-indian-rupee-sign {
 
 .close:hover,
 .close:focus {
-    color: var(--black);
+    color: var(--main-color);
     text-decoration: none;
     cursor: pointer;
 }
@@ -329,12 +329,6 @@ i.fa-solid.fa-indian-rupee-sign {
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-}
-.user-details-form h2 {
-    margin-bottom: 10px;
-    font-size: 2em;
-    color: var(--heading);
-    text-align: center;
 }
 
 .input-group {
@@ -365,6 +359,8 @@ i.fa-solid.fa-indian-rupee-sign {
 
 .checkbox {
     margin-bottom: 5px;
+    font-size: 15px;
+    color: gray;
     display: flex;
     gap: 2%;
 }
@@ -374,7 +370,8 @@ i.fa-solid.fa-indian-rupee-sign {
     height: 70px;
     margin-bottom: 5px;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 10px; 
+    border-radius: 5px;
     outline: none;
     font-size: 1em
 }
