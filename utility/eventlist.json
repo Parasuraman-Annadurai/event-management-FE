@@ -1,0 +1,22 @@
+
+{
+    "OrganizationName": "GRP Makeup Studio",
+    "eventName": "Bridal Makeup",
+    "eventPhotos": "/assets/eventsOrgImg/org1_makeup.jpg",
+    "eventDescription": "Exquisite bridal makeup for your special day.",
+    "price": "15,000",
+    "address": "123 Beauty Ave, Glam Town",
+    "whatsapp": 1234567800,
+    "Mobile": 9876543220,
+    "category": "makeup",
+    "tagline": "Transforming you into the bride of your dreams",
+    "about": "GRP Makeup Studio specializes in bridal makeup, offering a wide range of beauty services to ensure you look your best on your special day. Our team of expert makeup artists uses the latest techniques and high-quality products to create a flawless look that enhances your natural beauty.",
+    "about_img": "/assets/eventsOrgImg/makeup_about.jpg",
+    "projectImages": [
+        "/assets/eventsOrgImg/org1_makeup.jpg",
+        "/assets/eventsOrgImg/org2_makeup.jpeg",
+        "/assets/eventsOrgImg/org3_makeup.jpg",
+        "/assets/eventsOrgImg/org2_photo.jpg"
+    ],
+    "email":"grpmakeup@gmail.com"
+}

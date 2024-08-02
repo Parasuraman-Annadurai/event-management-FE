@@ -20,6 +20,44 @@ body {
     padding: 0;
    
 }
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+
+
+
+.intro-text {
+    max-width: 600px;
+}
+
+.intro-text h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--main-color);
+    border-right: .15em solid var(--primary-color); 
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The caret blinking effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--white); }
+}
+
 
 .container {
     width: 80%;

@@ -113,14 +113,14 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error('No category ID found in URL parameters.');
     }
 
-    setupEventListeners(container, categoryId);
+    // setupEventListeners(container, categoryId);
 });
 
-function setupEventListeners(container, categoryId) {
-    document.getElementById('priceFilter').addEventListener('change', () => {
-        applyPriceFilter(container, categoryId);
-    });
-}
+// function setupEventListeners(container, categoryId) {
+//     document.getElementById('priceFilter').addEventListener('change', () => {
+//         applyPriceFilter(container, categoryId);
+//     });
+// }
 
 function filterCategory(categoryId, container) {
     fetchData('http://localhost:8080/api/event')
@@ -144,7 +144,7 @@ function displayEvents(events, container) {
         card.className = 'card';
 
         card.innerHTML = `
-            <img src="${event.imageUrl}" alt="${event.eventName}">
+             <img src="/assets/eventsOrgImg/${event.imageUrl}" alt="${event.eventName}">
             <div class="card-body">
                 <h3>${event.organizationName}</h3>
                 <p>${event.eventDescription}</p>
@@ -163,27 +163,27 @@ function displayEvents(events, container) {
     });
 }
 
-function applyPriceFilter(container, categoryId) {
-    fetchData('http://localhost:8080/api/event')
-        .then(data => {
-            let filteredEvents = data.data;
+// function applyPriceFilter(container, categoryId) {
+//     fetchData('http://localhost:8080/api/event')
+//         .then(data => {
+//             let filteredEvents = data.data;
 
-            if (categoryId) {
-                filteredEvents = filteredEvents.filter(event => event.category === categoryId);
-            }
+//             if (categoryId) {
+//                 filteredEvents = filteredEvents.filter(event => event.category === categoryId);
+//             }
 
-            let selectedPrice = document.getElementById('priceFilter').value;
+//             let selectedPrice = document.getElementById('priceFilter').value;
 
-            if (selectedPrice !== 'all') {
-                let [min, max] = selectedPrice.split('-').map(Number);
-                max = max || Infinity; // If there's no max value, set it to Infinity
-                filteredEvents = filteredEvents.filter(event => event.price >= min && event.price <= max);
-            }
+//             if (selectedPrice !== 'all') {
+//                 let [min, max] = selectedPrice.split('-').map(Number);
+//                 max = max || Infinity; // If there's no max value, set it to Infinity
+//                 filteredEvents = filteredEvents.filter(event => event.price >= min && event.price <= max);
+//             }
 
-            displayEvents(filteredEvents, container);
-        })
-        .catch(error => console.error('Error fetching data:', error));
-}
+//             displayEvents(filteredEvents, container);
+//         })
+//         .catch(error => console.error('Error fetching data:', error));
+// }
 
 function showVendorsDetails(organizationName) {
     // Replace spaces with hyphens
