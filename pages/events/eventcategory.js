@@ -68,3 +68,4 @@ function createCategoryElement(category, rowDiv) {
 function showVendors(categoryId) {
     window.location.href = `../eventlisting/eventListing.html?category=${categoryId}`;
 }
+
