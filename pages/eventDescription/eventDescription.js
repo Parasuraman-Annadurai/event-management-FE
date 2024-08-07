@@ -1,6 +1,4 @@
 
-
-
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,7 +20,7 @@ function setupEventDetails() {
 
     fetch(`http://localhost:8080/api/events/${eventId}`)
         .then(response => response.json())
-        .then(responseData => {
+        .then(responseData => { 
             let event = responseData.data;
             if (event) {
                 displayEventDetails(event);
@@ -35,6 +33,8 @@ function setupEventDetails() {
 }
 
 function displayEventDetails(event) {
+    console.log(event);
+    
     document.getElementById('eventImage').src = `/assets/eventsOrgImg/${event.imageUrl}`;
     document.getElementById('eventName').textContent = event.eventName;
     document.getElementById('eventTagline').textContent = event.tagline;
@@ -43,16 +43,15 @@ function displayEventDetails(event) {
     document.getElementById('aboutImage').src = `/assets/eventsOrgImg/${event.about_img}`;
     
     // Projects Section
+    if (event.imageurl && event.imageurl.length >= 4) {
+        document.getElementById('projectImg1').src = `/assets/eventsOrgImg/${event.imageurl[0]}`;
+        document.getElementById('projectImg2').src = `/assets/eventsOrgImg/${event.imageurl[1]}`;
+        document.getElementById('projectImg3').src = `/assets/eventsOrgImg/${event.imageurl[2]}`;
+        document.getElementById('projectImg4').src = `/assets/eventsOrgImg/${event.imageurl[3]}`;
+    } else {
+        console.error('imageurl array is missing or does not contain enough elements');
+    }
 
-    // document.getElementById('projectImg1').src =`/assets/eventsOrgImg/${event.imageurl[0]}`;
-    // document.getElementById('projectImg2').src =`/assets/eventsOrgImg/${event.imageurl[1]}`;
-    // document.getElementById('projectImg3').src = `/assets/eventsOrgImg/${event.imageurl[2]}`;
-    // document.getElementById('projectImg4').src = `/assets/eventsOrgImg/${event.imageurl[3]}`;
-
-    document.getElementById('projectImg1').src =`/assets/eventsOrgImg/org1_bridal.jpg`;
-    document.getElementById('projectImg2').src =`/assets/eventsOrgImg/org2_bridal.jpg`;
-    document.getElementById('projectImg3').src = `/assets/eventsOrgImg/org5_bridal.jpg`;
-    document.getElementById('projectImg4').src = `/assets/eventsOrgImg/org4_bridal.jpg`
 
     // Contact Section
     document.getElementById('contactAddress').innerHTML = `<i class="fas fa-map-marker-alt icon"></i> ${event.address}`;
@@ -73,23 +72,27 @@ function setupNavigation() {
     });
 }
 
+
 function setupModalFunctionality(event) {
     let modal = document.getElementById('userModal');
     let blurOverlay = document.getElementById('blurOverlay');
     let closeBtn = document.querySelector('.close');
 
     // Initialize images array
-    // const images = event.projectImages || [];
+    let images = event.imageurl|| [];
 
     document.getElementById('bookingSection').addEventListener('click', () => {
-        console.log(event)
-        // if (images.length > 0) {
-            // const randomImage = images[Math.floor(Math.random() * images.length)];
-            document.getElementById('randomImage').src = `/assets/eventsOrgImg/org1_prewed.jpg`;
+        console.log(event);
+        if (images.length > 0) {
+            let randomImage = images[Math.floor(Math.random() * images.length)];
+            document.getElementById('randomImage').src = `/assets/eventsOrgImg/${randomImage}`;
             openModal(modal, blurOverlay);
-        // } else {
-        //     // console.error('No project images available for modal');
-        // }
+        } else {
+            // Display a message or handle the case where there are no images
+            document.getElementById('randomImage').src = '/assets/eventsOrgImg/org1_prewed.jpg'; // Path to a default image
+            console.error('No project images available for modal');
+            openModal(modal, blurOverlay); // Open modal with a default image
+        }
     });
 
     closeBtn.addEventListener('click', () => closeModal(modal, blurOverlay));
@@ -100,6 +103,7 @@ function setupModalFunctionality(event) {
         }
     });
 }
+
 
 function openModal(modal, blurOverlay) {
     modal.style.display = "flex";
@@ -215,3 +219,13 @@ function validateForm() {
 
     return isValid;
 }
+
+
+
+
+
+
+
+
+
+

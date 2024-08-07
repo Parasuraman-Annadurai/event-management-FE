@@ -1,24 +1,27 @@
 
+
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
-    
 document.addEventListener("DOMContentLoaded", () => {
-
     loadHeader();
     loadFooter();
 
     let categoriesContainer = document.getElementById("categories");
-    let eventsData = "../../utility/model.json";
+    let eventsDataUrl = "http://localhost:8080/api/categories";
 
-    fetchEventsData(eventsData, categoriesContainer);
+    fetchEventsData(eventsDataUrl, categoriesContainer);
 });
 
 function fetchEventsData(url, categoriesContainer) {
     fetch(url)
         .then(response => response.json())
-        .then(data => {
-            let categories = data.events;
-            displayCategories(categories, categoriesContainer);
+        .then(responseData => {
+            console.log('API Response:', responseData); 
+            if (responseData.success && Array.isArray(responseData.data)) {
+                displayCategories(responseData.data, categoriesContainer);
+            } else {
+                console.error('Unexpected data format:', responseData);
+            }
         })
         .catch(error => console.error('Error fetching the JSON data:', error));
 }
@@ -38,15 +41,17 @@ function displayCategories(categories, categoriesContainer) {
 function createCategoryElement(category, rowDiv) {
     let categoryDiv = document.createElement("div");
     categoryDiv.className = "category";
-    categoryDiv.id = category.id;
+    categoryDiv.id = category._id;
     categoryDiv.style.backgroundColor = category.backgroundColor;
 
     let img = document.createElement("img");
     img.src = category.imageUrl;
-    img.alt = category.title;
+    img.alt = category.category;
 
     let title = document.createElement("h2");
     title.textContent = category.title;
+    console.log(category.title);
+    
 
     let description = document.createElement("p");
     description.textContent = category.description;
@@ -57,15 +62,12 @@ function createCategoryElement(category, rowDiv) {
 
     rowDiv.appendChild(categoryDiv);
 
-    // Use the category.id when adding the event listener
+    // Use the category.category when adding the event listener
     categoryDiv.addEventListener("click", () => {
-        showVendors(category.id);
+        showVendors(category.category);
     });
 }
 
-
-// Define the showVendors function
 function showVendors(categoryId) {
     window.location.href = `../eventlisting/eventListing.html?category=${categoryId}`;
 }
-

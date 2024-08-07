@@ -28,6 +28,8 @@ function filterCategory(categoryId, container) {
     fetchData('http://localhost:8080/api/events')
         .then(data => {
             let filteredEvents = data.data.filter(event => event.category === categoryId);
+            console.log(filteredEvents);
+            
             displayEvents(filteredEvents, container);
         })
         .catch(error => console.error('Error fetching data:', error));
@@ -88,8 +90,5 @@ function displayEvents(events, container) {
 // }
 
 function showVendorsDetails(eventId) {
-    // Replace spaces with hyphens
-    // var formattedName = organizationName.replace(/ /g, '-');
-    // Redirect to the new URL
     window.location.href = `../eventDescription/eventDescription.html?id=${eventId}`;
 }
