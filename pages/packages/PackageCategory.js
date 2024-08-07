@@ -51,7 +51,7 @@ function initializePackageCategories(packages) {
         title.textContent = category.packageName;
 
         const description = document.createElement("p");
-        const descriptionText = category.packageDescription.split(' ').slice(0, 7).join(' ') + '...';
+        const descriptionText = category.packageDescription.split(' ').slice(0, 11).join(' ') + '...';
         description.textContent = descriptionText;
 
         categoryDiv.appendChild(img);
