@@ -34,7 +34,7 @@ function initializePackageCategories(packages) {
     let rowDiv = null;
 
     packages.forEach((category, index) => {
-        if (index % 4 === 0) {
+        if (index % 3 === 0) {
             rowDiv = document.createElement("div");
             rowDiv.className = "package-categories-row";
             categoriesContainer.appendChild(rowDiv);
