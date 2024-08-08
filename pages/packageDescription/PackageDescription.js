@@ -1,3 +1,4 @@
+// Assuming loadHeader and loadFooter are defined in '/utility/utility.js'
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
 const urlParams = new URLSearchParams(window.location.search);
 const packageName = urlParams.get('title');
 
+// Function to convert rating into star icons
+function convertRatingToStars(rating) {
+    let fullStar = '★';
+    let emptyStar = '☆';
+
+    // Use floor to round down the rating to the nearest integer
+    const fullStars = Math.floor(rating);
+    const emptyStars = 5 - fullStars;
+
+    return fullStar.repeat(fullStars) + emptyStar.repeat(emptyStars);
+}
+
 async function fetchPackageData() {
     try {
         const response = await fetch("http://localhost:8080/api/allpackages");
@@ -18,6 +31,9 @@ async function fetchPackageData() {
         if (packageData) {
             document.getElementById('packageImage').src = "/assets/Home_Images/" + packageData.packageImage;
             document.getElementById('packageName').textContent = packageData.packageName;
+            packageData.totalPackagePrice = packageData.totalPackagePrice.toLocaleString();
+            document.getElementById('packagePrice').textContent = "₹" + packageData.totalPackagePrice;
+            document.getElementById('packageTagLine').textContent = packageData.packageTagline;
             document.getElementById('organizerName').textContent = packageData.organizationName || 'Organizer Name';
             document.getElementById('packageDescription').textContent = packageData.packageDescription;
 
@@ -25,18 +41,18 @@ async function fetchPackageData() {
             packageData.packagesLists.forEach(event => {
                 const img = document.createElement('img');
                 img.src = "/assets/Home_Images/" + event.eventPhotos;
-                img.alt= event.eventName;
+                img.alt = event.eventName;
                 carousel.appendChild(img);
             });
 
             const packageDetails = document.getElementById('packageDetails');
             packageData.packagesLists.forEach(event => {
-                const card = document.createElement('div');
+                const card = document.createElement('div'); 
                 card.className = 'eventDetail';
                 card.innerHTML = `
                     <img src="/assets/Home_Images/${event.eventPhotos}" alt="${event.eventName}">
                     <h3>${event.eventName}</h3>
-                    <div class="price">₹${event.price}</div>
+                    <div class="price">₹${event.price.toLocaleString()}</div>
                     <p>${event.description}</p>
                 `;
                 packageDetails.appendChild(card);
@@ -46,8 +62,18 @@ async function fetchPackageData() {
             document.getElementById('whatsapp').textContent = packageData.whatsapp;
             document.getElementById('mobile').textContent = packageData.mobile;
             document.getElementById('email').textContent = packageData.email;
-            document.getElementById('rating').textContent = packageData.rating;
-            document.getElementById('experience').textContent = packageData.experience;
+            
+            // Convert rating to stars and display
+            const ratingStars = convertRatingToStars(packageData.rating);
+            document.getElementById('rating').innerHTML = ratingStars;
+
+            document.getElementById('experience').textContent = packageData.experience + " Years";
+
+            // Map Integration
+            const city = packageData.city;
+            const mapURL = `https://www.google.com/maps?q=${encodeURIComponent(city)}&z=13&output=embed`;
+            document.getElementById('cityMap').src = mapURL;
+
         } else {
             console.error('Package not found');
         }

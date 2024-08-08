@@ -27,6 +27,7 @@ body {
     max-width: 1244px;
     width: 100%;
     padding: 4rem 2rem;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .headerSection {
@@ -38,6 +39,7 @@ body {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 
 .headerSection img {
@@ -47,19 +49,41 @@ body {
     object-fit: cover;
     border: 5px solid var(--primary-color);
     margin-right: 2rem;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.headerDetails {
+    animation: slideInRight 0.8s ease-out;
 }
 
 .headerDetails h1 {
-    font-size: 2.2em;
+    font-size: 2.4em;
     color: var(--text-color);
     font-weight: 700;
     margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .headerDetails h2 {
     font-size: 1.4em;
     color: var(--secondary-color);
     font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#packageTagLine {
+    font-size: 1.2em;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#packagePrice {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .carouselContainer {
@@ -109,7 +133,6 @@ body {
 #nextBtn {
     right: 0;
 }
-
 .descriptionBody {
     background: var(--card-background);
     border-radius: 12px;
@@ -117,18 +140,21 @@ body {
     border: 1px solid var(--border-color);
     padding: 2rem;
     margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .descriptionBody h2 {
     font-size: 1.8em;
     color: var(--text-color);
     margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .descriptionBody p {
     color: var(--subtext-color);
     font-size: 1.1em;
     line-height: 1.6;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .servicesSection {
@@ -138,12 +164,14 @@ body {
     border: 1px solid var(--border-color);
     padding: 2rem;
     margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .servicesSection h2 {
     font-size: 1.8em;
     color: var(--text-color);
     margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .gridContainer {
@@ -158,6 +186,13 @@ body {
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.eventDetail:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .eventDetail img {
@@ -187,19 +222,11 @@ body {
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
-
-.contactCard {
-    background: var(--card-background);
-    border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border-color);
-    padding: 2rem;
-}
-
 .contactCard h2 {
     font-size: 1.8em;
     color: var(--text-color);
     margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .contactCard p {
@@ -212,5 +239,88 @@ body {
     color: var(--primary-color);
     font-weight: 600;
 }
+.contactCard {
+    display: flex;
+    padding: 2rem;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    animation: fadeIn 1s ease-in-out;
+}
 
+.contactInfo {
+    flex: 1;
+    padding-right: 2rem;
+}
 
+.contactInfo h2 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.contactInfo p {
+    font-size: 1em;
+    color: var(--subtext-color);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.mapContainer {
+    flex: 1;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
