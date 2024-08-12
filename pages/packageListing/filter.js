@@ -1,45 +1,37 @@
-import { loadHeader, loadFooter } from '/utility/utility.js';
+document.getElementById('filterForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadHeader();
-    loadFooter();
-    initializePackageListings();
+    const city = document.getElementById('city').value;
+    const startPrice = document.getElementById('startPrice').value;
+    const endPrice = document.getElementById('endPrice').value;
+    const packageName = document.getElementById('packageName').value;
+
+    const params = new URLSearchParams();
+
+    if (city) params.append('city', city);
+    if (startPrice) params.append('startPrice', startPrice);
+    if (endPrice) params.append('endPrice', endPrice);
+    if (packageName) params.append('packageName', packageName);
+
+    try {
+        const response = await fetch(`http://localhost:8080/api/allpackages/filter?${params.toString()}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        displayPackages(data.data); // Reusing displayPackages from the listing page script
+    } catch (error) {
+        console.error('Error fetching packages:', error);
+        document.getElementById('packageListings').innerHTML = `An error occurred while fetching the packages: ${error.message}`;
+    }
 });
-
-function initializePackageListings() {
-    const container = document.getElementById('packageListings');
-    if (!container) {
-        console.error('No element with ID "packageListings" found.');
-        return;
-    }
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryId = urlParams.get('category');
-
-    if (categoryId) {
-        filterCategory(categoryId);
-    } else {
-        fetchAllPackages();
-    }
-}
-
-function fetchAllPackages() {
-    fetch("http://localhost:8080/api/allpackages")
-        .then(response => response.json())
-        .then(data => {
-            displayPackages(data.data); // Adjusting to match the API response structure
-        })
-        .catch(error => console.error('Error fetching data:', error));
-}
-
-function filterCategory(category) {
-    fetch(`http://localhost:8080/api/allpackages?category=${category}`)
-        .then(response => response.json())
-        .then(data => {
-            const filteredPackages = data.data.filter(pkg => pkg.category === category);
-            displayPackages(filteredPackages);
-        })
-        .catch(error => console.error('Error fetching data:', error));
-}
 
 function displayPackages(packages) {
     const container = document.getElementById('packageListings');

@@ -12,6 +12,60 @@
     <div id="navbarHeader"></div>
     <!-- Navbar end -->
 
+    <!-- Filter Form -->
+    <div class="filterContainer">
+        <form id="filterForm">
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="">All Cities</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Tiruchirappalli">Tiruchirappalli</option>
+                <option value="Salem">Salem</option>
+                <option value="Tiruppur">Tiruppur</option>
+                <option value="Erode">Erode</option>
+                <option value="Vellore">Vellore</option>
+                <option value="Thoothukudi">Thoothukudi</option>
+            </select>
+
+            <label for="startPrice">Start Price:</label>
+            <select id="startPrice" name="startPrice">
+                <option value="">All Prices</option>
+                <option value="30000">₹30,000</option>
+                <option value="50000">₹50,000</option>
+                <option value="70000">₹70,000</option>
+                <option value="90000">₹90,000</option>
+                <option value="110000">₹110,000</option>
+            </select>
+
+            <label for="endPrice">End Price:</label>
+            <select id="endPrice" name="endPrice">
+                <option value="">All Prices</option>
+                <option value="50000">₹50,000</option>
+                <option value="70000">₹70,000</option>
+                <option value="90000">₹90,000</option>
+                <option value="110000">₹110,000</option>
+                <option value="130000">₹130,000</option>
+                <option value="150000">₹150,000</option>
+            </select>
+
+            <label for="packageName">Package Name:</label>
+            <select id="packageName" name="packageName">
+                <option value="">All Packages</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Reception">Reception</option>
+                <option value="BabyShower">Baby Shower</option>
+                <option value="EarPiercingCeremony">Ear Piercing Ceremony</option>
+                <option value="NamingCeremony">Naming Ceremony</option>
+            </select>
+
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+    <!-- Filter Form End -->
+
     <div class="packageContainer">
         <div class="packageListings" id="packageListings"></div>
     </div>
@@ -20,5 +74,6 @@
     <div id="footerEMS"></div>
 
     <script type="module" src="/pages/packageListing/PackageListing.js"></script>
+    <script src="/pages/packageListing/filter.js"></script> <!-- External filter script -->
 </body>
 </html>

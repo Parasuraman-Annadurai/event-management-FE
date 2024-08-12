@@ -23,6 +23,12 @@
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#navbarHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 .PackageCategoryMain {
     padding: 20px;
     display: flex;

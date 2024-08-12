@@ -16,13 +16,22 @@
     --secondary-color: #e56357;
     --white: #ffffff;
     --black: #000000;
+    --light-gray: #f2f2f2;
+    --gray: #ccc;
+    --border-radius: 8px;
+    --cart-color: #f9f9f9;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+#navbarHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .packageCategories {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
 }
 
 .packageContainer {
@@ -45,14 +54,15 @@
     background: var(--white);
     border-radius: 15px;
     cursor: pointer;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
     width: 1000px; 
     height: 200px;
     display: flex;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.packageCardMain{
+
+.packageCardMain {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,6 +70,7 @@
     width: 60%;
     height: 100%;
 }
+
 .packageCard:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -101,9 +112,63 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px 0px 0p ;
+    border-radius: 20px 0px 0p;
 }
 
 .packageCardFooter span {
     font-weight: bold;
+}
+
+/* Filter form styles */
+#filterForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    padding-bottom: 10px;
+    margin-top: 2rem;
+    margin-right: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+select {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray);
+    background-color: var(--cart-color);
+    color: var(--black);
+    min-width: 150px;
+    box-shadow: var(--box-shadow);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--main-color);
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#results ul {
+    list-style: none;
+    padding: 0;
+}
+
+#results li {
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
