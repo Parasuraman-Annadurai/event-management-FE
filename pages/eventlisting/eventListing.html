@@ -16,7 +16,38 @@
     <!-- <h1>Event Listing</h1> -->
 
      <!-- filterDiv -->
-    <div id="filter_div"></div>
+     <div id="filter_div">
+        <div class="filter-options">
+            
+             
+            <select id="citySelect">
+                <option value="">All Cities</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Tiruchirapalli">Tiruchirapalli</option>
+                <option value="Salem">Salem</option>
+                <option value="Vellore">Vellore</option>
+                <option value="Tiruppur"> Tiruppur</option>
+              
+            </select>
+    
+           
+            <select id="priceSelect">
+                <option value="">All Prices</option>
+                <option value="0-5000">₹5,000</option>
+                <option value="0-10000">₹10,000</option>
+                <option value="0-20000">₹20,000</option>
+                <option value="0-30000">₹30,000</option>
+                <option value="0-40000">₹40,000</option>
+                <option value="0-50000">₹50,000</option>
+                <!-- Add more price ranges as needed -->
+            </select>
+    
+            <button id="filterButton">Filter</button>
+        </div>
+    </div>
+    
     <!-- filterDiv end-->
 
     <div class="eventCategories">

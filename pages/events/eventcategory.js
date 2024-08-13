@@ -1,5 +1,3 @@
-
-
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -7,23 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
     loadFooter();
 
     let categoriesContainer = document.getElementById("categories");
-    let eventsDataUrl = "http://localhost:8080/api/categories";
+    let eventsData = "http://localhost:8080/api/categories";
 
-    fetchEventsData(eventsDataUrl, categoriesContainer);
+    fetchEventsData(eventsData, categoriesContainer);
 });
 
-function fetchEventsData(url, categoriesContainer) {
-    fetch(url)
-        .then(response => response.json())
-        .then(responseData => {
-            console.log('API Response:', responseData); 
-            if (responseData.success && Array.isArray(responseData.data)) {
-                displayCategories(responseData.data, categoriesContainer);
-            } else {
-                console.error('Unexpected data format:', responseData);
-            }
-        })
-        .catch(error => console.error('Error fetching the JSON data:', error));
+async function fetchEventsData(eventsData, categoriesContainer) {
+    try {
+        let response = await fetch(eventsData);
+        let responseData = await response.json();
+
+        if (response.ok && responseData.success && Array.isArray(responseData.data)) {
+            displayCategories(responseData.data, categoriesContainer);
+        } else {
+            console.error('Unexpected data format or response:', responseData);
+        }
+    } catch (error) {
+        console.error('Error fetching the JSON data:', error);
+    }
 }
 
 function displayCategories(categories, categoriesContainer) {
@@ -51,7 +50,6 @@ function createCategoryElement(category, rowDiv) {
     let title = document.createElement("h2");
     title.textContent = category.title;
     console.log(category.title);
-    
 
     let description = document.createElement("p");
     description.textContent = category.description;
@@ -62,7 +60,6 @@ function createCategoryElement(category, rowDiv) {
 
     rowDiv.appendChild(categoryDiv);
 
-    // Use the category.category when adding the event listener
     categoryDiv.addEventListener("click", () => {
         showVendors(category.category);
     });
