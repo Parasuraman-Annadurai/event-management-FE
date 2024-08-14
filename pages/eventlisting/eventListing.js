@@ -7,9 +7,22 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let urlParams = new URLSearchParams(window.location.search);
     let categoryId = urlParams.get('category');
+    let city = urlParams.get('city');
+    let price = urlParams.get('price');
 
-    // Display events based on the category or all events by default
-    fetchDataAndDisplay(container, categoryId);
+    // Construct the initial API URL
+    let apiUrl = `http://localhost:8080/api/events?category=${categoryId}`;
+    
+    if (city) {
+        apiUrl += `&city=${city}`;
+    }
+    
+    if (price) {
+        apiUrl += `&price=${price}`;
+    }
+
+    // Fetch and display data
+    fetchDataAndDisplay(container, apiUrl);
 
     // Set up filter button click event
     document.getElementById('filterButton').addEventListener('click', () => {
@@ -17,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Function to fetch and display events based on category or all events
-function fetchDataAndDisplay(container, categoryId) {
-    fetchData(`http://localhost:8080/api/events/category/${categoryId}`)
+// Function to fetch and display events based on the API URL
+function fetchDataAndDisplay(container, apiUrl) {
+    fetchData(apiUrl)
         .then(data => {
             let events = data.data;
             displayEvents(events, container);
@@ -27,33 +40,51 @@ function fetchDataAndDisplay(container, categoryId) {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-// Function to apply filters and consider the category
+// Function to apply filters and fetch filtered data from the backend
 function applyFilters(container, categoryId) {
     let city = document.getElementById('citySelect').value;
-    let priceRange = document.getElementById('priceSelect').value;
+    let maxPrice = document.getElementById('priceSelect').value;
 
-    fetchData(`http://localhost:8080/api/events/category/${categoryId}`)
+    // Construct the API URL with query parameters
+    let apiUrl = `http://localhost:8080/api/events?category=${categoryId}`;
+    
+    if (city) {
+        apiUrl += `&city=${city}`;
+    }
+    
+    if (maxPrice) {
+        apiUrl += `&price=${maxPrice}`; 
+    }
+
+    // Log the constructed API URL
+    console.log("API URL:", apiUrl);
+
+
+
+    // Update the browser's URL after clicked the filter button
+    let newUrl = `${window.location.pathname}?category=${categoryId}`;
+    if (city) {
+        newUrl += `&city=${city}`;
+    }
+    if (maxPrice) {
+        newUrl += `&price=${maxPrice}`;
+    }
+    window.history.pushState({}, '', newUrl);
+
+
+    fetchData(apiUrl)
         .then(data => {
             let filteredEvents = data.data;
-
-            // Apply city filter if selected
-            if (city) {
-                filteredEvents = filteredEvents.filter(event => event.city === city);
-            }
-
-            // Apply price range filter if selected
-            if (priceRange) {
-                let [minPrice, maxPrice] = priceRange.split('-').map(Number);
-                filteredEvents = filteredEvents.filter(event => event.price >= minPrice && event.price <= maxPrice);
-            }
-
             displayEvents(filteredEvents, container);
+
+            // Log the fetched data
+            console.log("Filtered Events:", filteredEvents);
         })
         .catch(error => console.error('Error fetching data:', error));
 
-         // Clear the filter selections after applying
-        document.getElementById('citySelect').value = "";
-        document.getElementById('priceSelect').value = "";
+    // Clear the filter selections after applying
+    document.getElementById('citySelect').value = "";
+    document.getElementById('priceSelect').value = "";
 }
 
 // Function to fetch data from the backend
@@ -72,7 +103,7 @@ async function fetchData(url) {
 
 // Function to display events or a "no data" message
 function displayEvents(events, container) {
-    container.innerHTML = ''; // Clear the existing content
+    container.innerHTML = '';
 
     if (events.length === 0) {
         // If no events match, display the "No Data" message
@@ -114,6 +145,3 @@ function displayEvents(events, container) {
 function showVendorsDetails(eventId) {
     window.location.href = `../eventDescription/eventDescription.html?id=${eventId}`;
 }
-
-
-

@@ -39,7 +39,7 @@
 }
 
 /* Dropdown styling */
-.filter-options select {
+/* .filter-options select {
     width: 200px;
     height: 40px;
     padding: 5px;
@@ -52,6 +52,24 @@
     cursor: pointer;
     outline: none;
     
+} */
+
+/* Dropdown styling */
+.filter-options select {
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--gray);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    position: relative;
+    background: var(--white) url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNiAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDFMOC44MzEgNi44NDFMNy4zIDUuNTgzTDEgMUgxNSIgZmlsbD0iIzAwMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIuMDAwMDAxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==') no-repeat right 10px center;
+    background-size: 10px;
 }
 
 /* Dropdown hover effect */
