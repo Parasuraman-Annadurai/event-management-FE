@@ -47,7 +47,7 @@ body {
 }
 
 .navbar-right {
-    width: 31%;
+    width: 33.9%;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -79,13 +79,23 @@ body {
 .sidebar-icon:hover {
     color: var(--secondary-color);
 }
-
+.navbar-right button {
+    border: none;
+    box-shadow: none;
+    border-radius: 20px;
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+.navbar-right button:hover {
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 7px;
+}
 .Services_content, .Famous_events, .famous_Packages {
     border: none;
     border-radius: 20px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 12px;
+    color: var(--primary-color);
+    font-size: 14px;
     font-weight: bold;
     padding: 8px;
 }
@@ -109,92 +119,46 @@ body {
 }
 
 /* packages dropdown */
-.famous-Packages {
+.famous-Packages,.famous-Events, .services-dropdown {
     position: relative;
     display: inline-block;
 }
 
-.packages-dropdown-content {
+.packages-dropdown-content ,.events-dropdown-content,.services-dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--white);
-    min-width: 140px;
-    border-radius: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 6px;
+    min-width: 122px;
+    left: 10px;
+    border-radius:4px ;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-.packages-dropdown-content a {
-    color: var(--black);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.famous-Packages:hover .packages-dropdown-content {
-    display: block;
-}
-
-.famous-Events {
-    position: relative;
-    display: inline-block;
-}
-
-/* events dropdown */
-.events-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 100px;
-    border-radius: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.events-dropdown-content a {
-    color: var(--black);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.famous-Events:hover .events-dropdown-content {
-    display: block;
-}
-
-/* services dropdown */
-.services-dropdown {
-    position: relative;
-    display: inline-block;
-
+.events-dropdown-content{
+    left: 7.5px;
+    min-width: 105px;
 }
 
 .services-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 100px;
-    border-radius: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    left:-10px;
+    min-width: 50px;
 }
-
-.services-dropdown-content a {
+.packages-dropdown-content a, .events-dropdown-content a,.services-dropdown-content a {
     color: var(--black);
-    padding: 12px 16px;
+    padding: 6px 8px;
     text-decoration: none;
     display: block;
 }
-/* .services-dropdown-content a:hover ,.events-dropdown-content a:hover ,.packages-dropdown-content a:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-   
-} */
-
-.services-dropdown:hover .services-dropdown-content {
+.packages-dropdown-content a:hover, .events-dropdown-content a:hover,.services-dropdown-content a:hover {
+color: var(--secondary-color);
+border: 1px solid var(--main-color);
+padding: 5px 7px;
+}
+.famous-Packages:hover .packages-dropdown-content, .famous-Events:hover .events-dropdown-content,.services-dropdown:hover .services-dropdown-content {
     display: block;
+    color: var(--primary-color);
 }
 
 .sidebar {
@@ -252,12 +216,19 @@ body {
             <div class="navbar-right">
                 <!-- <input type="text" class="search-bar" placeholder="Search...">
                 <i class="fas fa-search search-icon" id="search-icon"></i> -->
+                <div class="services-dropdown">
+                    <button class="Services_content">Services</button>
+                    <div class="services-dropdown-content">
+                        <a href="/pages/packages/PackageCategory.html">Packages</a>
+                        <a href="/pages/events/eventcategory.html">Events</a>
+                    </div>
+                </div>
 
                 <div class="famous-Packages">
                     <button class="famous_Packages">Famous Packages</button>
                     <div class="packages-dropdown-content">
-                        <a href="/pages/packageListing/PackageListing.html?category=Packages/birthday-package">BirthDay</a>
                         <a href="/pages/packageListing/PackageListing.html?category=Packages/wedding-package">Wedding</a>
+                        <a href="/pages/packageListing/PackageListing.html?category=Packages/birthday-package">BirthDay</a>
                     </div>
                 </div>
 
@@ -269,13 +240,7 @@ body {
                     </div>
                 </div>
 
-                <div class="services-dropdown">
-                    <button class="Services_content">Services</button>
-                    <div class="services-dropdown-content">
-                        <a href="/pages/packages/PackageCategory.html">Packages</a>
-                        <a href="/pages/events/eventcategory.html">Events</a>
-                    </div>
-                </div>
+              
                 <!-- <div class="famous-Events">
                     <button class="Famous_events">About</button>
                 </div>
@@ -288,8 +253,8 @@ body {
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
             <a href="/index.html">Home</a>
-            <a href="/pages/events/eventcategory.html">Events</a>
             <a href="/pages/packages/PackageCategory.html">Packages</a>
+            <a href="/pages/events/eventcategory.html">Events</a>
             <a href="#">About Us</a>
             <a href="#">Contact</a>
             <a href="#">FAQ</a>
