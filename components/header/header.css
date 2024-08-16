@@ -64,13 +64,13 @@ body {
 
 .sidebar-icon, .profile-icon {
     font-size: 1.5rem;
-    color: var(--grey);
+    color: var(--primary-color);
     cursor: pointer;
     margin: 0 1rem;
 }
 
 .sidebar-icon:hover {
-    color: var(--secondary-color);
+    color: var(--grey);
 }
 .navbar-right button {
     border: none;
@@ -90,14 +90,13 @@ body {
     font-size: 14px;
     padding: 8px;
 }
-.nav-logo {
-    color: var(--grey);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 1rem;
+.nav-logo img {
+    height: 36x;
+    width: 120px;
+  
 }
 .nav-logo a{
-    color: var(--grey);
+    color: var(--primary-color);
     text-decoration: none;
 
 }

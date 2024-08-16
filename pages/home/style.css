@@ -6,6 +6,7 @@
     --secondary-color: #e56357;
     --scrolltab:var(--primary-color);
     --scroll:#fcc4bf;
+    --grey:#717070;
     --white: #ffffff;
     --black: #000000;
 }
@@ -39,19 +40,57 @@ body {
 }
 
 .slideshow-container {
-    max-width: 100%;
     position: relative;
     margin: auto;
 }
 
 .mySlides {
     display: none;
+    position: relative;
+    height: 480px;
 }
 
-.mySlides img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
+.tagline {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color:var(--primary-color); 
 }
 
 .fade {
@@ -60,9 +99,12 @@ body {
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 }
+
+
+
 
 .homePageTopOrganiserTitle, .homePageTopPackagesTitle, .homePageTopEventsTitle {
     display: block;
@@ -70,7 +112,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 2rem;  
+    margin-top: 5rem;  
     color: var(--primary-color);
 }
 

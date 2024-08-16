@@ -1,4 +1,5 @@
 import { loadHeader, loadFooter, fetchData } from '../../utility/utility.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
@@ -13,36 +14,84 @@ function createSlideshow() {
     const slideshowContainer = document.createElement('div');
     slideshowContainer.className = 'slideshow-container';
 
-    for (let i = 1; i <= 8; i++) {
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'dots-container';
+
+    const taglines = [
+        "Creating Unforgettable Experiences",
+        "Your Event, Our Passion",
+        "Bringing Dreams to Life",
+        "Memories that Last a Lifetime",
+        "Tailoring Events to Perfection",
+        "Crafting Unique Celebrations",
+        "Making Every Moment Special",
+        "Events That Inspire"
+    ];
+
+    for (let i = 0; i < 8; i++) {
         const slide = document.createElement('div');
         slide.className = 'mySlides fade';
 
-        const img = document.createElement('img');
-        img.src = `assets/Home_Images/slideshow/Designer${i}.jpeg`;
-        img.alt = `Slide ${i}`;
+        // Setting the background image for the slide
+        slide.style.backgroundImage = `url('assets/Home_Images/slideshow/Designer${i + 1}.jpeg')`;
+        slide.style.backgroundSize = 'cover';
+        slide.style.backgroundPosition = 'center';
+        slide.style.height = '480px';  // Adjust the height as needed
 
-        slide.appendChild(img);
+        const tagline = document.createElement('div');
+        tagline.className = 'tagline';
+        tagline.innerText = taglines[i];
+
+        slide.appendChild(tagline);
         slideshowContainer.appendChild(slide);
+
+        // Creating dots for pagination
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        dotsContainer.appendChild(dot);
     }
 
+    slideshowContainer.appendChild(dotsContainer);
     return slideshowContainer;
 }
 
-function showSlides() {
-    let slideIndex = 0;
-    return function showNextSlide() {
-        const slides = document.querySelectorAll(".mySlides");
-        slides.forEach(slide => slide.style.display = "none");
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].style.display = "block";
-        setTimeout(showNextSlide, 2000);
+// JavaScript for slideshow functionality
+function showSlides(slideshowContainer, slideIndex) {
+    const slides = slideshowContainer.getElementsByClassName('mySlides');
+    const dots = slideshowContainer.getElementsByClassName('dot');
+
+    // Hide all slides initially
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
     }
+
+    // Increment the slide index
+    slideIndex++;
+
+    // Reset slideIndex if it exceeds the number of slides
+    if (slideIndex > slides.length) {
+        slideIndex = 1; // Reset to the first slide
+    }
+
+    // Remove the active class from all dots
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(' active', '');
+    }
+
+    // Show the current slide and add the active class to the corresponding dot
+    slides[slideIndex - 1].style.display = 'block';
+    dots[slideIndex - 1].className += ' active';
+
+    // Automatically change slides every 3 seconds
+    setTimeout(() => showSlides(slideshowContainer, slideIndex), 3000);
 }
 
+// Function to append slideshow to the home page
 function slidesHome() {
     const homePageSlideShow = document.getElementById('homePageMain_BannerSlider');
-    homePageSlideShow.appendChild(createSlideshow());
-    showSlides()();
+    const slideshowContainer = createSlideshow();
+    homePageSlideShow.appendChild(slideshowContainer);
+    showSlides(slideshowContainer, 0);
 }
 
 function initializeSlideshow(containerSelector, leftImageSelector, rightDescriptionSelector, jsonDataKey) {
@@ -55,7 +104,7 @@ function initializeSlideshow(containerSelector, leftImageSelector, rightDescript
 
     function updateSlide() {
         if (data.length > 0) {
-            leftImage.src = "assets/Home_Images/"+data[index].image;
+            leftImage.src = "assets/Home_Images/" + data[index].image;
             rightDescription.textContent = data[index].description;
             index = (index + 1) % data.length;
         }
