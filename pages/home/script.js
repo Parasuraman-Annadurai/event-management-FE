@@ -17,17 +17,6 @@ function createSlideshow() {
     const dotsContainer = document.createElement('div');
     dotsContainer.className = 'dots-container';
 
-    const taglines = [
-        "Creating Unforgettable Experiences",
-        "Your Event, Our Passion",
-        "Bringing Dreams to Life",
-        "Memories that Last a Lifetime",
-        "Tailoring Events to Perfection",
-        "Crafting Unique Celebrations",
-        "Making Every Moment Special",
-        "Events That Inspire"
-    ];
-
     for (let i = 0; i < 8; i++) {
         const slide = document.createElement('div');
         slide.className = 'mySlides fade';
@@ -38,11 +27,6 @@ function createSlideshow() {
         slide.style.backgroundPosition = 'center';
         slide.style.height = '480px';  // Adjust the height as needed
 
-        const tagline = document.createElement('div');
-        tagline.className = 'tagline';
-        tagline.innerText = taglines[i];
-
-        slide.appendChild(tagline);
         slideshowContainer.appendChild(slide);
 
         // Creating dots for pagination

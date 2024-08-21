@@ -42,12 +42,13 @@ body {
 .slideshow-container {
     position: relative;
     margin: auto;
+    margin-top: 5px;
 }
 
 .mySlides {
     display: none;
     position: relative;
-    height: 480px;
+    height: 600px;
 }
 
 .tagline {
@@ -55,25 +56,25 @@ body {
     bottom: 40%;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: rgb(6, 6, 6);
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
+    /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 10px 20px;
     border-radius: 5px;
 }
 
 .dots-container {
     position: absolute;
-    bottom: 0%;
+    bottom: -13%;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color:var(--grey);
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
+    /* background-color: rgba(0, 0, 0, 0.5);      */
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -83,14 +84,14 @@ body {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: var(--white);
+    background-color: var(--primary-color);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .dot.active {
-    background-color:var(--primary-color); 
+    background-color:var(--grey); 
 }
 
 .fade {
@@ -127,7 +128,7 @@ body {
     margin: auto;
     margin-top: 2rem;
     background-color:var(--white);
-    border-radius: 30px;
+    /* border-radius: 30px; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     background-color:var(--white);
@@ -140,23 +141,16 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    border-radius: 30px;
 }
 
-.homePageLeftDivImages, .homePagePackagesLeftDivImages, .homePageEventsLeftDivImages {
-    width: 600px;
-    height: 300px;
-    border-radius: 20px;
-    object-fit: cover;
-}
-.homePageLeftDivImages, .homePagePackagesLeftDivImages, .homePageEventsLeftDivImages {
+/* .homePageLeftDivImages, .homePagePackagesLeftDivImages, .homePageEventsLeftDivImages {
     border-radius: 30px 0px 0px 30px;
 
 }
 
 .homePagePackagesLeftDivImages{
     border-radius: 0px 30px 30px 0px;
-}
+} */
 
 .homePageRightdescription, .homePagePackagesRightdescription, .homePageEventsRightdescription {
     width: 550px;
@@ -164,6 +158,15 @@ body {
     font-size: 1.1em;
     line-height: 1.6;
     margin: 20px;
+    
+}
+
+.homePageLeftDivImages, .homePagePackagesLeftDivImages, .homePageEventsLeftDivImages {
+    width: 600px;
+    padding: 1px 1px 1px 1px;
+    height: 300px;
+    object-fit: cover;
+    border: solid 4px var(--primary-color);
 }
 /* .homePageTopOrganisersMain, .homePageTopEventsMain{
     background-color: var(--white);
