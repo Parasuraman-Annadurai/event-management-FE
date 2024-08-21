@@ -55,7 +55,7 @@ function displayEventDetails(event) {
 
     // Contact Section
     document.getElementById('contactAddress').innerHTML = `<i class="fas fa-map-marker-alt icon"></i> ${event.address}`;
-    document.getElementById('contactMobile').textContent = `Mobile: ${event.Mobile}`;
+    document.getElementById('contactMobile').textContent = `Mobile: ${event.mobile}`;
     document.getElementById('contactWhatsapp').textContent = `WhatsApp: ${event.whatsapp}`;
     document.getElementById('contactEmail').textContent = event.email;
 }

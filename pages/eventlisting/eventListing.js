@@ -43,36 +43,6 @@ function fetchDataAndDisplay(container, apiUrl) {
 
 // Function to apply filters and fetch filtered data from the backend
 
-// function applyFilters(container) {
-//     let city = document.getElementById('citySelect');
-//     let maxPrice = document.getElementById('priceSelect');
-
-//     let filterObj = {
-//         [city.id]: city.value,
-//         [maxPrice.id]: maxPrice.value
-//     };
-//     console.log(filterObj);
-
-//     let urlParams = new URLSearchParams(window.location.search);
-//     let categoryId = urlParams.get('category');
-//     let apiUrl = `http://localhost:8080/api/events?category=${encodeURIComponent(categoryId)}`;
-
-//     if (Object.keys(filterObj).length > 0) {
-//         Object.keys(filterObj).forEach((key) => {
-//             apiUrl += `&${key}=${encodeURIComponent(filterObj[key])}`;
-//         });
-//     }
-
-//     // Fetch and display filtered events
-//     fetchDataAndDisplay(container, apiUrl);
-// }
-
-
-
-
-
-
-
 function applyFilters(container) {
     let city = document.getElementById('citySelect').value;
     let maxPrice = document.getElementById('priceSelect').value;
