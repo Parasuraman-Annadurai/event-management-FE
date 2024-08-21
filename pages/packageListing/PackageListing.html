@@ -15,42 +15,47 @@
     <!-- Filter Form -->
     <div class="filterContainer">
         <form id="filterForm">
-            <label for="city">City:</label>
-            <select id="city" name="city">
-                <option value="">All Cities</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Trichy">Trichy</option>
-                <option value="Nagercoil">Nagercoil</option>
-                <option value="Erode">Erode</option>
-                <option value="Coimbatore">Coimbatore</option>
-                <option value="Madurai">Madurai</option>
-                <option value="Vellore">Vellore</option>
-                <option value="Thirunelveli">Thirunelveli</option>
-                <option value="Thoothukudi">Thoothukudi</option>
-                <option value="Salem">Salem</option>
-                <option value="Kanyakumari">Kanyakumari</option>
-            </select>
 
-            <label for="startPrice">Start Price:</label>
-            <select id="startPrice" name="startPrice">
-                <option value="">All Prices</option>
-                <option value="30000">₹30,000</option>
-                <option value="50000">₹50,000</option>
-                <option value="70000">₹70,000</option>
-                <option value="90000">₹90,000</option>
-                <option value="110000">₹110,000</option>
-            </select>
-
-            <label for="endPrice">End Price:</label>
-            <select id="endPrice" name="endPrice">
-                <option value="">All Prices</option>
-                <option value="50000">₹50,000</option>
-                <option value="70000">₹70,000</option>
-                <option value="90000">₹90,000</option>
-                <option value="110000">₹110,000</option>
-                <option value="130000">₹130,000</option>
-                <option value="150000">₹150,000</option>
-            </select>
+            <div class="filterDiv">   
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                    <option value="">All Cities</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Trichy">Trichy</option>
+                    <option value="Nagercoil">Nagercoil</option>
+                    <option value="Erode">Erode</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Vellore">Vellore</option>
+                    <option value="Thirunelveli">Thirunelveli</option>
+                    <option value="Thoothukudi">Thoothukudi</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Kanyakumari">Kanyakumari</option>
+                </select>
+                </div>
+            <div class="filterDiv">
+                <label for="startPrice">Start Price:</label>
+                <select id="startPrice" name="startPrice">
+                    <option value="">All Prices</option>
+                    <option value="30000">₹30,000</option>
+                    <option value="50000">₹50,000</option>
+                    <option value="70000">₹70,000</option>
+                    <option value="90000">₹90,000</option>
+                    <option value="110000">₹110,000</option>
+                </select>
+            </div>
+            <div class="filterDiv">
+                <label for="endPrice">End Price:</label>
+                <select id="endPrice" name="endPrice">
+                    <option value="">All Prices</option>
+                    <option value="50000">₹50,000</option>
+                    <option value="70000">₹70,000</option>
+                    <option value="90000">₹90,000</option>
+                    <option value="110000">₹110,000</option>
+                    <option value="130000">₹130,000</option>
+                    <option value="150000">₹150,000</option>
+                </select>
+            </div>
 
             <button type="submit">Filter</button>
         </form>

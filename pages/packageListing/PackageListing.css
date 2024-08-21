@@ -124,11 +124,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 19px;
+    gap: 4.6rem;
     padding-bottom: 10px;
     margin-top: 2rem;
-    margin-right: 0.8rem;
+    /* margin-left: 1rem; */
     margin-bottom: 2rem;
+}
+.filterDiv{
+display:flex;
+justify-content: center;
+align-items: center;
+gap: 1rem;
 }
 
 select {
