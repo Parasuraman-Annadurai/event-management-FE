@@ -42,16 +42,16 @@ function fetchDataAndDisplay(container, apiUrl) {
 }
 
 
+
 function applyFilters(container) {
-    let city = document.getElementById('citySelect');
-    let maxPrice = document.getElementById('priceSelect');
+    let city = document.getElementById('city');
+    let maxPrice = document.getElementById('price');
 
     let filterObj = {
         [city.id]: city.value,
         [maxPrice.id]: maxPrice.value
     };
-    console.log(filterObj);
-
+  
     let urlParams = new URLSearchParams(window.location.search);
     let categoryId = urlParams.get('category');
     let apiUrl = `http://localhost:8080/api/events?category=${categoryId}`;
@@ -59,7 +59,7 @@ function applyFilters(container) {
     // Construct the API URL with query parameters
     Object.keys(filterObj).forEach((key) => {
         if (filterObj[key]) {
-            apiUrl += `&${key.replace('Select', '')}=${filterObj[key]}`; 
+            apiUrl += `&${key}=${filterObj[key]}`; 
         }
     });
 
