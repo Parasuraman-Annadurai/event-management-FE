@@ -1,0 +1,90 @@
+/* Ensure the body has a background color and centers the container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+   
+    overflow: hidden;
+    background-color: white;
+    /* max-width: 1000px;  */
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    width: 100%;
+    height: 500px;
+   /* justify-content: space-bet; */
+    margin-left: 100px;
+}
+
+.form-image img {
+    width: 100%; /* Changed to a percentage to be responsive */
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-content {
+    padding: 40px;
+    width: 40%; /* Changed to a percentage to be responsive */
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f04e4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #e43d3d;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p span {
+    color: #f04e4e;
+    cursor: pointer;
+    text-decoration: underline;
+}
