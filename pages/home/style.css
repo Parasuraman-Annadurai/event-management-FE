@@ -74,7 +74,6 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.5);      */
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -113,8 +112,11 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 5rem;  
+    margin-top: 6rem;  
     color: var(--primary-color);
+}
+.homePageTopOrganiserTitle{
+    margin-top: 8rem;
 }
 
 .homePageTopOrganisersMain, .homePageTopPackagesMain, .homePageTopEventsMain {
@@ -128,8 +130,7 @@ body {
     margin: auto;
     margin-top: 2rem;
     background-color:var(--white);
-    /* border-radius: 30px; */
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
     transition: transform 0.3s;
     background-color:var(--white);
     color: var(--black);
@@ -142,15 +143,6 @@ body {
     justify-content: center;
     position: relative;
 }
-
-/* .homePageLeftDivImages, .homePagePackagesLeftDivImages, .homePageEventsLeftDivImages {
-    border-radius: 30px 0px 0px 30px;
-
-}
-
-.homePagePackagesLeftDivImages{
-    border-radius: 0px 30px 30px 0px;
-} */
 
 .homePageRightdescription, .homePagePackagesRightdescription, .homePageEventsRightdescription {
     width: 550px;
@@ -166,18 +158,7 @@ body {
     padding: 1px 1px 1px 1px;
     height: 300px;
     object-fit: cover;
-    /* border: solid 4px var(--primary-color); */
 }
-/* .homePageTopOrganisersMain, .homePageTopEventsMain{
-    background-color: var(--white);
-    color: var(--scroll);
-} 
-
-.homePageTopPackagesMain{
-    background-color:var(--primary-color);
-    color: var(--white);
-} */
-
 
 /* testimonial */
 .testimonial-div1 {
@@ -190,16 +171,13 @@ body {
     position: relative;
     margin: auto;
     margin-top: 2rem;
-    /* background-color:var(--scroll); */
     border-radius: 20px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .testimonial-container1 {
     display: flex;
     align-items: center;
     overflow: hidden;
-    /* width: 200px; */
     height: 250px;
     background-color: var(--white);
     width: 30%;
