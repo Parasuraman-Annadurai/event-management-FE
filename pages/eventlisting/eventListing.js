@@ -41,26 +41,33 @@ function fetchDataAndDisplay(container, apiUrl) {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-// Function to apply filters and fetch filtered data from the backend
 
 function applyFilters(container) {
-    let city = document.getElementById('citySelect').value;
-    let maxPrice = document.getElementById('priceSelect').value;
+    let city = document.getElementById('citySelect');
+    let maxPrice = document.getElementById('priceSelect');
 
-    // Construct the API URL with query parameters
+    let filterObj = {
+        [city.id]: city.value,
+        [maxPrice.id]: maxPrice.value
+    };
+    console.log(filterObj);
+
     let urlParams = new URLSearchParams(window.location.search);
     let categoryId = urlParams.get('category');
     let apiUrl = `http://localhost:8080/api/events?category=${categoryId}`;
-    if (city) apiUrl += `&city=${city}`;
-    if (maxPrice) apiUrl += `&price=${maxPrice}`;
+
+    // Construct the API URL with query parameters
+    Object.keys(filterObj).forEach((key) => {
+        if (filterObj[key]) {
+            apiUrl += `&${key.replace('Select', '')}=${filterObj[key]}`; 
+        }
+    });
 
     // Fetch and display filtered events
     fetchDataAndDisplay(container, apiUrl);
-
-    // Clear the filter selections after applying
-    document.getElementById('citySelect').value = "";
-    document.getElementById('priceSelect').value = "";
 }
+
+
 
 // Function to fetch data from the backend
 async function fetchData(url) {
