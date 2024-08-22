@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="eventOrganizationPage.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbarHeader"></div>
+    <!-- Navbar end -->
+    <div class="form-container-main">
+    <div class="form-container">
+        <h2>Organizer Details Form</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="organization">Organization Name</label>
+                    <input type="text" id="organization" name="organization" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventname">Event Name</label>
+                    <input type="text" id="eventname" name="eventname" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventtagline">Event Tagline</label>
+                    <input type="text" id="eventtagline" name="eventtagline" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="text" id="whatsapp" name="whatsapp" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="eventprice">Event Price</label>
+                    <input type="text" id="eventprice" name="eventprice" required>
+                </div>
+                <div class="form-group">
+                    <label for="selecteventcategory">Select Event Category</label>
+                    <select id="selecteventcategory" name="selecteventcategory" required>
+                        <option value="" disabled selected>Select category</option>
+                        <option value="conference">Conference</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="party">Party</option>
+                        <option value="food">Food</option>
+                        <option value="mehandi">Mehandi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="selectcity">Select City</label>
+                    <select id="selectcity" name="selectcity" required>
+                        <option value="" disabled selected>Select city</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="eventabout">Event About</label>
+                    <textarea id="eventabout" name="eventabout" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="eventdescription">Event Description</label>
+                    <textarea id="eventdescription" name="eventdescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="eventimage">Event Image</label>
+                    <input type="file" id="eventimage" name="eventimage" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectimages">Project Images (up to 4)</label>
+                    <input type="file" id="projectimages" name="projectimages[]" accept="image/*" multiple required>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+    <!-- Footer -->
+    <div id="footerEMS"></div>
+
+    <script type="module" src="eventOrganizationPage.js"></script>
+</body>
+</html>
