@@ -65,6 +65,10 @@ function applyFilters(container) {
 
     // Fetch and display filtered events
     fetchDataAndDisplay(container, apiUrl);
+
+      // Clear the input fields
+      city.value = '';
+      maxPrice.value = '';
 }
 
 

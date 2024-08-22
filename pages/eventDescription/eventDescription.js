@@ -126,16 +126,69 @@ function setupFormSubmission() {
     let form = document.getElementById('userForm');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
+        
         if (validateForm()) {
-            Swal.fire({
-                title: "Success",
-                text: "Your order has been placed",
-                icon: "success",
+            let formData = new FormData(form);
+            let data = {
+                name: formData.get('userName'),
+                email: formData.get('email'),
+                contact: formData.get('contact'),
+                address: formData.get('address')
+            };
+
+            let eventId = new URLSearchParams(window.location.search).get('id');
+            let submitBtn = document.querySelector('.submit-btn');
+
+            if (submitBtn) {
+                submitBtn.innerText = "Submitting...";
+                submitBtn.disabled = true; // Disable the button while submitting
+            }
+
+            fetch(`http://localhost:8080/api/orders/${eventId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(responseData => {
+                if (responseData.statusCode === 201 || responseData.success) {
+                    Swal.fire({
+                        title: "Success",
+                        text: "Your order has been placed, and a confirmation email has been sent.",
+                        icon: "success",
+                    }).then(() => {
+                        closeModal(document.getElementById('userModal'), document.getElementById('blurOverlay'));
+                    });
+                } else {
+                    console.error('Order submission failed:', responseData);
+                    Swal.fire({
+                        title: "Error",
+                        text: "There was an issue placing your order. Please try again.",
+                        icon: "error",
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                Swal.fire({
+                    title: "Error",
+                    text: "There was a problem with the request. Please try again later.",
+                    icon: "error",
+                });
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.innerText = "Submit";
+                    submitBtn.disabled = false; // Re-enable the button
+                }
             });
-            closeModal(document.getElementById('userModal'), document.getElementById('blurOverlay'));
         }
     });
 }
+
+
 
 function validateForm() {
     let isValid = true;
