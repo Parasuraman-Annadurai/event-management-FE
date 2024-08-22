@@ -1,4 +1,3 @@
-
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setupNavigation();
     setupFormSubmission();
 });
+
+let isSubmitting = false; // Flag to track form submission state
 
 function setupEventDetails() {
     let urlParams = new URLSearchParams(window.location.search);
@@ -52,7 +53,6 @@ function displayEventDetails(event) {
         console.error('imageurl array is missing or does not contain enough elements');
     }
 
-
     // Contact Section
     document.getElementById('contactAddress').innerHTML = `<i class="fas fa-map-marker-alt icon"></i> ${event.address}`;
     document.getElementById('contactMobile').textContent = `Mobile: ${event.mobile}`;
@@ -72,38 +72,34 @@ function setupNavigation() {
     });
 }
 
-
 function setupModalFunctionality(event) {
     let modal = document.getElementById('userModal');
     let blurOverlay = document.getElementById('blurOverlay');
     let closeBtn = document.querySelector('.close');
-
-    // Initialize images array
-    let images = event.imageurl|| [];
+    let images = event.imageurl || [];
 
     document.getElementById('bookingSection').addEventListener('click', () => {
-        console.log(event);
         if (images.length > 0) {
             let randomImage = images[Math.floor(Math.random() * images.length)];
             document.getElementById('randomImage').src = `/assets/eventsOrgImg/${randomImage}`;
-            openModal(modal, blurOverlay);
         } else {
-            // Display a message or handle the case where there are no images
             document.getElementById('randomImage').src = '/assets/eventsOrgImg/org1_prewed.jpg'; // Path to a default image
-            console.error('No project images available for modal');
-            openModal(modal, blurOverlay); // Open modal with a default image
+        }
+        openModal(modal, blurOverlay);
+    });
+
+    closeBtn.addEventListener('click', () => {
+        if (!isSubmitting) {
+            closeModal(modal, blurOverlay);
         }
     });
 
-    closeBtn.addEventListener('click', () => closeModal(modal, blurOverlay));
-
     window.addEventListener('click', (event) => {
-        if (event.target === modal || event.target === blurOverlay) {
+        if (event.target === blurOverlay && modal.style.display === "flex" && !isSubmitting) {
             closeModal(modal, blurOverlay);
         }
     });
 }
-
 
 function openModal(modal, blurOverlay) {
     modal.style.display = "flex";
@@ -112,10 +108,12 @@ function openModal(modal, blurOverlay) {
 }
 
 function closeModal(modal, blurOverlay) {
-    modal.style.display = "none";
-    blurOverlay.style.display = "none";
-    document.body.style.overflow = "auto";
-    resetForm();
+    if (modal.style.display === "flex") {
+        modal.style.display = "none";
+        blurOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+        resetForm();
+    }
 }
 
 function resetForm() {
@@ -138,6 +136,8 @@ function setupFormSubmission() {
 
             let eventId = new URLSearchParams(window.location.search).get('id');
             let submitBtn = document.querySelector('.submit-btn');
+
+            isSubmitting = true; // Set the flag to true when submission starts
 
             if (submitBtn) {
                 submitBtn.innerText = "Submitting...";
@@ -179,6 +179,7 @@ function setupFormSubmission() {
                 });
             })
             .finally(() => {
+                isSubmitting = false; // Reset the flag after submission is complete
                 if (submitBtn) {
                     submitBtn.innerText = "Submit";
                     submitBtn.disabled = false; // Re-enable the button
@@ -187,8 +188,6 @@ function setupFormSubmission() {
         }
     });
 }
-
-
 
 function validateForm() {
     let isValid = true;
@@ -272,13 +271,6 @@ function validateForm() {
 
     return isValid;
 }
-
-
-
-
-
-
-
 
 
 
