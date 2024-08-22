@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Global Styles */
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff6f61;
+    --secondary-color: #e56357;
+    --accent-color: #ff8b80;
+    --background-color: #f4f4f4;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --subtext-color: #666666;
+    --border-color: #e0e0e0;
+}
+
+/* Body Style */
+body {
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Container for the entire page */
+.descriptionContainer {
+    margin: auto;
+    max-width: 1244px;
+    width: 100%;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Section */
+.headerSection {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.headerSection img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-left: 2rem;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.headerDetails {
+    animation: slideInRight 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* General Description Sections */
+.descriptionBody {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Reverse Layout for alternating sections */
+.reverseLayout {
+    flex-direction: row-reverse;
+}
+
+/* Image styling in sections */
+.sectionImage {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+}
+
+/* Adjusting margin in sectionContent for better alignment */
+.sectionContent {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.sectionContent h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.sectionContent p {
+    font-size: 1rem;
+    color: var(--subtext-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Button styling */
+.bookNowBtn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.bookNowBtn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* How to Organize Section */
+.servicesSection {
+    padding: 2rem 0rem 2rem 3rem;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin-bottom: 2rem;
+}
+
+.servicesSection h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.servicesSection p {
+    font-size: 1rem;
+    color: var(--subtext-color);
+    line-height: 1.6;
+}
+
+/* Contact Card Style */
+.contactCard {
+    background-color: var(--border-color);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    padding: 1rem;
+    margin: 0 auto;
+    /* max-width: 400px; */
+}
+
+
+.contactInfo h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.contactInfo p {
+    font-size: 1rem;
+    color: var(--subtext-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

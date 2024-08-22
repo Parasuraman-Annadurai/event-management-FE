@@ -197,6 +197,24 @@ body {
     margin: 0 10px;
 }
 
+.carouselBtn {
+    background: var(--white);
+    border: none;
+    color: var(--primary-color);
+    height: 60px;
+    padding: 1rem;
+    font-weight: 900;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.carouselBtn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+
 .testimonial-content {
     text-align: center;
     /* margin: 20px; */
