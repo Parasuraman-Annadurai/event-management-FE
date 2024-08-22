@@ -1,4 +1,3 @@
-// Assuming loadHeader and loadFooter are defined in '/utility/utility.js'
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,26 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const urlParams = new URLSearchParams(window.location.search);
-const packageName = urlParams.get('title');
-
-// Function to convert rating into star icons
-function convertRatingToStars(rating) {
-    let fullStar = '★';
-    let emptyStar = '☆';
-
-    // Use floor to round down the rating to the nearest integer
-    const fullStars = Math.floor(rating);
-    const emptyStars = 5 - fullStars;
-
-    return fullStar.repeat(fullStars) + emptyStar.repeat(emptyStars);
-}
+const packageId = urlParams.get('_id');
+console.log(packageId)
 
 async function fetchPackageData() {
     try {
-        const response = await fetch("http://localhost:8080/api/allpackages");
+        const response = await fetch(`http://localhost:8080/api/allpackages?_id=${packageId}`);
         const data = await response.json();
-        const packageData = data.data.find(pkg => pkg.organizationName === packageName);
-
+        const packageData = data.data.find(pkg => pkg._id === packageId);
+console.log(packageData)
         if (packageData) {
             document.getElementById('packageImage').src = "/assets/Home_Images/" + packageData.packageImage;
             document.getElementById('packageName').textContent = packageData.packageName;
@@ -80,6 +68,17 @@ async function fetchPackageData() {
     } catch (error) {
         console.error('Error fetching package data:', error);
     }
+}
+
+// Function to convert rating into star icons
+function convertRatingToStars(rating) {
+    let fullStar = '★';
+    let emptyStar = '☆';
+
+    const fullStars = Math.floor(rating);
+    const emptyStars = 5 - fullStars;
+
+    return fullStar.repeat(fullStars) + emptyStar.repeat(emptyStars);
 }
 
 document.getElementById('prevBtn').addEventListener('click', () => {
