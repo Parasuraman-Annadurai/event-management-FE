@@ -30,8 +30,8 @@
 }
 /* Loader Styles */
 .listingLoader {
-    border: 16px solid var(--scroll);
-    border-top: 16px solid var(--primary-color);
+    border: 12px solid var(--scroll);
+    border-top: 12px solid var(--primary-color);
     border-radius: 50%;
     width: 100px;
     height: 100px;

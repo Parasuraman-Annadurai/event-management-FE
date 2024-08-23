@@ -247,14 +247,14 @@ function validateForm() {
         emailError.style.display = 'none';
     }
 
-    let contactPattern = /^[0-9]{10}$/;
+    let contactPattern = /^[6-9]\d{9}$/;
     if (contact.value.trim() === "") {
         contactError.textContent = "Enter contact number";
         contactError.style.display = 'block';
         errors.push(contactError);
         isValid = false;
     } else if (!contactPattern.test(contact.value.trim())) {
-        contactError.textContent = "Enter valid contact number";
+        contactError.textContent = "Invalid contact number";
         contactError.style.display = 'block';
         errors.push(contactError);
         isValid = false;
@@ -283,10 +283,11 @@ function validateForm() {
     if (errors.length > 0) {
         setTimeout(() => {
             errors.forEach(error => error.style.display = 'none');
-        }, 2000);
+        }, 3000);
     }
 
     return isValid;
 }
+
 
 
