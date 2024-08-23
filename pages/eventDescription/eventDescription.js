@@ -19,6 +19,10 @@ function setupEventDetails() {
         return;
     }
 
+
+    // Show loader while fetching data
+    document.getElementById('descriptionLoader').style.display = 'block';
+
     fetch(`http://localhost:8080/api/events/${eventId}`)
         .then(response => response.json())
         .then(responseData => { 
@@ -30,7 +34,11 @@ function setupEventDetails() {
                 console.error('Event not found');
             }
         })
-        .catch(error => console.error('Error fetching data:', error));
+        .catch(error => console.error('Error fetching data:', error))
+        .finally(() => {
+            // Hide loader after data is fetched
+            document.getElementById('descriptionLoader').style.display = 'none';
+        });
 }
 
 function displayEventDetails(event) {
@@ -139,6 +147,9 @@ function setupFormSubmission() {
 
             isSubmitting = true; // Set to true when submission starts
 
+             // Show loader when submitting form
+             document.getElementById('descriptionLoader').style.display = 'block';
+
             if (submitBtn) {
                 submitBtn.innerText = "Submitting...";
                 submitBtn.disabled = true; // Disable the button while submitting
@@ -179,7 +190,11 @@ function setupFormSubmission() {
                 });
             })
             .finally(() => {
-                isSubmitting = false; // Resetafter submission is complete
+                isSubmitting = false; // Reset after submission is complete
+
+                // Hide loader after submission is complete
+                document.getElementById('descriptionLoader').style.display = 'none';
+                
                 if (submitBtn) {
                     submitBtn.innerText = "Submit";
                     submitBtn.disabled = false; // Re-enable the button

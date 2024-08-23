@@ -33,12 +33,14 @@ function initializePage(container) {
 
 // Function to fetch and display events based on the API URL
 function fetchDataAndDisplay(container, apiUrl) {
+    showLoader(); // Show loader before fetching data
     fetchData(apiUrl)
         .then(data => {
             let events = data.data;
             displayEvents(events, container);
         })
-        .catch(error => console.error('Error fetching data:', error));
+        .catch(error => console.error('Error fetching data:', error))
+        .finally(() => hideLoader()); // Hide loader after data is fetched
 }
 
 
@@ -62,16 +64,25 @@ function applyFilters(container) {
             apiUrl += `&${key}=${filterObj[key]}`; 
         }
     });
+    
+     // Show loader, fetch and display filtered events
+     fetchDataAndDisplay(container, apiUrl);  // Loader functions are handled within this function
 
-    // Fetch and display filtered events
-    fetchDataAndDisplay(container, apiUrl);
 
       // Clear the input fields
       city.value = '';
       maxPrice.value = '';
 }
 
+// Function to show the loader
+function showLoader() {
+    document.getElementById('listingLoader').style.display = 'block';
+}
 
+// Function to hide the loader
+function hideLoader() {
+    document.getElementById('listingLoader').style.display = 'none';
+}
 
 // Function to fetch data from the backend
 async function fetchData(url) {

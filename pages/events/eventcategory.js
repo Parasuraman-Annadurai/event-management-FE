@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function fetchEventsData(eventsData, categoriesContainer) {
+    let eventLoader = document.getElementById("eventLoader");
+    eventLoader.style.display = "block"; // Show loader
     try {
         let response = await fetch(eventsData);
         let responseData = await response.json();
@@ -20,9 +22,14 @@ async function fetchEventsData(eventsData, categoriesContainer) {
         } else {
             console.error('Unexpected data format or response:', responseData);
         }
-    } catch (error) {
+    } 
+    catch (error) {
         console.error('Error fetching the JSON data:', error);
     }
+    finally {
+        eventLoader.style.display = "none"; // Hide loader
+    }
+
 }
 
 function displayCategories(categories, categoriesContainer) {
