@@ -38,7 +38,7 @@ body {
     box-sizing: border-box;
 }
 
-h2 {
+.form-content h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
@@ -78,12 +78,12 @@ button:hover {
     background-color: #e43d3d;
 }
 
-p {
+.form-content p {
     text-align: center;
     margin-top: 20px;
 }
 
-p span {
+.form-content p span {
     color: #f04e4e;
     cursor: pointer;
     text-decoration: underline;
