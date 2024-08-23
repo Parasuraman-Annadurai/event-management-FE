@@ -14,7 +14,7 @@ function showLoaderAndFetchData() {
     setTimeout(() => {
         fetchPackageData();
         loader.style.display = 'none'; // Hide loader
-    }, 500);
+    }, 300);
 }
 
 function fetchPackageData() {

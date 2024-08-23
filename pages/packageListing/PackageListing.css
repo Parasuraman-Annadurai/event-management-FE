@@ -23,11 +23,15 @@
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-#navbarHeader {
+#listingTop {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
+    width: 100%;
+    background-color: var(--white);
 }
+
+
 .packageCategories {
     display: flex;
     flex-direction: column;
@@ -36,16 +40,17 @@
 .intro-section {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom:3rem;
+    margin-top: 1rem;
 
 }
 .intro-text {
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .intro-text h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.7rem;
     color: var(--main-color);
     border-right: .15em solid var(--primary-color); 
     white-space: nowrap; 
@@ -80,14 +85,14 @@
     max-width: 1000px;
     width: 100%;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .packageListings {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 4rem;
     justify-content: center;
 }
 
@@ -219,6 +224,7 @@ button:hover {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
+
 
 /* loader styles */
 #loader {

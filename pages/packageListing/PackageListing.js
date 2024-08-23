@@ -18,7 +18,7 @@ function showLoaderAndFetchData() {
         if (loader) {
             loader.style.display = 'none'; // Hide loader
         }
-    }, 500);
+    }, 300);
 }
 
 function initializePackageListings() {
@@ -145,7 +145,7 @@ function applyFilters(container) {
         if (loader) {
             loader.style.display = 'none'; // Hide loader after fetching data
         }
-    }, 2000); // 2 seconds delay
+    }, 500); 
 }
 
 
