@@ -132,17 +132,19 @@ function setupFormSubmission() {
     let form = document.getElementById('userForm');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        
         if (validateForm()) {
             let formData = new FormData(form);
             let data = {
                 name: formData.get('userName'),
                 email: formData.get('email'),
                 contact: formData.get('contact'),
-                address: formData.get('address')
+                address: formData.get('address'),
+                organizerEmail: document.getElementById('contactEmail').textContent,
+                organizerName: document.getElementById('eventName').textContent,
+                organizerAddress: document.getElementById('contactAddress').textContent,
+                organizerMobile: document.getElementById('contactMobile').textContent,
             };
 
-            let eventId = new URLSearchParams(window.location.search).get('id');
             let submitBtn = document.querySelector('.submit-btn');
 
             isSubmitting = true; // Set to true when submission starts
@@ -155,7 +157,7 @@ function setupFormSubmission() {
                 submitBtn.disabled = true; // Disable the button while submitting
             }
 
-            fetch(`http://localhost:8080/api/orders/${eventId}`, {
+            fetch(`http://localhost:8080/api/orders`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -286,6 +288,5 @@ function validateForm() {
 
     return isValid;
 }
-
 
 
