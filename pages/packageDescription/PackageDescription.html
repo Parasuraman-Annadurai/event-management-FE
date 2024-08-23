@@ -6,6 +6,7 @@
     <title>Package Description</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/pages/packageDescription/PackageDescription.css">
+    <link rel="stylesheet" href="/pages/packageDescription/bokingForm.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -22,7 +23,7 @@
                 <h2 id="packageTagLine"></h2>
                 <h4 id="packagePrice"></h4>
                 <!-- Book Now Button -->
-            <button class="bookNowBtn">Book Now</button>
+                <button class="bookNowBtn" id="headerBookingBtn">Book Now</button>
             </div>
         </div>
 
@@ -56,7 +57,7 @@
                 <p><strong>Rating:</strong> <span id="rating"></span></p>
                 <p><strong>Experience:</strong> <span id="experience"></span></p>
                 <!-- Book Now Button -->
-                <button class="bookNowBtn">Book Now</button>
+                <button class="bookNowBtn" id="contactBookingBtn">Book Now</button>
             </div>
             <div class="mapContainer">
                 <iframe id="cityMap" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -67,6 +68,47 @@
     <!-- Footer -->
     <div id="footerEMS"></div>
 
+   <!-- User Details Modal -->
+   <div id="userModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="user-details-container">
+            <div class="left-side-image">
+                <img id="randomImage" src="/assets/Home_Images/Events/wedding_mehandi1.jpeg" alt="Random Image">
+            </div>
+            <div class="user-details-form">
+                <form id="userForm" action="#">
+                    <div class="input-group">
+                        <input type="text" id="userName" name="userName" placeholder="Your Name" >
+                        <div class="error-messages"><p class="error-message" id="userNameError"></p></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="Email" >
+                        <div class="error-messages"><p class="error-message" id="emailError"></p></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="contact" name="contact" placeholder="Contact" >
+                        <div class="error-messages"><p class="error-message" id="contactError"></p></div>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="address" id="address" placeholder="Address" ></textarea>
+                        <div class="error-messages"><p class="error-message" id="addressError"></p></div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">I confirm my booking for this event.</label>
+                        
+                    </div>
+                    <div class="error-messages"><p class="error-message" id="agreeError"></p></div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="blurOverlay" class="blur-overlay"></div>
+    
     <script type="module" src="/pages/packageDescription/PackageDescription.js"></script>
 </body>
 </html>
