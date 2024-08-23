@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     loadFooter();
     fetchPackageData();
     setupModalFunctionality();
+    setupFormSubmission();
 
     // Event listeners for "Book Now" buttons
-    document.getElementById('headerBookingBtn').addEventListener('click', openModal);
-    document.getElementById('contactBookingBtn').addEventListener('click', openModal);
+    // document.getElementById('headerBookingBtn').addEventListener('click', openModal);
+    // document.getElementById('contactBookingBtn').addEventListener('click', openModal);
 
     // Event listener for closing the modal
     document.querySelector('.close').addEventListener('click', closeModal);
@@ -83,7 +84,7 @@ function setupModalFunctionality() {
     let modal = document.getElementById('userModal');
     let blurOverlay = document.getElementById('blurOverlay');
     let closeBtn = document.querySelector('.close');
-    
+    let isSubmitting;
     closeBtn.addEventListener('click', () => {
         if (!isSubmitting) {
             closeModal();
@@ -95,131 +96,214 @@ function setupModalFunctionality() {
             closeModal();
         }
     });
-}
 
-function openModal() {
-    const modal = document.getElementById('userModal');
-    modal.style.display = 'block';
-    document.getElementById('blurOverlay').style.display = 'block';
-    document.body.style.overflow = "hidden";
-}
-
-function closeModal() {
-    const modal = document.getElementById('userModal');
-    modal.style.display = 'none';
-    document.getElementById('blurOverlay').style.display = 'none';
-    document.body.style.overflow = "auto";
-    resetForm(); // Clear the form when modal closes
-}
-
-function resetForm() {
-    document.getElementById('userForm').reset(); // Reset the form fields
-}
-
-function setupFormSubmission() {
-    const form = document.getElementById('userForm');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('userName'),
-            email: formData.get('email'),
-            contact: formData.get('contact'),
-            address: formData.get('address')
-        };
-
-        const submitBtn = document.querySelector('.submit-btn');
-
-        isSubmitting = true; // Set to true when submission starts
-
-        // Show loader when submitting form
-        document.getElementById('descriptionLoader').style.display = 'block';
-
-        if (submitBtn) {
-            submitBtn.innerText = "Submitting...";
-            submitBtn.disabled = true; // Disable the button while submitting
+    document.getElementById('bookingSection').addEventListener('click', () => {
+        const images = event.imageurl || [];
+        if (images.length > 0) {
+            let randomImage = images[Math.floor(Math.random() * images.length)];
+            document.getElementById('randomImage').src = `/assets/eventsOrgImg/${randomImage}`;
+        } else {
+            document.getElementById('randomImage').src = '/assets/eventsOrgImg/org1_prewed.jpg'; // Path to a default image
         }
-
-        fetch(`http://localhost:8080/api/orders/${packageId}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-        .then(response => response.json())
-        .then(responseData => {
-            if (responseData.statusCode === 201 || responseData.success) {
-                // Trigger email sending via the API
-                return fetch('http://localhost:8080/api/orders', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        name: data.name,
-                        email: data.email,
-                        contact: data.contact,
-                        address: data.address,
-                        organizerEmail: 'delightfulbabycelebrations@example.com', // Set organizer email
-                        organizerName: 'Delightful Baby Celebrations', // Set organizer name
-                        organizerAddress: '123 Celebration Avenue, Joy Town', // Set organizer address
-                        organizerMobile: '9812345672' // Set organizer mobile
-                    }),
-                });
-            } else {
-                throw new Error('Order submission failed');
-            }
-        })
-        .then(mailResponse => mailResponse.json())
-        .then(mailData => {
-            if (mailData.success) {
-                Swal.fire({
-                    title: "Success",
-                    text: "Your order has been placed, and a confirmation email has been sent.",
-                    icon: "success",
-                }).then(() => {
-                    closeModal();
-                });
-            } else {
-                throw new Error('Email sending failed');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            Swal.fire({
-                title: "Error",
-                text: "There was an issue with your request. Please try again later.",
-                icon: "error",
-            });
-        })
-        .finally(() => {
-            isSubmitting = false; // Reset after submission is complete
-
-            // Hide loader after submission is complete
-            document.getElementById('descriptionLoader').style.display = 'none';
-
-            if (submitBtn) {
-                submitBtn.innerText = "Submit";
-                submitBtn.disabled = false; // Re-enable the button
-            }
-        });
+        openModal(modal, blurOverlay);
     });
 }
 
+function openModal(modal, blurOverlay) {
+    modal.style.display = "flex";
+    blurOverlay.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal(modal, blurOverlay) {
+    if (modal.style.display === "flex") {
+        modal.style.display = "none";
+        blurOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+        resetForm();
+    }
+}
+
+function resetForm() {
+    document.getElementById('userForm').reset();
+}
+
+function setupFormSubmission() {
+    let form = document.getElementById('userForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            let formData = new FormData(form);
+            let data = {
+                name: formData.get('userName'),
+                email: formData.get('email'),
+                contact: formData.get('contact'),
+                address: formData.get('address'),
+                organizerEmail: document.getElementById('email').textContent,
+                organizerName: document.getElementById('packageName').textContent,
+                organizerAddress: document.getElementById('address').textContent,
+                organizerMobile: document.getElementById('mobile').textContent,
+            };
+            console.log(data.email);
+            
+
+            let submitBtn = document.querySelector('.submit-btn');
+            
+            let isSubmitting = true; // Set to true when submission starts
+
+             // Show loader when submitting form
+             document.getElementById('descriptionLoader').style.display = 'block';
+
+            if (submitBtn) {
+                submitBtn.innerText = "Submitting...";
+                submitBtn.disabled = true; // Disable the button while submitting
+            }
+
+            fetch(`http://localhost:8080/api/orders`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(responseData => {
+                if (responseData.statusCode === 201 || responseData.success) {
+                    Swal.fire({
+                        title: "Success",
+                        text: "Your order has been placed, and a confirmation email has been sent.",
+                        icon: "success",
+                    }).then(() => {
+                        closeModal(document.getElementById('userModal'), document.getElementById('blurOverlay'));
+                    });
+                } else {
+                    console.error('Order submission failed:', responseData);
+                    Swal.fire({
+                        title: "Error",
+                        text: "There was an issue placing your order. Please try again.",
+                        icon: "error",
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                Swal.fire({
+                    title: "Error",
+                    text: "There was a problem with the request. Please try again later.",
+                    icon: "error",
+                });
+            })
+            .finally(() => {
+                isSubmitting = false; // Reset after submission is complete
+
+                // Hide loader after submission is complete
+                document.getElementById('descriptionLoader').style.display = 'none';
+                
+                if (submitBtn) {
+                    submitBtn.innerText = "Submit";
+                    submitBtn.disabled = false; // Re-enable the button
+                }
+            });
+        }
+    });
+}
+
+function validateForm() {
+    let isValid = true;
+
+    let userName = document.getElementById('userName');
+    let email = document.getElementById('email');
+    let contact = document.getElementById('contact');
+    let address = document.getElementById('address');
+    let agree = document.getElementById('agree');
+
+    let userNameError = document.getElementById('userNameError');
+    let emailError = document.getElementById('emailError');
+    let contactError = document.getElementById('contactError');
+    let addressError = document.getElementById('addressError');
+    let agreeError = document.getElementById('agreeError');
+
+    console.log(contact.value);
+    
+    let errors = [];
+
+    if (userName.value.trim() === "") {
+        userNameError.textContent = "Enter user name";
+        userNameError.style.display = 'block';
+        errors.push(userNameError);
+        isValid = false;
+    } else {
+        userNameError.style.display = 'none';
+    }
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    console.log(email.innerText);
+    
+    if (email.innerText === "") {
+        emailError.textContent = "Enter email";
+        emailError.style.display = 'block';
+        errors.push(emailError);
+        isValid = false;
+    } else if (!emailPattern.test(email.innerText)) {
+        emailError.textContent = "Enter valid email";
+        emailError.style.display = 'block';
+        errors.push(emailError);
+        isValid = false;
+    } else {
+        emailError.style.display = 'none';
+    }
+
+    let contactPattern = /^[0-9]{10}$/;
+    if (contact.value.trim() === "") {
+        contactError.textContent = "Enter contact number";
+        contactError.style.display = 'block';
+        errors.push(contactError);
+        isValid = false;
+    } else if (!contactPattern.test(contact.value.trim())) {
+        contactError.textContent = "Enter valid contact number";
+        contactError.style.display = 'block';
+        errors.push(contactError);
+        isValid = false;
+    } else {
+        contactError.style.display = 'none';
+    }
+
+    if (address.innerText.trim() === "") {
+        addressError.textContent = "Enter address";
+        addressError.style.display = 'block';
+        errors.push(addressError);
+        isValid = false;
+    } else {
+        addressError.style.display = 'none';
+    }
+
+    if (!agree.checked) {
+        agreeError.textContent = "You must agree to the terms";
+        agreeError.style.display = 'block';
+        errors.push(agreeError);
+        isValid = false;
+    } else {
+        agreeError.style.display = 'none';
+    }
+
+    if (errors.length > 0) {
+        setTimeout(() => {
+            errors.forEach(error => error.style.display = 'none');
+        }, 2000);
+    }
+
+    return isValid;
+}
 function convertRatingToStars(rating) {
     let stars = '';
-    const fullStars = Math.floor(rating);
-    const emptyStars = 5 - fullStars;
-
-    for (let i = 0; i < fullStars; i++) {
-        stars += '★';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            stars += '<span class="fa fa-star checked"></span>';
+        } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
+            stars += '<span class="fa fa-star-half-alt checked"></span>';
+        } else {
+            stars += '<span class="fa fa-star"></span>';
+        }
     }
-
-    for (let i = 0; i < emptyStars; i++) {
-        stars += '☆';
-    }
-
     return stars;
 }
