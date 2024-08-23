@@ -3,8 +3,19 @@ import { loadHeader, loadFooter } from '/utility/utility.js';
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
-    fetchPackageData();
+    showLoaderAndFetchData();
 });
+
+function showLoaderAndFetchData() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'block'; // Show loader
+
+    
+    setTimeout(() => {
+        fetchPackageData();
+        loader.style.display = 'none'; // Hide loader
+    }, 500);
+}
 
 function fetchPackageData() {
     fetch("http://localhost:8080/api/allpackages")
@@ -67,5 +78,7 @@ function initializePackageCategories(packages) {
 }
 
 function showVendors(categoryId) {
-    window.location.href = `/pages/packageListing/PackageListing.html?category=${encodeURIComponent(categoryId)}`;
+    // Decoding the categoryId 
+    const decodedCategoryId = decodeURIComponent(categoryId);
+    window.location.href = `/pages/packageListing/PackageListing.html?category=${encodeURIComponent(decodedCategoryId)}`;
 }

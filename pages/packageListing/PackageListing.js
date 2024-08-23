@@ -3,8 +3,23 @@ import { loadHeader, loadFooter } from '/utility/utility.js';
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
-    initializePackageListings();
+    showLoaderAndFetchData();
 });
+
+function showLoaderAndFetchData() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.style.display = 'block'; // Show loader
+    }
+
+    // Simulate loader display for 2 seconds
+    setTimeout(() => {
+        initializePackageListings();
+        if (loader) {
+            loader.style.display = 'none'; // Hide loader
+        }
+    }, 2000);
+}
 
 function initializePackageListings() {
     const container = document.getElementById('packageListings');
@@ -12,10 +27,12 @@ function initializePackageListings() {
         console.error('No element with ID "packageListings" found.');
         return;
     }
+
     const urlParams = new URLSearchParams(window.location.search);
-    const categoryId = urlParams.get('category');
+    let categoryId = urlParams.get('category');
 
     if (categoryId) {
+        categoryId = decodeURIComponent(categoryId).replace(/%2F/g, '/'); // Decode and replace %2F with /
         filterCategory(categoryId);
     } else {
         fetchAllPackages();
@@ -32,6 +49,7 @@ function fetchAllPackages() {
 }
 
 function filterCategory(category) {
+    category = encodeURIComponent(category).replace(/%2F/g, '/').replace(/%20/g, '+'); // Ensure URL encoding and replace spaces
     fetch(`http://localhost:8080/api/allpackages?category=${category}`)
         .then(response => response.json())
         .then(data => {
@@ -71,17 +89,19 @@ function displayPackages(packages) {
             </div>
         `;
 
+        console.log(pkg._id);
+
         // Append card to container
         container.appendChild(card);
 
-        // Add click event to redirect to package details
+        // Add click event to redirect to package details using _id
         card.addEventListener('click', () => {
-            showPackageDetails(pkg.organizationName);
+            showPackageDetails(pkg._id);
         });
     });
 }
 
-function showPackageDetails(organizationName) {
-    const formattedTitle = encodeURIComponent(organizationName);
-    window.location.href = `/pages/packageDescription/PackageDescription.html?title=${formattedTitle}`;
+function showPackageDetails(packageId) {
+    const formattedId = encodeURIComponent(packageId);
+    window.location.href = `/pages/packageDescription/PackageDescription.html?_id=${formattedId}`;
 }
