@@ -137,7 +137,7 @@ function setupFormSubmission() {
             let eventId = new URLSearchParams(window.location.search).get('id');
             let submitBtn = document.querySelector('.submit-btn');
 
-            isSubmitting = true; // Set the flag to true when submission starts
+            isSubmitting = true; // Set to true when submission starts
 
             if (submitBtn) {
                 submitBtn.innerText = "Submitting...";
@@ -179,7 +179,7 @@ function setupFormSubmission() {
                 });
             })
             .finally(() => {
-                isSubmitting = false; // Reset the flag after submission is complete
+                isSubmitting = false; // Resetafter submission is complete
                 if (submitBtn) {
                     submitBtn.innerText = "Submit";
                     submitBtn.disabled = false; // Re-enable the button
