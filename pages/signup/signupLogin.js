@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeForms();
 });
 
-let form1= document.getElementById('form1');
-let form2 = document.getElementById('submit-btn');
+
 // Initialize forms
 function initializeForms() {
     document.getElementById('signup-form').style.display = 'block';
@@ -34,30 +33,69 @@ function toggleForms(isSignup) {
 }
 
 
-const username = document.getElementById('username').value; // Changed from 'username' to 'email'
-const password = document.getElementById('password').value;
 
+// Handle signup submission
+function handleSignup(event) {
+    event.preventDefault();
 
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (!username || !password || !email) {
+        alert('All fields are required for signup');
+        return;
+    }
+
+    fetch('http://localhost:8080/api/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, email, password }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.token) {
+            alert('Signup successful!');
+            console.log('User data:', data);
+            localStorage.setItem('token', data.token);
+
+            
+            document.getElementById('signup-form').reset();
+
+            
+            toggleForms(false);
+        } else {
+            alert('Signup failed: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred during signup.');
+    });
+}
 
 // Handle login submission
 function handleLogin(event) {
-    event.preventDefault(); // Prevent form from submitting the traditional way
+    event.preventDefault(); 
 
-    const username = document.getElementById('usernames').value; // Changed from 'username' to 'email'
+    const username = document.getElementById('usernames').value; 
     const password = document.getElementById('passwords').value;
 
+   
        
     fetch('http://localhost:8080/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }), // Changed 'name' to 'email' to match backend
+        body: JSON.stringify({ username, password}), 
     })
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        if (data.token) { // Assuming the backend returns a token on successful login
+        if (data.token) { 
             alert('Login successful!');
 
             console.log('User data:', data);
@@ -77,12 +115,14 @@ function handleLogin(event) {
     });
 }
 
-// Attach submit event to the login form
-document.getElementById('form2').addEventListener('submit', handleLogin);
-// Attach submit event to the signup form
-document.getElementById('signup-form').addEventListener('submit', handleSignup);
 
-// Handle hamburger menu toggling
+document.getElementById('form2').addEventListener('submit', handleLogin);
+
+document.getElementById('form1').addEventListener('submit', handleSignup);
+
+// Hamburger menu functionality
+
+
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
