@@ -44,7 +44,7 @@
 
 .form-container h2 {
     text-align: center;
-    color: var(--heading);
+    color: var(--main-color);
     margin-bottom: 20px;
 }
 
@@ -88,8 +88,8 @@
 }
 
 .form-group textarea {
-    resize: vertical;
     height: 80px;
+    resize: none;
 }
 
 .form-group select {
@@ -97,6 +97,8 @@
     background-color: var(--white);
     position: relative;
     padding-right: 30px;
+    background: var(--white) url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNiAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDFMOC44MzEgNi44NDFMNy4zIDUuNTgzTDEgMUgxNSIgZmlsbD0iIzAwMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIuMDAwMDAxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==) no-repeat right 10px center;
+    background-size: 10px;
 }
 
 .submit-btn {
