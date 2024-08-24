@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Package</title>
+    <link rel="stylesheet" href="/pages/packageOrganizingPage/packageOrganize.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbarHeader"></div>
+    
+    <div class="container">
+        <h2>Add a New Package</h2>
+        <form id="packageForm">
+            <div class="grid-container">
+
+                <div class="form-group">
+                    <label for="packageName">Package Name</label>
+                    <select id="packageName" name="packageName" required>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Reception">Reception</option>
+                        <option value="NamingCeremony">Naming Ceremony</option>
+                        <option value="EarPiercingCeremony">Ear Piercing Ceremony</option>
+                        <option value="BabyShower">Baby Shower</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="Packages/wedding-package">Wedding Package</option>
+                        <option value="Packages/birthday-package">Birthday Package</option>
+                        <option value="Packages/reception-package">Reception Package</option>
+                        <option value="Packages/naming-ceremony-package">Naming Ceremony Package</option>
+                        <option value="Packages/ear-piercing-ceremony-package">Ear Piercing Ceremony Package</option>
+                        <option value="Packages/baby-shower-package">Baby Shower Package</option>
+                    </select>
+                </div>
+
+               
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <select id="city" name="city" required>
+                        <option value="">All Cities</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Trichy">Trichy</option>
+                        <option value="Nagercoil">Nagercoil</option>
+                        <option value="Erode">Erode</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                        <option value="Madurai">Madurai</option>
+                        <option value="Vellore">Vellore</option>
+                        <option value="Thirunelveli">Thirunelveli</option>
+                        <option value="Thoothukudi">Thoothukudi</option>
+                        <option value="Salem">Salem</option>
+                        <option value="Kanyakumari">Kanyakumari</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="organizationName">Organization Name</label>
+                    <input type="text" id="organizationName" name="organizationName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="totalPackagePrice">Total Package Price</label>
+                    <input type="number" id="totalPackagePrice" name="totalPackagePrice" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="packageImage">Package Image</label>
+                    <input type="file" id="packageImage" name="packageImage" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="packageDescription">Package Description</label>
+                    <textarea id="packageDescription" name="packageDescription" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="packageTagline">Package Tagline</label>
+                    <textarea id="packageTagline" name="packageTagline" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="text" id="whatsapp" name="whatsapp" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" step="0.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience (in years)</label>
+                    <input type="number" id="experience" name="experience" required>
+                </div>
+            </div>
+            <div id="eventsDisplayContainer"></div>
+
+            <div id="eventsContainer">
+                <h3>Events</h3>
+                <div class="event-group">
+                    <label for="eventName">Event Name</label>
+                    <input type="text" name="eventName" required>
+                    <label for="description">Description</label>
+                    <input type="text" name="description" required>
+                    <label for="eventPhotos">Event Photo</label>
+                    <input type="file" name="eventPhotos" accept="image/*" required>
+                    <label for="price">Price</label>
+                    <input type="number" name="price" required>
+                </div>
+            </div>
+
+            <button type="button" id="addEventButton">Add More Events</button>
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div id="footerEMS"></div>
+
+    <script type="module" src="/pages/packageOrganizingPage/packageOrganize.js"></script>
+</body>
+</html>
+

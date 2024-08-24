@@ -6,20 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchPackageData();
     setupModalFunctionality();
     setupFormSubmission();
+    document.getElementById('prevBtn').addEventListener('click', () => moveCarousel(-1));
+    document.getElementById('nextBtn').addEventListener('click', () => moveCarousel(1));
 
-    // Event listeners for "Book Now" buttons
-    // document.getElementById('headerBookingBtn').addEventListener('click', openModal);
-    // document.getElementById('contactBookingBtn').addEventListener('click', openModal);
-
-    // Event listener for closing the modal
-    document.querySelector('.close').addEventListener('click', closeModal);
-    document.getElementById('blurOverlay').addEventListener('click', closeModal);
+    // document.querySelector('.close').addEventListener('click', closeModal);
+    // document.getElementById('blurOverlay').addEventListener('click', closeModal);
 });
 
 const urlParams = new URLSearchParams(window.location.search);
 const packageId = urlParams.get('_id');
 console.log(packageId);
 
+let images = []; 
 async function fetchPackageData() {
     try {
         const response = await fetch(`http://localhost:8080/api/allpackages?_id=${packageId}`);
@@ -37,6 +35,7 @@ async function fetchPackageData() {
 
             const carousel = document.getElementById('carousel');
             packageData.packagesLists.forEach(event => {
+                images.push(event.eventPhotos); // Store image paths in the images array
                 const img = document.createElement('img');
                 img.src = "/assets/Home_Images/" + event.eventPhotos;
                 img.alt = event.eventName;
@@ -84,10 +83,11 @@ function setupModalFunctionality() {
     let modal = document.getElementById('userModal');
     let blurOverlay = document.getElementById('blurOverlay');
     let closeBtn = document.querySelector('.close');
-    let isSubmitting;
+    let isSubmitting = false;
+
     closeBtn.addEventListener('click', () => {
         if (!isSubmitting) {
-            closeModal();
+            closeModal(modal, blurOverlay);
         }
     });
 
@@ -98,22 +98,23 @@ function setupModalFunctionality() {
     });
 
     document.getElementById('bookingSection').addEventListener('click', () => {
-        const images = event.imageurl || [];
         if (images.length > 0) {
             let randomImage = images[Math.floor(Math.random() * images.length)];
-            document.getElementById('randomImage').src = `/assets/eventsOrgImg/${randomImage}`;
+            document.getElementById('randomImage').src = `/assets/Home_Images/${randomImage}`;
         } else {
-            document.getElementById('randomImage').src = '/assets/eventsOrgImg/org1_prewed.jpg'; // Path to a default image
+            document.getElementById('randomImage').src = '/assets/eventsOrgImg/org1_prewed.jpg'; // Default image path
         }
-        openModal(modal, blurOverlay);
+        openModal(document.getElementById('userModal'), document.getElementById('blurOverlay'));
     });
 }
+
 
 function openModal(modal, blurOverlay) {
     modal.style.display = "flex";
     blurOverlay.style.display = "block";
     document.body.style.overflow = "hidden";
 }
+
 
 function closeModal(modal, blurOverlay) {
     if (modal.style.display === "flex") {
@@ -293,6 +294,12 @@ function validateForm() {
     }
 
     return isValid;
+}
+function moveCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    const items = carousel.children;
+    const itemWidth = items[0].clientWidth + 16; // Adjust for margin/padding if necessary
+    carousel.scrollBy({ left: itemWidth * direction, behavior: 'smooth' });
 }
 function convertRatingToStars(rating) {
     let stars = '';
