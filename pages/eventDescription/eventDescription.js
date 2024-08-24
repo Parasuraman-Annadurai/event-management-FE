@@ -23,7 +23,7 @@ function setupEventDetails() {
     // Show loader while fetching data
     document.getElementById('descriptionLoader').style.display = 'block';
 
-    fetch(`http://localhost:8080/api/events/${eventId}`)
+    fetch(`http://localhost:8080/api/events?_id=${eventId}`)
         .then(response => response.json())
         .then(responseData => { 
             let event = responseData.data;

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #ff6f61;
+    --main-color: #ff8b80;
+    --secondary-color: #e56357;
+    --scroll: #ffd3cf;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #666;
+    --heading: #333;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbarHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.aboutLoader {
+    border: 12px solid var(--scroll);
+    border-top: 12px solid var(--primary-color);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    color: var(--main-color);
+    /* animation: fadeIn 2s ease-in-out; */
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    color: var(--gray);
+    max-width: 800px;
+    margin: 20px auto;
+    /* animation: fadeIn 2s ease-in-out 0.5s; */
+}
+
+.team-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-section h2 {
+    font-size: 2em;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    /* animation: fadeIn 2s ease-in-out; */
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    /* animation: fadeIn 2s ease-in-out; */
+}
+
+.team-member img {
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    color: var(--heading);
+}
+
+.team-member p {
+    margin: 0;
+    color: var(--gray);
+}
+
+.mission-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mission-section h2 {
+    font-size: 2em;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    /* animation: fadeIn 2s ease-in-out; */
+}
+
+.mission-section p {
+    font-size: 1.2em;
+    color: var(--gray);
+    max-width: 800px;
+    margin: 0 auto;
+    /* animation: fadeIn 2s ease-in-out 0.5s; */
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--scroll);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* Fade-in Animation */
+/* @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
