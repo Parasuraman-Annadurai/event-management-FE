@@ -12,7 +12,7 @@
     
     <div class="container">
         <h2>Add a New Package</h2>
-        <form id="packageForm">
+        <form id="packageForm" enctype="multipart/form-data">
             <div class="grid-container">
 
                 <div class="form-group">
@@ -38,8 +38,6 @@
                         <option value="Packages/baby-shower-package">Baby Shower Package</option>
                     </select>
                 </div>
-
-               
 
                 <div class="form-group">
                     <label for="city">City</label>
@@ -110,7 +108,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="experience">Experience (in years)</label>
+                    <label for="experience">Experience</label>
                     <input type="number" id="experience" name="experience" required>
                 </div>
             </div>
@@ -142,4 +140,3 @@
     <script type="module" src="/pages/packageOrganizingPage/packageOrganize.js"></script>
 </body>
 </html>
-

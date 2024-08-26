@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get values from the current event group
         const eventName = eventGroup.querySelector('input[name="eventName"]').value;
         const description = eventGroup.querySelector('input[name="description"]').value;
-        const eventPhotos = eventGroup.querySelector('input[name="eventPhotos"]').value;
+        const eventPhotos = eventGroup.querySelector('input[name="eventPhotos"]').files[0];
         const price = eventGroup.querySelector('input[name="price"]').value;
 
         // Check if all fields are filled
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="event-data">
                     <p><strong>Event Name:</strong> ${eventName}</p>
                     <p><strong>Description:</strong> ${description}</p>
-                    <p><strong>Event Photo URL:</strong> ${eventPhotos}</p>
+                    <p><strong>Event Photo:</strong> ${eventPhotos.name}</p>
                     <p><strong>Price:</strong> ${price}</p>
                 </div>
             `;
@@ -54,40 +54,76 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.getElementById('packageForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+    // Handle form submission
+    document.getElementById('packageForm').addEventListener('submit', function(e) {
+        e.preventDefault();
 
-        const formData = new FormData(this);
-        const packageData = {
-            organizationName: formData.get('organizationName'),
-            packageName: formData.get('packageName'),
-            packageImage: formData.get('packageImage'),
-            category: formData.get('category'),
-            city: formData.get('city'),
-            packageDescription: formData.get('packageDescription'),
-            packageTagline: formData.get('packageTagline'),
-            totalPackagePrice: parseInt(formData.get('totalPackagePrice'), 10),
-            address: formData.get('address'),
-            whatsapp: formData.get('whatsapp'),
-            mobile: formData.get('mobile'),
-            email: formData.get('email'),
-            rating: parseFloat(formData.get('rating')),
-            experience: parseInt(formData.get('experience'), 10),
-            packagesLists: []
-        };
+        const formData = new FormData();
 
-        const eventGroups = document.querySelectorAll('.event-display .event-data');
-        eventGroups.forEach(eventData => {
-            const eventName = eventData.querySelector('p:nth-child(1)').textContent.split(': ')[1];
-            const description = eventData.querySelector('p:nth-child(2)').textContent.split(': ')[1];
-            const eventPhotos = eventData.querySelector('p:nth-child(3)').textContent.split(': ')[1];
-            const price = eventData.querySelector('p:nth-child(4)').textContent.split(': ')[1];
-            if (eventName && description && eventPhotos && price) {
-                packageData.packagesLists.push({ eventName, description, eventPhotos, price: parseInt(price, 10) });
+        // Safely accessing the form elements
+        const getFieldValue = (id) => document.getElementById(id)?.value || '';
+
+        // Append basic package data
+        formData.append('organizationName', getFieldValue('organizationName'));
+        formData.append('customised', getFieldValue('customised'));
+        formData.append('packageName', getFieldValue('packageName'));
+        formData.append('packageTagline', getFieldValue('packageTagline'));
+        formData.append('packageDescription', getFieldValue('packageDescription'));
+        formData.append('address', getFieldValue('address'));
+        formData.append('whatsapp', getFieldValue('whatsapp'));
+        formData.append('mobile', getFieldValue('mobile'));
+        formData.append('category', getFieldValue('category'));
+        formData.append('email', getFieldValue('email'));
+        formData.append('rating', getFieldValue('rating'));
+        formData.append('experience', getFieldValue('experience'));
+        formData.append('city', getFieldValue('city'));
+        formData.append('totalPackagePrice', getFieldValue('totalPackagePrice'));
+
+        // Append package image
+        const packageImageFile = document.getElementById('packageImage')?.files[0];
+        if (packageImageFile) {
+            formData.append('packageImage', packageImageFile);
+        }
+
+        // Append event data
+        const eventItems = document.getElementsByClassName('event-item');
+        for (let i = 0; i < eventItems.length; i++) {
+            formData.append(`packagesLists[${i}][eventName]`, eventItems[i].querySelector('.eventName')?.value || '');
+            formData.append(`packagesLists[${i}][description]`, eventItems[i].querySelector('.description')?.value || '');
+            formData.append(`packagesLists[${i}][price]`, eventItems[i].querySelector('.price')?.value || '');
+
+            const eventPhotoFile = eventItems[i].querySelector('.eventPhotos')?.files[0];
+            if (eventPhotoFile) {
+                formData.append(`packagesLists[${i}][eventPhotos]`, eventPhotoFile);
             }
-        });
+        }
 
-        console.log('Final Package Data:', packageData);
-        alert('Form submitted successfully!');
+        // Log the formData keys and values
+        console.log('FormData content:');
+        for (const [key, value] of formData.entries()) {
+            console.log(`${key}:`, value);
+        }
+
+        // Send the request to the API
+        fetch('http://localhost:8080/api/allpackages/create', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .then(data => {
+            console.log('Package created successfully:', data);
+            alert('Package added successfully!');
+            // Optionally, redirect to another page or clear the form
+        })
+        .catch(error => {
+            console.error('Error creating package:', error);
+            alert('There was an error adding the package.');
+        });
     });
 });
