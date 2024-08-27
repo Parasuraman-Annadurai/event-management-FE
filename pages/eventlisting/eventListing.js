@@ -97,8 +97,6 @@ async function fetchData(url) {
         throw error;
     }
 }
-
-// Function to display events or a "no data" message
 function displayEvents(events, container) {
     container.innerHTML = '';
 
@@ -114,8 +112,12 @@ function displayEvents(events, container) {
             let card = document.createElement('div');
             card.className = 'card';
 
+            // Primary and fallback URLs for the event image
+            let primaryUrl = `/assets/eventsOrgImg/${event.imageUrl}`;
+            let fallbackUrl = "http://localhost:8080/" + event.imageUrl.slice(7);
+
             card.innerHTML = `
-                <img src="/assets/eventsOrgImg/${event.imageUrl}" alt="${event.eventName}">
+                <img src="${primaryUrl}" alt="${event.eventName}">
                 <div class="card-body">
                     <h3>${event.organizationname}</h3>
                     <p>${event.eventDescription}</p>
@@ -125,6 +127,12 @@ function displayEvents(events, container) {
                     <span>per day</span>
                 </div>
             `;
+
+            // Add error handling for the image
+            let imgElement = card.querySelector('img');
+            imgElement.onerror = function() {
+                imgElement.src = fallbackUrl;
+            };
 
             container.appendChild(card);
 

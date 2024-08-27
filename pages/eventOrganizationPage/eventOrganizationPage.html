@@ -3,110 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Form</title>
+    <title>Create Event</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="eventOrganizationPage.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 <body>
-
     <!-- Navbar -->
     <div id="navbarHeader"></div>
     <!-- Navbar end -->
+
+    <h1 class="create-event-heading">Create New Event</h1>
     <div class="form-container-main">
-    <div class="form-container">
-        <h2>Organizer Details Form</h2>
-        <form>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="organization">Organization Name</label>
-                    <input type="text" id="organization" name="organization" required>
+        <div class="form-container">
+            <form id="eventForm" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="organizationname">Organization Name:</label>
+                        <input type="text" id="organizationname" name="organizationname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventName">Event Name:</label>
+                        <input type="text" id="eventName" name="eventName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tagline">Event Tagline:</label>
+                        <input type="text" id="tagline" name="tagline" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="eventname">Event Name</label>
-                    <input type="text" id="eventname" name="eventname" required>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile:</label>
+                        <input type="number" id="mobile" name="mobile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="number" id="whatsapp" name="whatsapp" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="eventtagline">Event Tagline</label>
-                    <input type="text" id="eventtagline" name="eventtagline" required>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">Event Price:</label>
+                        <input type="number" id="price" name="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Select Event Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>Select category</option>
+                            <option value="venues">Venues</option>
+                            <option value="photographers">Photographers</option>
+                            <option value="makeup">Makeup</option>
+                            <option value="pre-wedding-shoot">Pre-Wedding-Shoot</option>
+                            <option value="planning-decor">Planning-Decor</option>
+                            <option value="bridal-wear">Bridal-Wear</option>
+                            <option value="food">Food</option>
+                            <option value="music-dance">Music-Dance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Select City:</label>
+                        <select id="city" name="city" required>
+                            <option value="" disabled selected>Select city</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Madurai">Madurai</option>
+                            <option value="Tiruchirapalli">Tiruchirapalli</option>
+                            <option value="Salem">Salem</option>
+                            <option value="Vellore">Vellore</option>
+                            <option value="Tiruppur">Tiruppur</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="about">Event About:</label>
+                        <textarea id="about" name="about" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Event Description:</label>
+                        <textarea id="eventDescription" name="eventDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="mobile">Mobile</label>
-                    <input type="number" id="mobile" name="mobile" required>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventImage">Event Image:</label>
+                        <input type="file" id="eventImage" name="eventImage" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectImages">Project Images (up to 4):</label>
+                        <input type="file" id="projectImages" name="projectImages[]" accept="image/*" multiple required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="whatsapp">WhatsApp</label>
-                    <input type="number" id="whatsapp" name="whatsapp" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="eventprice">Event Price</label>
-                    <input type="text" id="eventprice" name="eventprice" required>
-                </div>
-                <div class="form-group">
-                    <label for="selecteventcategory">Select Event Category</label>
-                    <select id="selecteventcategory" name="selecteventcategory" required>
-                        <option value="" disabled selected>Select category</option>
-                        <option value="venues">Venues</option>
-                        <option value="photographers">Photographers</option>
-                        <option value="makeup">Makeup</option>
-                        <option value="pre-wedding-shoot">Pre-Wedding-Shoot</option>
-                        <option value="planning-decor">Planning-Decor</option>
-                        <option value="bridal-wear">Bridal-Wear</option>
-                        <option value="food">Food</option>
-                        <option value="music-dance">Music-Dance</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="selectcity">Select City</label>
-                    <select id="selectcity" name="selectcity" required>
-                        <option value="" disabled selected>Select city</option>
-                        <option value="Chennai">Chennai</option>
-                        <option value="Coimbatore">Coimbatore</option>
-                        <option value="Madurai">Madurai</option>
-                        <option value="Tiruchirapalli">Tiruchirapalli</option>
-                        <option value="Salem">Salem</option>
-                        <option value="Vellore">Vellore</option>
-                        <option value="Tiruppur"> Tiruppur</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="eventabout">Event About</label>
-                    <textarea id="eventabout" name="eventabout" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="eventdescription">Event Description</label>
-                    <textarea id="eventdescription" name="eventdescription" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <textarea id="address" name="address" required></textarea>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="eventimage">Event Image</label>
-                    <input type="file" id="eventimage" name="eventimage" accept="image/*" required>
-                </div>
-                <div class="form-group">
-                    <label for="projectimages">Project Images (up to 4)</label>
-                    <input type="file" id="projectimages" name="projectimages[]" accept="image/*" multiple required>
-                </div>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+                
+                <button type="submit" class="submit-btn">Create Event</button>
+            </form>
+        </div>
     </div>
-</div>
+
     <!-- Footer -->
     <div id="footerEMS"></div>
 
