@@ -6,20 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchPackageData();
     setupModalFunctionality();
     setupFormSubmission();
+    document.getElementById('prevBtn').addEventListener('click', () => moveCarousel(-1));
+    document.getElementById('nextBtn').addEventListener('click', () => moveCarousel(1));
 
-    // Event listeners for "Book Now" buttons
-    // document.getElementById('headerBookingBtn').addEventListener('click', openModal);
-    // document.getElementById('contactBookingBtn').addEventListener('click', openModal);
-
-    // Event listener for closing the modal
-    document.querySelector('.close').addEventListener('click', closeModal);
-    document.getElementById('blurOverlay').addEventListener('click', closeModal);
+    // document.querySelector('.close').addEventListener('click', closeModal);
+    // document.getElementById('blurOverlay').addEventListener('click', closeModal);
 });
 
 const urlParams = new URLSearchParams(window.location.search);
 const packageId = urlParams.get('_id');
 console.log(packageId);
 
+let images = []; 
 async function fetchPackageData() {
     try {
         const response = await fetch(`http://localhost:8080/api/allpackages?_id=${packageId}`);
@@ -27,7 +25,14 @@ async function fetchPackageData() {
         const packageData = data.data.find(pkg => pkg._id === packageId);
         console.log(packageData);
         if (packageData) {
-            document.getElementById('packageImage').src = "/assets/Home_Images/" + packageData.packageImage;
+            const imgElement = document.getElementById('packageImage');
+            const primaryUrl = "/assets/Home_Images/" + packageData.packageImage;
+            const fallbackUrl = "http://localhost:8080/" + packageData.packageImage.slice(7);
+
+            imgElement.src = primaryUrl;
+                        imgElement.onerror = function() {
+                            imgElement.src = fallbackUrl;
+                        };
             document.getElementById('packageName').textContent = packageData.packageName;
             packageData.totalPackagePrice = packageData.totalPackagePrice.toLocaleString();
             document.getElementById('packagePrice').textContent = "₹" + packageData.totalPackagePrice;
@@ -36,26 +41,40 @@ async function fetchPackageData() {
             document.getElementById('packageDescription').textContent = packageData.packageDescription;
 
             const carousel = document.getElementById('carousel');
-            packageData.packagesLists.forEach(event => {
-                const img = document.createElement('img');
-                img.src = "/assets/Home_Images/" + event.eventPhotos;
-                img.alt = event.eventName;
-                carousel.appendChild(img);
-            });
-
             const packageDetails = document.getElementById('packageDetails');
+            
             packageData.packagesLists.forEach(event => {
+                const primaryUrl = "/assets/Home_Images/" + event.eventPhotos;
+                const fallbackUrl = "http://localhost:8080/" + event.eventPhotos.slice(7);
+            
+                // Carousel Image
+                const imgCarousel = document.createElement('img');
+                imgCarousel.src = primaryUrl;
+                imgCarousel.alt = event.eventName;
+                imgCarousel.onerror = function() {
+                    imgCarousel.src = fallbackUrl;
+                };
+                carousel.appendChild(imgCarousel);
+            
+                // Event Detail Image
                 const card = document.createElement('div');
                 card.className = 'eventDetail';
                 card.innerHTML = `
-                    <img src="/assets/Home_Images/${event.eventPhotos}" alt="${event.eventName}">
+                    <img src="${primaryUrl}" alt="${event.eventName}">
                     <h3>${event.eventName}</h3>
                     <div class="price">₹${event.price.toLocaleString()}</div>
                     <p>${event.description}</p>
                 `;
+            
+                // Set fallback for the image in the event details
+                const imgDetail = card.querySelector('img');
+                imgDetail.onerror = function() {
+                    imgDetail.src = fallbackUrl;
+                };
+            
                 packageDetails.appendChild(card);
             });
-
+            
             document.getElementById('address').textContent = packageData.address;
             document.getElementById('whatsapp').textContent = packageData.whatsapp;
             document.getElementById('mobile').textContent = packageData.mobile;
@@ -84,10 +103,11 @@ function setupModalFunctionality() {
     let modal = document.getElementById('userModal');
     let blurOverlay = document.getElementById('blurOverlay');
     let closeBtn = document.querySelector('.close');
-    let isSubmitting;
+    let isSubmitting = false;
+
     closeBtn.addEventListener('click', () => {
         if (!isSubmitting) {
-            closeModal();
+            closeModal(modal, blurOverlay);
         }
     });
 
@@ -98,22 +118,23 @@ function setupModalFunctionality() {
     });
 
     document.getElementById('bookingSection').addEventListener('click', () => {
-        const images = event.imageurl || [];
         if (images.length > 0) {
             let randomImage = images[Math.floor(Math.random() * images.length)];
-            document.getElementById('randomImage').src = `/assets/eventsOrgImg/${randomImage}`;
+            document.getElementById('randomImage').src = `/assets/Home_Images/${randomImage}`;
         } else {
-            document.getElementById('randomImage').src = '/assets/eventsOrgImg/org1_prewed.jpg'; // Path to a default image
+            document.getElementById('randomImage').src = '/assets/eventsOrgImg/org1_prewed.jpg'; // Default image path
         }
-        openModal(modal, blurOverlay);
+        openModal(document.getElementById('userModal'), document.getElementById('blurOverlay'));
     });
 }
+
 
 function openModal(modal, blurOverlay) {
     modal.style.display = "flex";
     blurOverlay.style.display = "block";
     document.body.style.overflow = "hidden";
 }
+
 
 function closeModal(modal, blurOverlay) {
     if (modal.style.display === "flex") {
@@ -293,6 +314,12 @@ function validateForm() {
     }
 
     return isValid;
+}
+function moveCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    const items = carousel.children;
+    const itemWidth = items[0].clientWidth + 16; // Adjust for margin/padding if necessary
+    carousel.scrollBy({ left: itemWidth * direction, behavior: 'smooth' });
 }
 function convertRatingToStars(rating) {
     let stars = '';

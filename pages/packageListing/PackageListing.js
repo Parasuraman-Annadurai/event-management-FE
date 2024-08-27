@@ -74,9 +74,13 @@ function displayPackages(container, packages) {
         const card = document.createElement('div');
         card.className = 'packageCard';
 
+        // Primary and fallback URLs for the package image
+        const primaryUrl = "/assets/Home_Images/" + pkg.packageImage;
+        const fallbackUrl = "http://localhost:8080/" + pkg.packageImage.slice(7);
+
         // Populate card with package data
         card.innerHTML = `
-            <img src="/assets/Home_Images/${pkg.packageImage}" alt="${pkg.packageName}">
+            <img src="${primaryUrl}" alt="${pkg.packageName}">
             <div class="packageCardMain">
                 <div class="packageCardBody">
                     <h3>${pkg.organizationName}</h3>
@@ -88,6 +92,12 @@ function displayPackages(container, packages) {
                 </div>
             </div>
         `;
+
+        // Add error handling for the image
+        const imgElement = card.querySelector('img');
+        imgElement.onerror = function() {
+            imgElement.src = fallbackUrl;
+        };
 
         // Append card to container
         container.appendChild(card);
