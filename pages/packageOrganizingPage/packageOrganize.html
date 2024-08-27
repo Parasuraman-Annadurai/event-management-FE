@@ -3,18 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Package</title>
-    <link rel="stylesheet" href="/pages/packageOrganizingPage/packageOrganize.css">
+    <title>Create Package</title>
+    <style>
+        :root {
+            --primary-color: #ff6f61;
+            --secondary-color: #e56357;
+            --accent-color: #ff8b80;
+            --background-color: #f4f4f4;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --subtext-color: #666666;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1190px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .packageFormButtonsDiv{
+            max-width: 1080px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .packageFormButtonsDiv button{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .packageFormMain, .packageFormButtonsDiv,  .event-item{
+            display: flex;
+            /* align-items: center; */
+            flex-wrap: wrap;
+            justify-content:flex-start;
+            margin-left: 1.5rem;
+            gap: 40px;
+        }
+
+        .container h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .container h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .form-group {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            padding: 6px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* #eventItems {
+            
+        }
+
+        .event-item {
+            
+        }
+ */
+        .event-item label {
+            margin-bottom: 5px;
+        }
+
+        .event-item input[type="text"],
+        .event-item textarea,
+        .event-item input[type="number"],
+        .event-item input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .event-item button {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        .event-item button:hover {
+            background-color: var(--secondary-color);
+        }
+        .event-display {
+            margin-bottom: 15px;
+        }
+
+        .event-data {
+            display: none;
+            margin-top: 10px;
+            background-color: var(--background-color);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        .event-toggle-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .event-toggle-btn:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <div id="navbarHeader"></div>
-    
+     <!-- Navbar -->
+     <div id="navbarHeader"></div>
+     <!-- Navbar end -->
     <div class="container">
-        <h2>Add a New Package</h2>
-        <form id="packageForm" enctype="multipart/form-data">
-            <div class="grid-container">
-
+       <h1>Create a New Package</h1>
+            <form id="packageForm">
+           
+            <div class="packageFormMain">
+                <div class="form-group">
+                    <label for="organizationName">Organization Name:</label>
+                    <input type="text" id="organizationName" name="organizationName" required>
+                </div>
+    
                 <div class="form-group">
                     <label for="packageName">Package Name</label>
                     <select id="packageName" name="packageName" required>
@@ -26,7 +189,42 @@
                         <option value="BabyShower">Baby Shower</option>
                     </select>
                 </div>
-
+    
+                <div class="form-group">
+                    <label for="packageTagline">Package Tagline:</label>
+                    <input type="text" id="packageTagline" name="packageTagline" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="packageDescription">Package Description:</label>
+                    <textarea id="packageDescription" name="packageDescription" required></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="packageImage">Package Image:</label>
+                    <input type="file" id="packageImage" name="packageImage" accept="image/*" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="totalPackagePrice">Total Package Price:</label>
+                    <input type="number" id="totalPackagePrice" name="totalPackagePrice" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp:</label>
+                    <input type="text" id="whatsapp" name="whatsapp" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="mobile">Mobile:</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+    
                 <div class="form-group">
                     <label for="category">Category</label>
                     <select id="category" name="category" required>
@@ -38,7 +236,22 @@
                         <option value="Packages/baby-shower-package">Baby Shower Package</option>
                     </select>
                 </div>
-
+    
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" name="rating" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="experience">Experience:</label>
+                    <input type="number" id="experience" name="experience" required>
+                </div>
+    
                 <div class="form-group">
                     <label for="city">City</label>
                     <select id="city" name="city" required>
@@ -56,85 +269,41 @@
                         <option value="Kanyakumari">Kanyakumari</option>
                     </select>
                 </div>
+    
+        </div>
+            <h2>Event Items</h2>
+            <div id="eventsContainer">
+                <div class="event-item">
+                    <div class="form-group">
+                        <label for="eventName">Event Name:</label>
+                        <input type="text" class="eventName" name="eventName" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="organizationName">Organization Name</label>
-                    <input type="text" id="organizationName" name="organizationName" required>
-                </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="description" name="description" required></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label for="totalPackagePrice">Total Package Price</label>
-                    <input type="number" id="totalPackagePrice" name="totalPackagePrice" required>
-                </div>
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" class="price" name="price" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="packageImage">Package Image</label>
-                    <input type="file" id="packageImage" name="packageImage" accept="image/*" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="packageDescription">Package Description</label>
-                    <textarea id="packageDescription" name="packageDescription" rows="5" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="packageTagline">Package Tagline</label>
-                    <textarea id="packageTagline" name="packageTagline" rows="5" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <textarea id="address" name="address" rows="5" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="whatsapp">WhatsApp</label>
-                    <input type="text" id="whatsapp" name="whatsapp" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="mobile">Mobile</label>
-                    <input type="text" id="mobile" name="mobile" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="rating">Rating</label>
-                    <input type="number" id="rating" name="rating" step="0.1" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="experience">Experience</label>
-                    <input type="number" id="experience" name="experience" required>
+                    <div class="form-group">
+                        <label for="eventPhotos">Event Photos:</label>
+                        <input type="file" class="eventPhotos" name="eventPhotos" accept="image/*" required>
+                    </div>
                 </div>
             </div>
+
             <div id="eventsDisplayContainer"></div>
 
-            <div id="eventsContainer">
-                <h3>Events</h3>
-                <div class="event-group">
-                    <label for="eventName">Event Name</label>
-                    <input type="text" name="eventName" required>
-                    <label for="description">Description</label>
-                    <input type="text" name="description" required>
-                    <label for="eventPhotos">Event Photo</label>
-                    <input type="file" name="eventPhotos" accept="image/*" required>
-                    <label for="price">Price</label>
-                    <input type="number" name="price" required>
-                </div>
+            <div class="packageFormButtonsDiv">
+                <button type="button" id="addEventButton">Add Another Event</button>
+                <button type="submit">Create Package</button>
             </div>
-
-            <button type="button" id="addEventButton">Add More Events</button>
-           
-            <button type="submit">Submit</button>
         </form>
     </div>
-
-    <!-- Footer -->
     <div id="footerEMS"></div>
 
     <script type="module" src="/pages/packageOrganizingPage/packageOrganize.js"></script>

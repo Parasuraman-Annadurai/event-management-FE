@@ -25,7 +25,14 @@ async function fetchPackageData() {
         const packageData = data.data.find(pkg => pkg._id === packageId);
         console.log(packageData);
         if (packageData) {
-            document.getElementById('packageImage').src = "/assets/Home_Images/" + packageData.packageImage;
+            const imgElement = document.getElementById('packageImage');
+            const primaryUrl = "/assets/Home_Images/" + packageData.packageImage;
+            const fallbackUrl = "http://localhost:8080/" + packageData.packageImage.slice(7);
+
+            imgElement.src = primaryUrl;
+                        imgElement.onerror = function() {
+                            imgElement.src = fallbackUrl;
+                        };
             document.getElementById('packageName').textContent = packageData.packageName;
             packageData.totalPackagePrice = packageData.totalPackagePrice.toLocaleString();
             document.getElementById('packagePrice').textContent = "₹" + packageData.totalPackagePrice;
@@ -34,27 +41,40 @@ async function fetchPackageData() {
             document.getElementById('packageDescription').textContent = packageData.packageDescription;
 
             const carousel = document.getElementById('carousel');
-            packageData.packagesLists.forEach(event => {
-                images.push(event.eventPhotos); // Store image paths in the images array
-                const img = document.createElement('img');
-                img.src = "/assets/Home_Images/" + event.eventPhotos;
-                img.alt = event.eventName;
-                carousel.appendChild(img);
-            });
-
             const packageDetails = document.getElementById('packageDetails');
+            
             packageData.packagesLists.forEach(event => {
+                const primaryUrl = "/assets/Home_Images/" + event.eventPhotos;
+                const fallbackUrl = "http://localhost:8080/" + event.eventPhotos.slice(7);
+            
+                // Carousel Image
+                const imgCarousel = document.createElement('img');
+                imgCarousel.src = primaryUrl;
+                imgCarousel.alt = event.eventName;
+                imgCarousel.onerror = function() {
+                    imgCarousel.src = fallbackUrl;
+                };
+                carousel.appendChild(imgCarousel);
+            
+                // Event Detail Image
                 const card = document.createElement('div');
                 card.className = 'eventDetail';
                 card.innerHTML = `
-                    <img src="/assets/Home_Images/${event.eventPhotos}" alt="${event.eventName}">
+                    <img src="${primaryUrl}" alt="${event.eventName}">
                     <h3>${event.eventName}</h3>
                     <div class="price">₹${event.price.toLocaleString()}</div>
                     <p>${event.description}</p>
                 `;
+            
+                // Set fallback for the image in the event details
+                const imgDetail = card.querySelector('img');
+                imgDetail.onerror = function() {
+                    imgDetail.src = fallbackUrl;
+                };
+            
                 packageDetails.appendChild(card);
             });
-
+            
             document.getElementById('address').textContent = packageData.address;
             document.getElementById('whatsapp').textContent = packageData.whatsapp;
             document.getElementById('mobile').textContent = packageData.mobile;
