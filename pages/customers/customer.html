@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* Common Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        :root {
+            --primary-color: #ff6f61;
+            --main-color: #ff8b80;
+            --secondary-color: #e56357;
+            --scroll: #ffd3cf;
+            --white: #ffffff;
+            --black: #000000;
+            --gray: #666;
+            --border-color: #ccc;
+            --heading: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--gray);
+        }
+
+        #navbarHeader {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #footerEMS {
+            margin-top: 50px;
+        }
+         
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+.intro-text {
+    max-width: 800px;
+}
+
+.intro-text h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--main-color);
+    border-right: .15em solid var(--primary-color); 
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The caret blinking effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--white); }
+}
+
+
+.container1 {
+    width: 80%;
+    margin: 40px auto;
+    margin-bottom: 30px;
+}
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            color: var(--heading);
+            margin-bottom: 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial h3 {
+            font-size: 1.2rem;
+            color: var(--heading);
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbarHeader"></div>
+    <div class="container1">
+        <!-- Intro Section -->
+        <section class="intro-section">
+           <div class="intro-text">
+                <h1>Your Trust, Our Commitment,Delivered with Care.</h1>
+            </div>
+        </section>
+
+    </div>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="testimonials-grid" id="testimonialsGrid">
+            <!-- Testimonials will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footerEMS"></div>
+
+<script type="module" src="/pages/customers/customer.js"></script>
+
+</body>
+</html>

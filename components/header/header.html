@@ -132,7 +132,7 @@ padding: 7px;
 color: var(--main-color);
 }
 .nav-logo img {
-    height: 37x;
+    height: 37px;
     width: 130px;
   
 }
@@ -202,7 +202,10 @@ font-weight: 500;
     text-decoration: none;
     font-size: 20px;
     color: var(--primary-color);
-    display: block;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 30px;
     transition: 0.3s;
 }
 
@@ -225,11 +228,13 @@ font-weight: 500;
     color: var(--primary-color);
     box-shadow: none;
 }
-/* #profileOrganiser{
-    display: none;
-} */
+#profileDropdown{
+    min-width: 100px;
+    left: -26px;
+}
 
-   </style> 
+
+</style> 
 </head>
 <body>
     <header>
@@ -269,21 +274,26 @@ font-weight: 500;
                     <button class="organiserServices"><a href="/pages/organiserPage/organiser.html">For Organizers</a></button>
                 </div>
                 
-                <div class="organiserProfileIcon" id="profileOrganiser">
+                <div class="organiserProfileIcon services-dropdown" id="profileOrganiser">
                     <i id="navProfileIcon" class="fa-solid fa-user"></i>
+                    <div class="services-dropdown-content" id="profileDropdown">
+                        <a href="#" id="profileBtn">Profile</a>
+                        <a href="#" id="logoutBtn" onclick="logout()">Logout</a>
+                    </div>
                   </div>
             </div>
         </nav>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-            <a href="/index.html">Home</a>
-            <a href="/pages/events/eventcategory.html">Events</a>
-            <a href="/pages/packages/PackageCategory.html">Packages</a>
-            <a href="/pages/aboutPage/aboutPage.html">About Us</a>
-            <a href="/pages/contactPage/contactPage.html">Contact</a>
-            <a href="#">FAQ</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy Policy</a>
+            <a href="/index.html"> <i class="fa-solid fa-house"></i>  Home</a>
+            <a href="/pages/events/eventcategory.html"> <i class="fa-solid fa-ring"></i>  Events</a>
+            <a href="/pages/packages/PackageCategory.html"><i class="fa-solid fa-star"></i>  Packages</a>
+            <a href="/pages/terms/terms.html"> <i class="fa-solid fa-lock"></i> Our Policy</a>
+            <a href="/pages/aboutPage/aboutPage.html"><i class="fa-solid fa-address-card"></i>  About Us</a>
+            <a href="/pages/contactPage/contactPage.html"><i class="fa-solid fa-address-book"></i>  Contact</a>
+            <a href="/pages/gallery/gallery.html"><i class="fa-regular fa-image"></i>  Gallery</a>
+            <a href="/pages/chatBot/chatBot.html"> <i class="fa-solid fa-circle-question"></i>  FAQ</a>
+            <a href="/pages/terms/terms.html"> <i class="fa-solid fa-shield-halved"></i>  Terms</a>
         </div>
     </header>
 <script>
@@ -309,10 +319,13 @@ function showProfileIcon() {
         profileIconDiv.style.display = "none";
     }
 }
-
+// console.log(localStorage.getItem('token.data'))
 // Calling the function on page load 
 window.onload = showProfileIcon;
-
+        function logout() {
+            localStorage.removeItem('token'); // Remove token from localStorage
+            showProfileIcon(); // Update profile icon visibility
+        }
 
 </script>
 </body>

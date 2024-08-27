@@ -1,0 +1,145 @@
+/* Gallery Section */
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+.intro-text {
+    max-width: 600px;
+}
+
+.intro-text h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--main-color);
+    border-right: .15em solid var(--primary-color); 
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The caret blinking effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--white); }
+}
+
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    margin-bottom: 30px;
+}
+
+
+.album {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.responsive-container-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.responsive-container-block.bg {
+    max-width: 1320px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.responsive-container-block.img-cont {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(33.333% - 16px);
+    min-height: auto;
+}
+
+.img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Pagination Styles */
+.pagination-container {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    gap: 50px;
+    margin-left: 10rem;
+}
+
+.pagination-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.pagination-button.active {
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.pagination-button:focus {
+    outline: none;
+}
+
+@media (max-width: 1024px) {
+    .responsive-container-block.img-cont {
+        max-width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-container-block.img-cont {
+        max-width: 100%;
+    }
+
+    .img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .responsive-container-block.img-cont {
+        flex-direction: column;
+    }
+
+    .img {
+        max-width: 94%;
+        margin: 0 auto 16px;
+    }
+}

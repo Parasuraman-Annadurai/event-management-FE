@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="/pages/gallery/gallery.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbarHeader"></div>
+    <!-- Navbar end -->
+
+    <div id="loader" class="loader">Loading...</div>
+
+    <div class="container">
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <div class="intro-text">
+                <h1>Our Stunning Gallery</h1>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <div class="album">
+            <div class="responsive-container-block bg" id="gallery-container">
+              <!-- Gallery items will be dynamically inserted here -->
+            </div>
+          </div>
+          
+
+        <!-- Pagination Controls -->
+        <div id="pagination" class="pagination-container">
+            <!-- Pagination buttons will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="footerEMS"></div>
+
+    <script type="module" src="/pages/gallery/galler.js"></script>
+
+</body>
+</html>

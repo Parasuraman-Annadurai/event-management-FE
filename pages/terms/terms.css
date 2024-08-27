@@ -1,0 +1,90 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #ff6f61;
+    --main-color: #ff8b80;
+    --secondary-color: #e56357;
+    --scroll: #ffd3cf;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #666;
+    --heading: #333;
+}
+
+/* Global Styles */
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--scroll);
+}
+
+#navbarHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.intro-text h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--main-color);
+    border-right: .15em solid var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Caret Blinking Effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--white); }
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    margin-bottom: 30px;
+}
+
+/* Terms Content Styles */
+.terms-content {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-content h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.terms-content p {
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
