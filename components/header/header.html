@@ -50,7 +50,7 @@ body {
 }
 
 .navbar-right {
-    width: 48.9%;
+    width: 54.9%;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -93,6 +93,25 @@ body {
     color: var(--main-color);
     border-radius: 4px;
 }
+.organiserProfileIcon{
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+}
+#navProfileIcon{
+    color: var(--white);
+    font-size: larger;
+}
+.organiserProfileIcon:hover{
+    border: 1px solid var(--primary-color);
+    background-color: var(--main-color);
+}
+
 .organiserServices, .Services_content, .Famous_events, .famous_Packages {
     border: none;
     border-radius: 20px;
@@ -206,7 +225,9 @@ font-weight: 500;
     color: var(--primary-color);
     box-shadow: none;
 }
-
+/* #profileOrganiser{
+    display: none;
+} */
 
    </style> 
 </head>
@@ -246,7 +267,11 @@ font-weight: 500;
 
                 <div class="organiser">
                     <button class="organiserServices"><a href="/pages/organiserPage/organiser.html">For Organizers</a></button>
-                </div> 
+                </div>
+                
+                <div class="organiserProfileIcon" id="profileOrganiser">
+                    <i id="navProfileIcon" class="fa-solid fa-user"></i>
+                  </div>
             </div>
         </nav>
         <div id="mySidebar" class="sidebar">
@@ -271,6 +296,23 @@ function openSidebar() {
 }
 
 document.getElementById('bar').addEventListener('click', openSidebar);
+
+function showProfileIcon() {
+    const token = localStorage.getItem('token');  // Assuming your token is stored with the key 'token'
+    const profileIconDiv = document.getElementById("profileOrganiser");
+
+    if (token) {
+        // If the token exists, show the profile icon
+        profileIconDiv.style.display = "block";
+    } else {
+        // If the token doesn't exist, hide the profile icon
+        profileIconDiv.style.display = "none";
+    }
+}
+
+// Calling the function on page load 
+window.onload = showProfileIcon;
+
 
 </script>
 </body>

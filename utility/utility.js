@@ -18,6 +18,9 @@ export function loadHeader() {
             });
 
             document.getElementById('bar').addEventListener('click', openSidebar);
+
+            // Call showProfileIcon after header is loaded
+            showProfileIcon();
         })
         .catch(error => console.error('Error loading header:', error));
 }
@@ -39,5 +42,17 @@ export async function fetchData(jsonFile) {
     } catch (error) {
         console.error('Error fetching data:', error);
         return null;
+    }
+}
+
+export function showProfileIcon() {
+    const token = localStorage.getItem('token');
+    const profileIconDiv = document.getElementById("profileOrganiser");
+
+    if (token) {
+        profileIconDiv.style.display = "block";
+        
+    } else {
+        profileIconDiv.style.display = "none";
     }
 }

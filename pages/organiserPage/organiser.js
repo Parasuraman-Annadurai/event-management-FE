@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
     initializeCarousel();
+    // checkTokenAndRedirect();
 });
+
 
 function initializeCarousel() {
     const prevBtn = document.getElementById('prevBtn');
@@ -28,3 +30,4 @@ function initializeCarousel() {
         scrollAmount -= 300;
     });
 }
+

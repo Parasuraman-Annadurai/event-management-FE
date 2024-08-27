@@ -39,14 +39,15 @@ function initializePackageListings() {
     }
 }
 
-function fetchAllPackages(container) {
-    fetch("http://localhost:8080/api/allpackages")
-        .then(response => response.json())
-        .then(data => {
-            displayPackages(container, data.data); // Adjusting to match the API response structure
-        })
-        .catch(error => console.error('Error fetching data:', error));
-}
+// function fetchAllPackages(container) {
+//     fetch("http://localhost:8080/api/allpackages")
+//         .then(response => response.json())
+//         .then(data => {
+//             displayPackages(container, data.data); // Adjusting to match the API response structure
+//         })
+//         .catch(error => console.error('Error fetching data:', error));
+// }
+
 
 function filterCategory(category) {
     const container = document.getElementById('packageListings');

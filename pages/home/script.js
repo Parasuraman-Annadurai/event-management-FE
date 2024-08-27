@@ -1,7 +1,7 @@
-import { loadHeader, loadFooter, fetchData } from '../../utility/utility.js';
+import { loadHeader, loadFooter, fetchData, showProfileIcon } from '../../utility/utility.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadHeader();
+    loadHeader();  // `showProfileIcon` is called inside `loadHeader`
     loadFooter();
     slidesHome();
     initializeSlideshow('.homePageTopOrganisersMain', '.homePageLeftDivImages', '.homePageRightdescription', 'utility/homeOrganisers.json');
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSlideshow('.homePageTopEventsMain', '.homePageEventsLeftDivImages', '.homePageEventsRightdescription', 'utility/homeEvents.json');
     initializeTestimonials();
 });
+
 
 function createSlideshow() {
     const slideshowContainer = document.createElement('div');
