@@ -124,17 +124,38 @@ function handleSignup(event) {
     .then(response => response.json())
     .then(data => {
         if (data.token) {
-            alert('Signup successful!');
+    
             localStorage.setItem('token', data.token);
-            document.getElementById('signup-form').reset();
+           
             toggleForms(false);
         } else {
-            alert('Signup failed: ' + data.message);
+            Swal.fire({
+                title: "Success",
+                text: "signup successfully.",
+                icon: "success",
+            });
+    document.getElementById('signup-form').style.display = 'none';
+    document.getElementById('login-form').style.display = 'block';
+
+    document.getElementById('Login_btn').addEventListener('click', () => {
+        toggleForms(true);
+    });
+
+    document.getElementById('signup_btn').addEventListener('click', () => {
+        toggleForms(false);
+    });
+            
+            // alert('Signup: ' + data.message);
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('An error occurred during signup.');
+        Swal.fire({
+            title: "Error",
+            text: "Signup failed.",
+            icon: "error",
+        });
+       
     });
 }
 
@@ -179,8 +200,7 @@ function handleLogin(event) {
     .then(response => response.json())
     .then(data => {
         if (data.token) {
-            alert('Login successful!');
-            localStorage.setItem('token', data.token);
+          localStorage.setItem('token', data.token);
             window.location.replace('/pages/organiserPage/organiser.html');
         } else {
             alert('Login failed: ' + data.message);
