@@ -117,6 +117,10 @@
     background-color: var(--main-color);
 }
 
+button.swal2-confirm.swal2-styled {
+    background-color: var(--secondary-color);
+}
+
 i.fas.fa-phone-alt , i.fas.fa-envelope , i.fas.fa-map-marker-alt{
     color: var(--main-color);
 }
