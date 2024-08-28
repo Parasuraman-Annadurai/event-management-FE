@@ -16,126 +16,164 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-#navbarHeader {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-
-.aboutLoader {
-    border: 12px solid var(--scroll);
-    border-top: 12px solid var(--primary-color);
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    animation: spin 2s linear infinite;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    display: none; 
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.container {
-    width: 80%;
-    margin: 40px auto;
-}
-
-.intro-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.intro-text h1 {
-    font-size: 2.5em;
-    color: var(--main-color);
-    /* animation: fadeIn 2s ease-in-out; */
-}
-
-.intro-text p {
-    font-size: 1.2em;
+.text-blk {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    line-height: 20px;
     color: var(--gray);
-    max-width: 800px;
-    margin: 20px auto;
-    /* animation: fadeIn 2s ease-in-out 0.5s; */
 }
 
-.team-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.team-section h2 {
-    font-size: 2em;
-    color: var(--main-color);
-    margin-bottom: 20px;
-    /* animation: fadeIn 2s ease-in-out; */
-}
-
-.team-members {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    background-color: var(--white);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
-    /* animation: fadeIn 2s ease-in-out; */
-}
-
-.team-member img {
+.responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
     width: 100%;
-    height: 150px;
-    border-radius: 50%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    justify-content: flex-start;
 }
 
-.team-member h3 {
-    margin: 10px 0 5px;
-    color: var(--heading);
+.responsive-container-block.bigContainer {
+    color: #333;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin: 0 0 0 0;
 }
 
-.team-member p {
-    margin: 0;
-    color: var(--gray);
+.responsive-container-block.Container {
+    max-width: 1320px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 80px;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
 }
 
-.mission-section {
-    text-align: center;
-    margin-bottom: 40px;
+.responsive-container-block.leftSide {
+    width: auto;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    flex-direction: column;
+    position: static;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 500px;
 }
 
-.mission-section h2 {
-    font-size: 2em;
-    color: var(--main-color);
+.text-blk.heading {
+    font-size: 35px;
+    line-height: 64px;
+    font-weight: 900;
+    color: var(--primary-color);
     margin-bottom: 20px;
-    /* animation: fadeIn 2s ease-in-out; */
+    
 }
 
-.mission-section p {
-    font-size: 1.2em;
-    color: var(--gray);
-    max-width: 800px;
-    margin: 0 auto;
-    /* animation: fadeIn 2s ease-in-out 0.5s; */
+.responsive-container-block.rightSide {
+    width: 675px;
+    position: relative;
+    display: flex;
+    height: 700px;
+    min-height: auto;
 }
+
+.number1img {
+    margin-top: 39%;
+    margin-right: 80%;
+    margin-bottom: 29%;
+    margin-left: 0px;
+    height: 32%;
+    width: 20%;
+    position: absolute;
+}
+
+.number2img {
+    margin-top: 19%;
+    margin-right: 42%;
+    margin-bottom: 42%;
+    margin-left: 23%;
+    width: 35%;
+    height: 39%;
+    position: absolute;
+}
+
+.number3img {
+    width: 13%;
+    height: 21%;
+    position: absolute;
+    margin-top: 62%;
+    margin-right: 64%;
+    margin-bottom: 30%;
+    margin-left: 23%;
+}
+
+.number4vid {
+    width: 34%;
+    height: 33%;
+    position: absolute;
+    margin-top: 62%;
+    margin-right: 27%;
+    margin-bottom: 0px;
+    margin-left: 39%;
+}
+
+.number5img {
+    position: absolute;
+    width: 13%;
+    height: 21%;
+    margin-top: 38%;
+    margin-right: 27%;
+    margin-bottom: 41%;
+    margin-left: 60%;
+}
+
+.number6img {
+    position: absolute;
+    margin-top: 0px;
+    margin-right: 3%;
+    margin-bottom: 67%;
+    margin-left: 62%;
+    width: 35%;
+    height: 33%;
+}
+
+.number7img {
+    position: absolute;
+    width: 25%;
+    margin-top: 40%;
+    margin-right: 0px;
+    margin-bottom: 18%;
+    margin-left: 75%;
+    height: 42%;
+}
+
+.text-blk.subHeading {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
@@ -150,15 +188,3 @@ body {
     background-color: var(--secondary-color);
     border-radius: 4px;
 }
-
-/* Fade-in Animation */
-/* @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
