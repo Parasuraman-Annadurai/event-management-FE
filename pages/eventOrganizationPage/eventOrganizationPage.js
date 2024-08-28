@@ -1,9 +1,7 @@
 
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
     loadHeader();
     loadFooter();
 });
@@ -155,8 +153,8 @@ document.getElementById('eventForm').addEventListener('submit', async function(e
     }
 
     // Event Image Validation
-    const eventImage = document.getElementById('eventImage');
-    const eventImageError = document.getElementById('eventImage-error');
+    const eventImage = document.getElementById('imageUrl');
+    const eventImageError = document.getElementById('imageUrl-error');
     if (eventImage.files.length === 0) {
         eventImageError.textContent = "Please upload an event image.";
         isValid = false;
@@ -164,10 +162,19 @@ document.getElementById('eventForm').addEventListener('submit', async function(e
     } else {
         eventImageError.textContent = "";
     }
-
+     // Event Image Validation
+     const aboutImage = document.getElementById('about_img');
+     const aboutImageError = document.getElementById('about_img-error');
+     if (aboutImage.files.length === 0) {
+         aboutImageError.textContent = "Please upload an about image.";
+         isValid = false;
+         hideErrorAfterDelay(aboutImageError);
+     } else {
+         eventImageError.textContent = "";
+     }
     // Project Images Validation
-    const projectImages = document.getElementById('projectImages');
-    const projectImagesError = document.getElementById('projectImages-error');
+    const projectImages = document.getElementById('imageurl');
+    const projectImagesError = document.getElementById('imageurl-error');
     if (projectImages.files.length === 0 || projectImages.files.length > 4) {
         projectImagesError.textContent = "Please upload between 1 and 4 project images.";
         isValid = false;
@@ -177,7 +184,7 @@ document.getElementById('eventForm').addEventListener('submit', async function(e
     }
 
     if (isValid) {
-        // Create a new FormData object to hold the form data
+        // If the form is valid, proceed with form submission
         const formData = new FormData(this);
 
         try {
@@ -188,10 +195,9 @@ document.getElementById('eventForm').addEventListener('submit', async function(e
 
             if (response.ok) {
                 const jsonResponse = await response.json();
-                console.log('Event created successfully:', jsonResponse);
                 Swal.fire({
                     title: "Success",
-                    text: "Your event has been created successfully and a confirmation email has been sent.",
+                    text: "Your event has been created successfully",
                     icon: "success",
                 }).then(() => {
                     // Clear the form fields after successful submission
@@ -201,7 +207,6 @@ document.getElementById('eventForm').addEventListener('submit', async function(e
                 });
             } else {
                 const errorResponse = await response.json();
-                console.error('Error creating event:', errorResponse);
                 Swal.fire({
                     title: "Error",
                     text: "There was an issue creating your event. Please try again.",
@@ -218,4 +223,3 @@ document.getElementById('eventForm').addEventListener('submit', async function(e
         }
     }
 });
-

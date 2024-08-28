@@ -1,3 +1,5 @@
+
+
 import { loadHeader, loadFooter } from '/utility/utility.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -43,12 +45,11 @@ function setupEventDetails() {
 function displayEventDetails(event) {
     console.log(event);
 
-    // Construct the primary and fallback URLs
-    const primaryImageUrl = `/assets/eventsOrgImg/${event.imageUrl}`;
-    const fallbackImageUrl = "http://localhost:8080/" + event.imageUrl.slice(7);
-
     // Event Image
-    const eventImage = document.getElementById('eventImage');
+    let eventImage = document.getElementById('eventImage');
+    let primaryImageUrl = `/assets/eventsOrgImg/${event.imageUrl}`;
+    let fallbackImageUrl = `http://localhost:8080/${event.imageUrl.slice(7)}`;
+
     eventImage.src = primaryImageUrl;
     eventImage.onerror = () => eventImage.src = fallbackImageUrl;
 
@@ -58,18 +59,22 @@ function displayEventDetails(event) {
     document.getElementById('aboutDescription').innerHTML = event.about;
 
     // About Image
-    const aboutImage = document.getElementById('aboutImage');
-    const aboutImageUrl = `/assets/eventsOrgImg/${event.about_img}`;
+    let aboutImage = document.getElementById('aboutImage');
+    let aboutImageUrl = `/assets/eventsOrgImg/${event.about_img}`;
+    let aboutFallbackImageUrl = `http://localhost:8080/${event.about_img.slice(7)}`;
+
     aboutImage.src = aboutImageUrl;
-    aboutImage.onerror = () => aboutImage.src = fallbackImageUrl;
+    aboutImage.onerror = () => aboutImage.src = aboutFallbackImageUrl;
 
     // Projects Section
     if (event.imageurl && event.imageurl.length >= 4) {
         for (let i = 1; i <= 4; i++) {
-            const projectImg = document.getElementById(`projectImg${i}`);
-            const projectImageUrl = `/assets/eventsOrgImg/${event.imageurl[i - 1]}`;
+            let projectImg = document.getElementById(`projectImg${i}`);
+            let projectImageUrl = `/assets/eventsOrgImg/${event.imageurl[i - 1]}`;
+            let projectFallbackImageUrl = `http://localhost:8080/${event.imageurl[i - 1].slice(7)}`;
+            let dummyImage = '/assets/eventsImages/dance.jpg';
             projectImg.src = projectImageUrl;
-            projectImg.onerror = () => projectImg.src = fallbackImageUrl;
+            projectImg.onerror = () => projectImg.src = projectFallbackImageUrl;
         }
     } else {
         console.error('imageurl array is missing or does not contain enough elements');
@@ -100,8 +105,6 @@ function setupModalFunctionality(event) {
     let blurOverlay = document.getElementById('blurOverlay');
     let closeBtn = document.querySelector('.close');
     let images = event.imageurl || [];
-    let fallbackImageUrl = "http://localhost:8080/" + event.imageUrl.slice(7); // Fallback image
-    let dummyImageUrl = '/assets/eventsImages/dance.jpg'; // if image not found then show this image
 
     document.getElementById('bookingSection').addEventListener('click', () => {
         let randomImage = images.length > 0 ? images[Math.floor(Math.random() * images.length)] : null;
@@ -109,13 +112,14 @@ function setupModalFunctionality(event) {
 
         if (randomImage) {
             let primaryImageUrl = `/assets/eventsOrgImg/${randomImage}`;
+            let fallbackImageUrl = `http://localhost:8080/${randomImage.slice(7)}`;
             randomImageElement.src = primaryImageUrl;
 
             randomImageElement.onerror = () => {
                 randomImageElement.src = fallbackImageUrl;
             };
         } else {
-            randomImageElement.src = dummyImageUrl;
+            randomImageElement.src = '/assets/eventsImages/dance.jpg';
         }
 
         openModal(modal, blurOverlay);
@@ -133,7 +137,6 @@ function setupModalFunctionality(event) {
         }
     });
 }
-
 
 
 function openModal(modal, blurOverlay) {
@@ -296,7 +299,6 @@ function validateForm() {
     } else {
         addressError.style.display = 'none';
     }
-
     if (!agree.checked) {
         agreeError.textContent = "You must agree to the terms";
         agreeError.style.display = 'block';
@@ -313,3 +315,4 @@ function validateForm() {
 
     return isValid;
 }
+

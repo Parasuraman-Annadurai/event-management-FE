@@ -13,7 +13,7 @@
     <div id="navbarHeader"></div>
     <!-- Navbar end -->
 
-    <h1 class="create-event-heading">Create New Event</h1>
+    <h1 class="create-event-heading">Create a New Event</h1>
     <div class="form-container-main">
         <div class="form-container">
             <form id="eventForm" enctype="multipart/form-data">
@@ -29,7 +29,7 @@
                         <div class="error-message" id="eventName-error"></div>
                     </div>
                     <div class="form-group">
-                        <label for="tagline">Event Tagline:</label>
+                        <label for="tagline">Tagline:</label>
                         <input type="text" id="tagline" name="tagline">
                         <div class="error-message" id="tagline-error"></div>
                     </div>
@@ -43,24 +43,24 @@
                     </div>
                     <div class="form-group">
                         <label for="mobile">Mobile:</label>
-                        <input type="text" id="mobile" name="mobile">
+                        <input type="number" id="mobile" name="mobile">
                         <div class="error-message" id="mobile-error"></div>
                     </div>
                     <div class="form-group">
                         <label for="whatsapp">WhatsApp:</label>
-                        <input type="text" id="whatsapp" name="whatsapp">
+                        <input type="number" id="whatsapp" name="whatsapp">
                         <div class="error-message" id="whatsapp-error"></div>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="price">Event Price:</label>
-                        <input type="text" id="price" name="price">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price">
                         <div class="error-message" id="price-error"></div>
                     </div>
                     <div class="form-group">
-                        <label for="category">Select Event Category:</label>
+                        <label for="category">Category:</label>
                         <select id="category" name="category">
                             <option value="" disabled selected>Select category</option>
                             <option value="venues">Venues</option>
@@ -77,7 +77,7 @@
                         <div class="error-message" id="category-error"></div>
                     </div>
                     <div class="form-group">
-                        <label for="city">Select City:</label>
+                        <label for="city">City:</label>
                         <select id="city" name="city">
                             <option value="" disabled selected>Select city</option>
                             <option value="Chennai">Chennai</option>
@@ -94,7 +94,7 @@
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="about">Event About:</label>
+                        <label for="about">About:</label>
                         <textarea id="about" name="about"></textarea>
                         <div class="error-message" id="about-error"></div>
                     </div>
@@ -112,14 +112,19 @@
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="eventImage">Event Image:</label>
-                        <input type="file" id="eventImage" name="eventImage" accept="image/*">
-                        <div class="error-message" id="eventImage-error"></div>
+                        <label for="imageUrl">Event Image:</label>
+                        <input type="file" id="imageUrl" name="imageUrl" accept="image/*">
+                        <div class="error-message" id="imageUrl-error"></div>
                     </div>
                     <div class="form-group">
-                        <label for="projectImages">Project Images (up to 4):</label>
-                        <input type="file" id="projectImages" name="projectImages[]" accept="image/*" multiple>
-                        <div class="error-message" id="projectImages-error"></div>
+                        <label for="about_img">About Image:</label>
+                        <input type="file" id="about_img" name="about_img" accept="image/*">
+                        <div class="error-message" id="about_img-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageurl">Projects Images:</label>
+                        <input type="file" id="imageurl" name="imageurl" accept="image/*" multiple>
+                        <div class="error-message" id="imageurl-error"></div>
                     </div>
                 </div>
                 
