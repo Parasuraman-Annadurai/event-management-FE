@@ -8,6 +8,8 @@
     --text-color-dark: #333;
     --border-color: #ccc;
     --shadow-color: rgba(0, 0, 0, 0.3);
+    --scrolltab:var(--primary-color);
+    --scroll:#fcc4bf;
 
     /* Fonts */
     --font-family: Inter, sans-serif;
@@ -124,4 +126,29 @@
     border-radius: var(--message-border-radius);
     color: var(--text-color-light);
     cursor: pointer;
+}
+/*------------------------------------------------ scroll bar code */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+    background-color: var(--primary-color);
+  }
+  ::-webkit-scrollbar-track {
+    background-color:var(--scroll)
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color:var(--scrolltab);
+    border-radius: 4px;
+  }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

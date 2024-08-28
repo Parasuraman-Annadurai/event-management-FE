@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let eventCounter = 0; // Initialize event counter
+let eventList = []; // Store all event data
 
 // Event listener for the "Add More Events" button
 document.getElementById('addEventButton').addEventListener('click', () => {
@@ -21,6 +22,14 @@ document.getElementById('addEventButton').addEventListener('click', () => {
     if (eventName && description && eventPhotos && price) {
         // Increment event counter
         eventCounter++;
+
+        // Create an event object and push it to the eventList array
+        eventList.push({
+            eventName,
+            description,
+            eventPhotos,
+            price
+        });
 
         // Create a dropdown button for the event
         const eventDisplay = document.createElement('div');
@@ -52,7 +61,7 @@ document.getElementById('addEventButton').addEventListener('click', () => {
     }
 });
 
-// Handle form submission (unchanged)
+// Handle form submission
 document.getElementById('packageForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -77,19 +86,18 @@ document.getElementById('packageForm').addEventListener('submit', function(e) {
         formData.append('packageImage', packageImageFile);
     }
 
-    const eventItems = document.getElementsByClassName('event-item');
-    for (let i = 0; i < eventItems.length; i++) {
-        formData.append(`packagesLists[${i}][eventName]`, eventItems[i].querySelector('.eventName').value);
-        formData.append(`packagesLists[${i}][description]`, eventItems[i].querySelector('.description').value);
-        formData.append(`packagesLists[${i}][price]`, eventItems[i].querySelector('.price').value);
+    // Loop through the eventList and append each event to formData
+    eventList.forEach((event, index) => {
+        formData.append(`packagesLists[${index}][eventName]`, event.eventName);
+        formData.append(`packagesLists[${index}][description]`, event.description);
+        formData.append(`packagesLists[${index}][price]`, event.price);
 
-        const eventPhotoFile = eventItems[i].querySelector('.eventPhotos').files[0];
-        if (eventPhotoFile) {
-            formData.append(`packagesLists[${i}][eventPhotos]`, eventPhotoFile);
+        if (event.eventPhotos) {
+            formData.append(`packagesLists[${index}][eventPhotos]`, event.eventPhotos);
         }
-    }
+    });
 
-    // Log the formData keys and values
+    // Log the formData keys and values for debugging
     for (const [key, value] of formData.entries()) {
         console.log(`${key}: ${value}`);
     }

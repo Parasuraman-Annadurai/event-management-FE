@@ -12,6 +12,8 @@
     --primary-color: #ff6f61;
     --secondary-color: #e56357;
     --accent-color: #ff8b80;
+    --scrolltab:var(--primary-color);
+    --scroll:#fcc4bf;
     --background-color: #f4f4f4;
     --card-background: #ffffff;
     --text-color: #333333;
@@ -216,5 +218,32 @@ body {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+
+/*------------------------------------------------ scroll bar code */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+    background-color: var(--primary-color);
+  }
+  ::-webkit-scrollbar-track {
+    background-color:var(--scroll)
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color:var(--scrolltab);
+    border-radius: 4px;
+  }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

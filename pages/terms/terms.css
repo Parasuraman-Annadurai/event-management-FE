@@ -6,7 +6,8 @@
     --primary-color: #ff6f61;
     --main-color: #ff8b80;
     --secondary-color: #e56357;
-    --scroll: #ffd3cf;
+    --scrolltab:var(--primary-color);
+    --scroll:#fcc4bf;
     --white: #ffffff;
     --black: #000000;
     --gray: #666;
@@ -87,4 +88,29 @@ body {
 .terms-content p {
     line-height: 1.6;
     margin: 0 0 20px;
+}
+/*------------------------------------------------ scroll bar code */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+    background-color: var(--primary-color);
+  }
+  ::-webkit-scrollbar-track {
+    background-color:var(--scroll)
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color:var(--scrolltab);
+    border-radius: 4px;
+  }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

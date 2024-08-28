@@ -202,10 +202,11 @@ font-weight: 500;
     text-decoration: none;
     font-size: 20px;
     color: var(--primary-color);
+    /* display: block; */
     display: flex;
     justify-content:flex-start;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
     transition: 0.3s;
 }
 
@@ -277,7 +278,7 @@ font-weight: 500;
                 <div class="organiserProfileIcon services-dropdown" id="profileOrganiser">
                     <i id="navProfileIcon" class="fa-solid fa-user"></i>
                     <div class="services-dropdown-content" id="profileDropdown">
-                        <a href="#" id="profileBtn">Profile</a>
+                        <!-- <a href="#" id="profileBtn">Profile</a> -->
                         <a href="#" id="logoutBtn" onclick="logout()">Logout</a>
                     </div>
                   </div>
@@ -319,7 +320,6 @@ function showProfileIcon() {
         profileIconDiv.style.display = "none";
     }
 }
-// console.log(localStorage.getItem('token.data'))
 // Calling the function on page load 
 window.onload = showProfileIcon;
         function logout() {
