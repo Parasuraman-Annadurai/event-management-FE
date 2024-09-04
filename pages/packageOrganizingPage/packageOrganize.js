@@ -116,6 +116,9 @@ document.getElementById('packageForm').addEventListener('submit', function(e) {
     })
     .then(data => {
         console.log('Package created successfully:', data);
+
+        // Navigate to the PackageCategory page after successful creation
+        window.location.href = '/pages/packages/PackageCategory.html';
     })
     .catch(error => {
         console.error('Error creating package:', error);
